@@ -32,6 +32,7 @@
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('horarios') }}">Horarios</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('entrenamientos') }}">Entrenamientos</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('soporte') }}">Soporte</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('perfil') }}">Perfil</a></li>
                     </ul>
                 </div>
             </div>

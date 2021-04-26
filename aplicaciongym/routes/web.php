@@ -33,5 +33,8 @@ Route::get('soporte', function(){
   return view('soporte');
 })->middleware(['auth'])->name('soporte');
 
+Route::get('perfil', function(){
+  return view('perfil');
+})->middleware(['auth'])->name('perfil');
 
 require __DIR__.'/auth.php';
