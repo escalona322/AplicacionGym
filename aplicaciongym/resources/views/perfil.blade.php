@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      @extends('layouts.layout')
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, user-scalable-no, initial-scale-1=0">
         <meta name="description" content="" />
@@ -23,51 +24,30 @@
         <!-- Navigation-->
         <div class="container">
 
-          <div class="row">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-                <div class="container">
 
-                      <img src="{{asset('imgs/logo.png')}}" alt="foto" width="130" height="55"></img>
-
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('inicio') }}">Inicio</a></li>
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('horarios') }}">Horarios</a></li>
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('entrenamientos') }}">Entrenamientos</a></li>
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('soporte') }}">Soporte</a></li>
-                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('perfil') }}">Perfil</a></li>
-                        </ul>
-                    </div>
+          <div class="row h-100 align-items-center justify-content-center text-center">
+              <div class="col-lg-10 align-self-end">
+                  <h1 class="text-uppercase text-white font-weight-bold">lol</h1>
+                  <hr class="divider my-4" />
+              </div>
+              <div class="row">
+                <div class="col-12 border fondogris"> h1
                 </div>
-
-            </nav>
+              </div>
+              <div class="row">
+                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 border "> <img src="" alt="placeholder" height="400" width="250"> <form class=""  method="post">
+                    <input type="file" name="fotoperfil" value="">
+                  </form> </div>
+                  <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 col-xxl-6 border ">Cabecera</div>
+                  <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 border ">LATERAL DER</div>
+              </div>
+              <div class="row">
+                <div class="col-12 border fondogris">DivInf</div>
+              </div>
           </div>
-
-          <div class="row">
-            <div class="">
-              prueba
-            </div>
-          </div>
-
-            <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
-</style>
-        <footer class="footer bg-dark rounded-top text-center">
-          <div class="container py-2">
-            <p class="text-white my-2 "> Gimansio Sportakus &copy;</p>
+      </div>
 
 
-          </div>
-        </footer>
       </div>
     </body>
 </html>

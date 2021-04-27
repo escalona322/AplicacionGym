@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+      @extends('layouts.layout')
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, user-scalable-no, initial-scale-1=0">
         <meta name="description" content="" />
@@ -19,24 +20,7 @@
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     </head>
     <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color:#79DFE1;">
-            <div class="container">
-              <div class="">
-                  <img src="{{asset('imgs/logo.png')}}" alt="foto" width="130" height="55"></img>
-              </div>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('inicio') }}">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('horarios') }}">Horarios</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('entrenamientos') }}">Entrenamientos</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('soporte') }}">Soporte</a></li>
-                          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{{ route('perfil') }}">Perfil</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+
         <!-- Masthead-->
 
             <div class="container h-100">
@@ -52,23 +36,6 @@
                 </div>
             </div>
 
-            <style>
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
-</style>
-        <footer class="footer bg-dark rounded-top text-center">
-          <div class="container py-2">
-            <p class="text-white my-2 "> Gimansio Sportakus &copy;</p>
-
-
-          </div>
-        </footer>
+          
     </body>
 </html>
