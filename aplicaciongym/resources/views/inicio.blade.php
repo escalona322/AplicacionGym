@@ -20,21 +20,14 @@
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     </head>
     <body>
-        <!-- Navigation-->
-
-
-
-                <div class="row h-100 align-items-center justify-content-center text-center">
-                    <div class="col-lg-10 align-self-end">
-                        <h1 class="text-uppercase text-white font-weight-bold">lol</h1>
-                        <hr class="divider my-4" />
-                    </div>
-                    <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 font-weight-light mb-5">Este gimnasio es la hostia lolololo</p>
-                        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Find Out More</a>
-                    </div>
-                </div>
-            </div>
+      <div style="margin-top: 6em;">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 col-xxl-2 border ">  1 </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-8 col-xxl-8 border ">Cabecera</div>
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-2 col-xxl-2 border " style="background: rgb(51,51,40);
+background: linear-gradient(0deg, rgba(51,51,40,1) 0%, rgba(228,78,97,1) 39%);">LATERAL DER</div>
+        </div>
+      </div>
 
     </body>
 </html>
