@@ -22,10 +22,74 @@
     <body>
       <div style="margin-top: 6em;">
         <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 col-xxl-2 border ">  1 </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-8 col-xxl-8 border ">Cabecera</div>
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-2 col-xxl-2 border " style="background: rgb(51,51,40);
-background: linear-gradient(0deg, rgba(51,51,40,1) 0%, rgba(228,78,97,1) 39%);">LATERAL DER</div>
+          <!-- IZQUIERDA -->
+            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-2 col-xxl-2  ">
+
+
+
+             </div>
+              <!-- CENTRO -->
+            <div class="col-12 col-md-12 col-lg-4 col-xl-8 col-xxl-8  text-center">
+              <img src="{{asset('imgs/logo.png')}}"style="width:30%;" alt="">
+              <br><br>
+              <h5>Bienvenido a Sportakus, durante más de 20 años hemos estado ayudando a nuestros clientes para encontrar su estado físico óptimo.
+                Redescubre nuestro nuevo aspecto, clases, horarios , y todo tipo de dudas sobre nosotros y nuestras instalaciones.
+                <br>Te esperamos!</h5>
+                <br><br>
+
+
+              <img src="{{asset('imgs/gym2.png')}}" alt="fotoportada" width="95%">
+
+
+
+
+
+            <div class="container-fluid text-center" style="margin-top:5%;margin-bottom:10%;  " >
+
+              <div class="row "  >
+                <div class="col-xl-4 col-xs-12 d-flex justify-content-center">
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{asset('imgs/gym5.jpg')}}" alt="Card image cap">
+                      <div class="card-body">
+                    <h5 class="card-title">Entrenamientos</h5>
+                  <p class="card-text">Disfruta de nuestros entrenamientos personalizados de la mano de nuestros monitores. </p>
+                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Ir aEntrenamientos </a>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col-xl-4 col-xs-12 d-flex justify-content-center">
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{asset('imgs/gym4.jpg')}}" alt="Card image cap">
+                      <div class="card-body">
+                    <h5 class="card-title">Horarios</h5>
+                  <p class="card-text">Disfruta de nuestros horarios actualizados al dia y ven a la clase que mas se amolde a tu tiempo.</p>
+                  <a href="{{ route('horarios') }}" class="btn btn-primary">Ir a Horarios</a>
+                      </div>
+                  </div>
+
+                </div>
+                <div class="col-xl-4  col-xs-12 d-flex justify-content-center">
+
+                  <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{asset('imgs/perfil.jpg')}}" alt="Card image cap">
+                      <div class="card-body">
+                    <h5 class="card-title">Perfil</h5>
+                  <p class="card-text">Revisa si estas al corriente de pago y tu informacion personal, podras editarla y revisar todo lo referente a tu estancia en Sportakus.</p>
+                  <a  href="{{ route('perfil') }}" class="btn btn-primary">Ir a Perfil</a>
+                      </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <!-- DERECHA -->
+            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-2 col-xxl-2  " >
+
+            </div>
         </div>
       </div>
 
