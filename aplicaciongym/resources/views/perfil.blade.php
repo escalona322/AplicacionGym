@@ -14,19 +14,72 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- Third party plugin CSS-->
+        <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link rel="stylesheet" href="/css/web.css">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     </head>
     <body>
+      <style media="screen">
+        .textogym{
+          font-size: 1em; font-family: 'Bungee', cursive;
+        }
+      </style>
       <div style="margin-top: 6em;">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 border ">  1 </div>
-            <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 col-xxl-6 border ">Cabecera</div>
-            <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 border ">LATERAL DER</div>
+
+  <div class="row">
+
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 border ">
+            <div class="container">
+                      <div class="row">
+                        <div class="col text-center">
+                        <h1>Username</h1>  </div>
+                      </div>
+                      <div class="row">
+                        <div class="col"></div>
+                        <div class="col"><img src="{{asset('imgs/default.png')}}" alt="foto" width="170" height="240" class="border border-danger rounded"></img></div>
+                        <div class="col"></div>
+                    </div>
+                  <div class="row">
+                    <form style="margin-top: 2em;">
+                        <div class="form-group">
+                          <label for="exampleFormControlFile1">Selecciona un archivo</label>
+                          <input type="file" class="form-control-file" id="exampleFormControlFile1" >
+                          <input type="submit" name="Enviar" value="Enviar" class="btn btn-danger my-2">
+                        </div>
+                      </form>
+                  </div>
+                  <div class="row my-5">
+                      <div class="col">
+                        <p class="textogym">Entrenamiento favorito:</p>
+                        <p class="textogym">Clase favorita:</p>
+                        <p class="textogym">Monitor Asignado:</p>
+                      </div>
+                  </div>
+          </div>
+      </div>
+
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 col-xxl-6 border ">
+        <div class="container border border-danger">
+          <form class="" action="index.html" method="post">
+              <div class="row form-group my-2">
+                <div class="col">                    <p class="textogym text-center" style="font-size: 2.5em">Datos personales </p>                                </div>
+              </div>
+              <div class="row my-1">
+                <div class="col">
+                   <span class="textogym"> Nombre:</span><input type="text" class="border border-danger" name="" value="">
+                </div>
+                <div class="col">
+
+                </div>
+              </div>
+        </form>
         </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 border ">LATERAL DER</div>
+  </div>
+
+
       </div>
 
 
