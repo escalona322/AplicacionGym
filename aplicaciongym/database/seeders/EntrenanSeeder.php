@@ -5,8 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-
-class ClaseSeeder extends Seeder
+class EntrenanSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +14,6 @@ class ClaseSeeder extends Seeder
      */
     public function run()
     {
-
+        //
     }
 }
