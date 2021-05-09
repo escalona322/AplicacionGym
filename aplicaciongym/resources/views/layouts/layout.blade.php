@@ -24,6 +24,7 @@ background: linear-gradient(0deg, rgba(236,99,116,1) 0%, rgba(51,40,40,1) 100%);
                       <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{{ route('horarios') }}" style="font-size: 1.5em;font-family: 'Bungee', cursive;">Horarios</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{{ route('entrenamientos') }}" style="font-size: 1.5em;font-family: 'Bungee', cursive;">Entrenamientos</a></li>
                       <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{{ route('perfil') }}" style="font-size: 1.5em; font-family: 'Bungee', cursive;">Perfil</a></li>
+                      <li class="nav-item"><a class="nav-link js-scroll-trigger text-light" href="{{ route('contacto') }}" style="font-size: 1.5em; font-family: 'Bungee', cursive;">Contacto</a></li>
                     </ul>
                 </div>
             </div>
