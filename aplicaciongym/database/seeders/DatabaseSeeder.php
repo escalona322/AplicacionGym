@@ -16,20 +16,29 @@ class DatabaseSeeder extends Seeder
     {
       DB::table('users')->insert([
         'nombre'=>'admin',
-        'email'=> 'admin@admin.com',
+        'apellidos'=> 'admin',
+        'DNI' => '00000000Z',
+        'pagado' => 'si',
+        'email' => 'admin@admin.com',
         'password'=>Hash::make('admin'),
         'rol' => 'admin'
       ]);
 
       DB::table('users')->insert([
         'nombre'=>'profe1',
-        'email'=> 'profe1@profe1.com',
+        'apellidos'=> 'profe1',
+        'DNI' => '00000000Z',
+        'pagado' => 'si',
+        'email' => 'profe1@profe1.com',
         'password'=>Hash::make('profe1'),
         'rol' => 'monitor'
       ]);
 
       DB::table('users')->insert([
         'nombre'=>'usu1',
+        'apellidos'=> 'usu1',
+        'DNI' => '00000000Z',
+        'pagado' => 'si',
         'email'=> 'usu1@usu1.com',
         'password'=>Hash::make('usu1'),
         'rol' => 'usuario'

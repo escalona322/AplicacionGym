@@ -24,66 +24,67 @@
         .textogym{
           font-size: 1em; font-family: 'Bungee', cursive;
         }
+        .textogymxl{
+          font-size: 2em; font-family: 'Bungee', cursive;
+        }
       </style>
       <div style="margin-top: 6em;">
+<div class="container">
+
 
   <div class="row">
 
         <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 border ">
-            <div class="container">
-                      <div class="row">
-                        <div class="col text-center">
-                        <h1>Username</h1>  </div>
-                      </div>
-                      <div class="row">
-                        <div class="col"></div>
-                        <div class="col"><img src="{{asset('imgs/default.png')}}" alt="foto" width="170" height="240" class="border border-danger rounded"></img></div>
-                        <div class="col"></div>
-                    </div>
-                  <div class="row">
-                    <form style="margin-top: 2em;">
-                        <div class="form-group">
-                          <label for="exampleFormControlFile1">Selecciona un archivo</label>
-                          <input type="file" class="form-control-file" id="exampleFormControlFile1" >
-                          <input type="submit" name="Enviar" value="Enviar" class="btn btn-danger my-2">
-                        </div>
-                      </form>
-                  </div>
-                  <div class="row my-5">
-                      <div class="col">
-                        <p class="textogym">Entrenamiento favorito:</p>
-                        <p class="textogym">Clase favorita:</p>
-                        <p class="textogym">Monitor Asignado:</p>
-                      </div>
-                  </div>
-          </div>
+            <h2 class="text-center" style="font-size: 2em; font-family: 'Bungee', cursive;">Tablas de entrenamientos</h2>
+
       </div>
 
       <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 col-xxl-6 border ">
-        <div class="container border border-danger">
-          <form class="" action="index.html" method="post">
-              <div class="row form-group my-2">
-                <div class="col">                    <p class="textogym text-center" style="font-size: 2.5em">Datos personales </p>                                </div>
-              </div>
-              <div class="row my-1">
-                <div class="col">
-                   <span class="textogym"> Nombre:</span><input type="text" class="border border-danger" name="" value="">
-                </div>
-                <div class="col">
+                  <div class="row">
+                    <div class="col mx-5">
+                    <h1 class="mx-5">Nombre</h1>  </div>
+                  </div>
+                  <div class="row">
 
+                    <div class="col mx-5"><img src="{{asset('imgs/default.png')}}" alt="foto" width="200" height="270" class="border border-danger rounded mx-3"></img></div>
+                                <div class="col">
+                                    <div class="row">
+                                        <p class="textogym">DNI: </p>
+                                    </div>
+                                    <div class="row">
+                                        <p class="textogym">email: </p>
+                                    </div>
+                                    <div class="row">
+                                        <p class="textogym">Apellidos: </p>
+                                    </div>
+
+                                </div>
                 </div>
+              <div class="row">
+                <form style="margin-top: 2em;">
+                    <div class="form-group">
+                      <label for="exampleFormControlFile1">Selecciona un archivo</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1" ><br>
+                      <input type="submit" name="Enviar" value="Enviar" class="btn btn-danger my-2">
+                    </div>
+                  </form>
               </div>
-        </form>
-        </div>
+              <div class="row my-5">
+                  <div class="col">
+
+                  </div>
+              </div>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 border ">LATERAL DER</div>
+      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 border ">
+          <h2 class="text-center" style="font-size: 2em; font-family: 'Bungee', cursive;">Clases</h2>
+      </div>
   </div>
 
-
+</div>
       </div>
 
 
 
-      </div>
+
     </body>
 </html>
