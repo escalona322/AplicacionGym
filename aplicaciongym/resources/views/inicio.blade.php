@@ -31,6 +31,9 @@
              </div>
               <!-- CENTRO -->
             <div class="col-12 col-md-12 col-lg-4 col-xl-8 col-xxl-8  text-center">
+
+            <div class="" style="box-shadow:  11px -11px 21px black,
+                                -11px 11px 21px black; margin-top: 10px;">
               <img src="{{asset('imgs/logo.png')}}"style="width:30%;" alt="">
               <br><br>
               <h5>Bienvenido a Sportakus, durante más de 20 años hemos estado ayudando a nuestros clientes para encontrar su estado físico óptimo.
@@ -38,10 +41,8 @@
                 <br>Te esperamos!</h5>
                 <br><br>
 
-
-              <img src="{{asset('imgs/gym2.png')}}" alt="fotoportada" width="95%">
-
-
+              <img src="{{asset('imgs/gym2.png')}}" alt="fotoportada" width="100%">
+              </div>
 
 
 
