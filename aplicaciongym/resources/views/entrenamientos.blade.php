@@ -22,14 +22,73 @@
     </head>
     <body>
       <div style="margin-top: 6em;">
-        <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+        <div class="row" >
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2">
+              <div class="row">
+                <!-- parte arriba -->
 
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-xxl-12">
+                  <div class="card" style="width: 14rem;margin-bottom:10%;">
 
+                      <div class="card-body">
+                    <h5 class="card-title">Entrenamiento Upper Body</h5>
+
+                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Upper Body </a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- parte abajo -->
+                <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-xxl-12">
+                  <div class="card" style="width: 14rem;margin-bottom:10%;">
+
+                      <div class="card-body">
+                    <h5 class="card-title">Entrenamiento Low body</h5>
+
+                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Low Body </a>
+                      </div>
+                  </div>
+                </div>
+
+                <!-- cardio -->
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-xxl-12">
+                  <div class="card" style="width: 14rem">
+
+                      <div class="card-body">
+                    <h5 class="card-title">Entrenamiento Cardio</h5>
+
+                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Cardio </a>
+                      </div>
+                  </div>
+                </div>
+
+              </div>
 
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
+            <!-- PARTE DEL MEDIO -->
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 text-center">
+              <h1 class="textogym">Entrenamiento escogido</h1>
+              <h5 class="textogym">Upper Body</h2>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/2momU89TgYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            </div>
+            <!-- PARTE IZQUIERDA -->
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2">
+              <div class="col">
+                <h1>Clientes</h1>
+                <ol>
+                  <li>Paula</li>
+                  <li>Jose</li>
+                  <li>Alberto</li>
+                  <li>Javi</li>
+                </ol>
+
+                <div class="col">
+                  <button class="btn btn-primary"type="button" name="button" style="margin-top:10%">Editar/Seleccionar cliente</button>
+                </div>
+              </div>
+
+            </div>
         </div>
       </div>
 
