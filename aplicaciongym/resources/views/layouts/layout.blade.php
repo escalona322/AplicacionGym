@@ -15,7 +15,7 @@
 background: linear-gradient(0deg, rgba(236,99,116,1) 0%, rgba(51,40,40,1) 100%);">
             <div class="container">
 
-                  <img src="{{asset('imgs/logo.png')}}" alt="foto" width="130" height="55"></img>
+                <a href="{{ route('inicio') }}"><img src="{{asset('imgs/logo.png')}}"  alt="foto" width="130" height="55"></img></a>  
 
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
