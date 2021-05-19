@@ -72,23 +72,7 @@
               <iframe width="560" height="315" src="https://www.youtube.com/embed/2momU89TgYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
             </div>
-            <!-- PARTE IZQUIERDA -->
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2">
-              <div class="col">
-                <h1>Clientes</h1>
-                <ol>
-                  <li>Paula</li>
-                  <li>Jose</li>
-                  <li>Alberto</li>
-                  <li>Javi</li>
-                </ol>
-
-                <div class="col">
-                  <button class="btn btn-primary"type="button" name="button" style="margin-top:10%">Editar/Seleccionar cliente</button>
-                </div>
-              </div>
-
-            </div>
+          
         </div>
       </div>
 
