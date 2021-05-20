@@ -34,20 +34,17 @@
 
   <div class="row">
 
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 col-xxl-3 border ">
-            <h2 class="text-center" style="font-size: 2em; font-family: 'Bungee', cursive;">Tablas de entrenamientos</h2>
 
-      </div>
 
-      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-6 col-xxl-6 border ">
-                  <div class="row">
-                    <div class="col mx-5">
-                    <h1 class="mx-5">Nombre</h1>  </div>
-                  </div>
+      <div class="col-12  ">
+
                   <div class="row">
 
-                    <div class="col mx-5"><img src="{{asset('imgs/default.png')}}" alt="foto" width="200" height="270" class="border border-danger rounded mx-3"></img></div>
-                                <div class="col">
+                    <div class="col mx-5 my-5"><img src="{{asset('imgs/default.png')}}" alt="foto" width="65%" height="85%" class="border border-danger rounded mx-3"></img></div>
+                                <div class="col my-5">
+                                  <div class="row">
+                                      <p class="textogym">Nombre: </p>
+                                  </div>
                                     <div class="row">
                                         <p class="textogym">DNI: </p>
                                     </div>
@@ -57,27 +54,25 @@
                                     <div class="row">
                                         <p class="textogym">Apellidos: </p>
                                     </div>
-
+                                    <div class="row">
+                                      <form style="margin-top: 2em;">
+                                          <div class="form-group">
+                                            <label for="exampleFormControlFile1">Selecciona un archivo</label>
+                                            <input type="file" class="form-control-file" id="exampleFormControlFile1" ><br>
+                                            <input type="submit" name="Enviar" value="Enviar" class="btn btn-danger my-2">
+                                          </div>
+                                        </form>
+                                    </div>
                                 </div>
                 </div>
-              <div class="row">
-                <form style="margin-top: 2em;">
-                    <div class="form-group">
-                      <label for="exampleFormControlFile1">Selecciona un archivo</label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1" ><br>
-                      <input type="submit" name="Enviar" value="Enviar" class="btn btn-danger my-2">
-                    </div>
-                  </form>
-              </div>
+
               <div class="row my-5">
                   <div class="col">
 
                   </div>
               </div>
       </div>
-      <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3 col-xxl-3 border ">
-          <h2 class="text-center" style="font-size: 2em; font-family: 'Bungee', cursive;">Clases</h2>
-      </div>
+
   </div>
 
 </div>
