@@ -19,60 +19,101 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
           <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+          <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
     </head>
     <body>
       <div style="margin-top: 6em;">
         <div class="row" >
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2">
-              <div class="row">
-                <!-- parte arriba -->
-
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-xxl-12">
-                  <div class="card" style="width: 14rem;margin-bottom:10%;">
-
-                      <div class="card-body">
-                    <h5 class="card-title">Entrenamiento Upper Body</h5>
-
-                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Upper Body </a>
-                      </div>
-                  </div>
-                </div>
-
-                <!-- parte abajo -->
-                <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-xxl-12">
-                  <div class="card" style="width: 14rem;margin-bottom:10%;">
-
-                      <div class="card-body">
-                    <h5 class="card-title">Entrenamiento Low body</h5>
-
-                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Low Body </a>
-                      </div>
-                  </div>
-                </div>
-
-                <!-- cardio -->
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-12 col-xl-12 col-xxl-12">
-                  <div class="card" style="width: 14rem">
-
-                      <div class="card-body">
-                    <h5 class="card-title">Entrenamiento Cardio</h5>
-
-                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Cardio </a>
-                      </div>
-                  </div>
-                </div>
-
-              </div>
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
 
             </div>
             <!-- PARTE DEL MEDIO -->
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8 text-center">
-              <h1 class="textogym">Entrenamiento escogido</h1>
-              <h5 class="textogym">Upper Body</h2>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/2momU89TgYA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+                <div class="row">
+                    <p class="textogymxl text-center"> Lower Body </p>
+                </div>
+                <div class="container contenedorentrenos overflow-auto">
+                    <div class="row fondoentrenos">
+                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
+                      <div class="col">
 
+                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
+                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
+                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
+                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
+                    </div>
+                    <div class="row fondoentrenos">
+                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
+                      <div class="col">
+
+                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
+                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
+                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
+                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
+                    </div>
+                    <div class="row fondoentrenos">
+                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
+                      <div class="col">
+
+                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
+                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
+                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
+                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
+                    </div>
+                    <div class="row fondoentrenos">
+                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
+                      <div class="col">
+
+                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
+                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
+                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
+                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
+                    </div>
+                    <div class="row fondoentrenos">
+                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
+                      <div class="col">
+
+                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
+                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
+                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
+                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
+                    </div>
+
+                </div>
+                <div class="container contenedorcards my-5">
+                    <div class="row">
+                      <div class="col my-3">
+                        <div class="card text-center textogym cardsentreno">
+                            <div class="card-body">
+                              <h5 class="card-title">Entrenamiento Upper Body</h5>
+                              <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Upper Body </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col my-3">
+                        <div class="card text-center textogym cardsentreno">
+
+                            <div class="card-body">
+                          <h5 class="card-title">Entrenamiento Low body</h5>
+
+                        <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Low Body </a>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="col my-3">
+                        <div class="card text-center textogym cardsentreno" >
+
+                            <div class="card-body">
+                          <h5 class="card-title">Entrenamiento Cardio</h5>
+
+                        <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Cardio </a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
             </div>
-          
+
         </div>
       </div>
 

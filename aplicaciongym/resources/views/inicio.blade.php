@@ -19,8 +19,10 @@
         <!-- Core theme CSS (includes Bootstrap)-->
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
             <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
+            <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
     </head>
     <body>
+
       <div style="margin-top: 6em;">
         <div class="row">
           <!-- IZQUIERDA -->
@@ -31,15 +33,20 @@
              </div>
               <!-- CENTRO -->
             <div class="col-12 col-md-12 col-lg-4 col-xl-8 col-xxl-8  text-center">
-
             <div class="" style="box-shadow:  11px -11px 21px black,
                                 -11px 11px 21px black; margin-top: 10px;">
-              <img src="{{asset('imgs/logo.png')}}"style="width:30%;" alt="">
-              <br><br>
-              <h5>Bienvenido a Sportakus, durante más de 20 años hemos estado ayudando a nuestros clientes para encontrar su estado físico óptimo.
-                Redescubre nuestro nuevo aspecto, clases, horarios , y todo tipo de dudas sobre nosotros y nuestras instalaciones.
-                <br>Te esperamos!</h5>
-                <br><br>
+              <div class="row my-5">
+                <div class="col"></div>
+                <div class="col"><img src="{{asset('imgs/logo.png')}}"style="width:100%; margin-top: 10px;" alt=""></div>
+                <div class="col"></div>
+
+              </div>
+          <div class="row my-5">
+              <h4>Bienvenido a Sportakus, durante más de 20 años hemos estado ayudando a nuestros clientes para encontrar su estado físico óptimo.
+              Redescubre nuestro nuevo aspecto, clases, horarios , y todo tipo de dudas sobre nosotros y nuestras instalaciones.
+              <br>Te esperamos!</h4>
+          </div>
+
 
               <img src="{{asset('imgs/gym2.png')}}" alt="fotoportada" width="100%">
               </div>

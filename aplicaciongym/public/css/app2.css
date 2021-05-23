@@ -110,6 +110,47 @@ body{
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
+.textonavbar{
+  font-family: 'Bungee';
+  font-size: 1.5em;
+}
 .textogym{
           font-family: 'Bungee', cursive;
        }
+.textogymxl{
+       font-family: 'Bungee', cursive;
+       font-size: 2.5em;
+       margin-top: 0.5em;
+       margin-bottom: 0.5em;
+}
+.fondoentrenos{
+  background: rgb(149,90,90);
+background: linear-gradient(90deg, rgba(149,90,90,1) 0%, rgba(215,70,70,1) 50%, rgba(149,90,90,1) 100%);
+box-shadow:  11px -11px 21px grey,
+            -11px 11px 21px lightgrey;
+margin-bottom: 2em;
+margin-top: 2em;
+}
+
+.contenedorentrenos{
+  height: 30em;
+}
+.contenedorcards{
+  background: rgb(149,90,90);
+  background: linear-gradient(90deg, rgba(149,90,90,1) 0%, rgba(215,70,70,1) 50%, rgba(149,90,90,1) 100%);
+}
+.cardsentreno{
+  border-radius: 6em;
+  box-shadow:  5px -5px 10px black,
+              -5px 5px 10px black;
+}
+.botonentrenos{
+  background: white;
+font-family: 'Bungee', cursive;
+font-size: 1em;
+color: black;
+margin-top: 1.8em;
+height: 3em;
+width: 16em;
+border-radius: 6em;
+}
