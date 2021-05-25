@@ -25,12 +25,12 @@
       <div style="margin-top: 6em;">
         <div class="row" >
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
-                  <a href="{{ route('entrenamientosanadir') }}" class="btn btn-primary"> Link añadir entrenamiento </a>
+
             </div>
             <!-- PARTE DEL MEDIO -->
             <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
                 <div class="row">
-                    <p class="textogymxl text-center"> Página Principal </p>
+                    <p class="textogymxl text-center"> Cardio </p>
                 </div>
                 <div class="container contenedorentrenos overflow-auto">
                     <div class="row fondoentrenos">

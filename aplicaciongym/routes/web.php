@@ -29,6 +29,22 @@ Route::get('entrenamientos', function(){
   return view('entrenamientos');
 })->middleware(['auth'])->name('entrenamientos');
 
+Route::get('entrenamientosupper', function(){
+  return view('entrenamientosupper');
+})->middleware(['auth'])->name('entrenamientosupper');
+
+Route::get('entrenamientoslow', function(){
+  return view('entrenamientoslow');
+})->middleware(['auth'])->name('entrenamientoslow');
+
+Route::get('entrenamientoscardio', function(){
+  return view('entrenamientoscardio');
+})->middleware(['auth'])->name('entrenamientoscardio');
+
+Route::get('entrenamientosanadir', function(){
+  return view('entrenamientosanadir');
+})->middleware(['auth'])->name('entrenamientosanadir');
+
 Route::get('soporte', function(){
   return view('soporte');
 })->middleware(['auth'])->name('soporte');
