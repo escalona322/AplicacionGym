@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTienensTable extends Migration
+class CreateTablaentrenosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateTienensTable extends Migration
      */
     public function up()
     {
-        Schema::create('tienens', function (Blueprint $table) {
+        Schema::create('tablaentrenos', function (Blueprint $table) {
             $table->id();
+            $table->string("Nombre");
+            $table->foreignId('entrenamientos_id')->constrained()->onDelete('cascade');
             $table->timestamps();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('clase_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -28,6 +28,6 @@ class CreateTienensTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tienens');
+        Schema::dropIfExists('tablaentrenos');
     }
 }

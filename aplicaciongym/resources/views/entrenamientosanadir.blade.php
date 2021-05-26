@@ -34,12 +34,12 @@
                 </div>
                 <div class="container contenedorentrenos">
                   <form role="form">
-                               <div class="form-group"> <label for="nombreentreno">
-                                       <h6>Nombre del nuevo entreno</h6>
+                               <div class="form-group my-3"> <label for="nombreentreno">
+                                       <h6 class="textogym">Nombre del nuevo entreno</h6>
                                    </label> <input type="text" name="nombreentreno" placeholder="EJ: Sentiadillas" required class="form-control "> </div>
-                               <div class="form-group">
+                               <div class="form-group my-3">
                                  <label for="cardNumber">
-                                       <h6>Link video YouTube</h6>
+                                       <h6 class="textogym">Link video YouTube</h6>
                                    </label>
                                    <div class="input-group"> <input type="text" name="linkyt" placeholder="EJ: youtube.com/watch?ejemplo" class="form-control " required>
 
@@ -47,15 +47,35 @@
                                </div>
                                <div class="row">
                                    <div class="col-sm-8">
-                                       <div class="form-group"> <label><span class="hidden-xs">
-                                                   <h6>Datos Varios</h6>
+                                       <div class="form-group my-3"> <label><span class="hidden-xs">
+                                                   <h6 class="textogym my-3">Datos Varios</h6>
                                                </span></label>
-                                           <div class="input-group"> <label for="Repeticiones" class="labelinputs">Repeticiones</label> <input type="number" placeholder="0" name="Repeticiones" class="form-control" required></div>
-                                             <div class="input-group"> <label for="Series" class="labelinputs">Series</label> <input type="number" placeholder="0" name="Series" class="form-control" required></div>
-
+                                               <div class="container">
+                                                 <div class="row">
+                                                    <div class="col"> <span class="textogym">Series: </span> </div>
+                                                    <div class="col"> <input class="inputnumber" type="number" name="Series" value="">  </div>
+                                                    <div class="col"> <span class="textogym">Intensidad: </span> </div>
+                                                    <div class="col"> <select class="" name="Tipo">
+                                                      <option value="Alta" selected>Alta</option>
+                                                      <option value="Media">Media</option>
+                                                      <option value="Baja">Baja</option>
+                                                    </select>  </div></div>
+                                                 <div class="row">
+                                                    <div class="col"> <span class="textogym">Repeticiones: </span> </div>
+                                                    <div class="col"><input class="inputnumber" type="number" name="Repeticiones" value=""></div>
+                                                    <div class="col"> <span class="textogym">Tipo: </span> </div>
+                                                    <div class="col"> <select class="" name="Tipo">
+                                                      <option value="Low" selected>Low body</option>
+                                                      <option value="Upper">Upper body</option>
+                                                      <option value="Cardio">Cardio</option>
+                                                    </select>  </div>
+                                                 </div>
+                                               </div>
                                        </div>
                                    </div>
-
+                                   <div class="form-group">
+                                      <input type="file" name="" value="">
+                                   </div>
                                <div class="card-footer"> <button type="button" class="subscribe btn btn-primary btn-block shadow-sm">Guardar entrenamiento </button>
                            </form>
                 </div>
