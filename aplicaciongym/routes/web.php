@@ -24,9 +24,7 @@ Route::get('/dashboard', function () {
     return view('inicio');
 })->middleware(['auth'])->name('inicio');
 
-Route::get('horarios', function(){
-  return view('horarios',['clases' => clase::All()],['users'=> User::All()]);
-})->middleware(['auth'])->name('horarios');
+Route::get('horarios','App\Http\Controllers\horarioController@listadoClases')->middleware(['auth'])->name('horarios');
 
 Route::get('entrenamientos', function(){
   return view('entrenamientos');

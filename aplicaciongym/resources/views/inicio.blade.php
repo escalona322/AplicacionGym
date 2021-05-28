@@ -63,7 +63,7 @@
                       <div class="card-body">
                     <h5 class="card-title">Entrenamientos</h5>
                   <p class="card-text">Disfruta de nuestros entrenamientos personalizados de la mano de nuestros monitores. </p>
-                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary"> Ir aEntrenamientos </a>
+                  <a href="{{ route('entrenamientos') }}" class="btn btn-primary">Entrenamientos </a>
                       </div>
                   </div>
                 </div>
@@ -75,7 +75,7 @@
                       <div class="card-body">
                     <h5 class="card-title">Horarios</h5>
                   <p class="card-text">Disfruta de nuestros horarios actualizados al dia y ven a la clase que mas se amolde a tu tiempo.</p>
-                  <a href="{{ route('horarios') }}" class="btn btn-primary">Ir a Horarios</a>
+                  <a href="{{ route('horarios') }}" class="btn btn-primary">Horarios</a>
                       </div>
                   </div>
 
@@ -87,7 +87,7 @@
                       <div class="card-body">
                     <h5 class="card-title">Perfil</h5>
                   <p class="card-text">Revisa si estas al corriente de pago y tu informacion personal, podras editarla y revisar todo lo referente a tu estancia en Sportakus.</p>
-                  <a  href="{{ route('perfil') }}" class="btn btn-primary">Ir a Perfil</a>
+                  <a  href="{{ route('perfil') }}" class="btn btn-primary">Perfil</a>
                       </div>
                   </div>
 
