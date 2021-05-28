@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\camarerosController;
+use App\Http\Controllers\horarioController;
+use App\Http\Controllers\gimnasioController;
+use App\Models\clase;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,7 +25,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('inicio');
 
 Route::get('horarios', function(){
-  return view('horarios');
+  return view('horarios',['clases' => clase::All()],['users'=> User::All()]);
 })->middleware(['auth'])->name('horarios');
 
 Route::get('entrenamientos', function(){

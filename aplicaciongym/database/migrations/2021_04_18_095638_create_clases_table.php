@@ -15,12 +15,13 @@ class CreateClasesTable extends Migration
     {
         Schema::create('clases', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('nombre');
             $table->integer('aforo');
             $table->integer('duracion');
-            $table->string('sala');
+            $table->string('dia');
+            $table->string('turno');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->timestamps();
         });
     }
 
