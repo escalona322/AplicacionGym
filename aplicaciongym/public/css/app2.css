@@ -167,6 +167,10 @@ font-size: 0.1em;
           font-family: 'Bungee', cursive;
           font-size: 1em;
        }
+.textoejercicio{
+       font-family: 'Bungee', cursive;
+        font-size: 2em;
+  }
 .textogymxl{
        font-family: 'Bungee', cursive;
        font-size: 2.5em;
@@ -194,6 +198,17 @@ margin-top: 2em;
   box-shadow:  5px -5px 10px black,
               -5px 5px 10px black;
 }
+
+.cardsejercicio{
+  border-radius: 3em;
+  box-shadow:  5px -5px 10px black,
+              -5px 5px 10px black;
+  width: 10em;
+  height: 4em;
+}
+.texto{
+  font-size: 1em;
+}
 .botonentrenos{
   background: white;
 font-family: 'Bungee', cursive;
@@ -206,6 +221,11 @@ border-radius: 6em;
 }
 .labelinputs{
   margin-left: -4em;
+}
+
+.videoyt{
+  height: 25em;
+  width: 45em;
 }
 
 /*switch de horarios*/

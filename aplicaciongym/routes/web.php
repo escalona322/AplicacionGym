@@ -53,6 +53,10 @@ Route::get('entrenamientoscardio', function(){
   return view('entrenamientoscardio');
 })->middleware(['auth'])->name('entrenamientoscardio');
 
+Route::get('verentrenamiento', function(){
+  return view('verentrenamiento');
+})->middleware(['auth'])->name('verentrenamiento');
+
 Route::get('entrenamientosanadir', function(){
   return view('entrenamientosanadir');
 })->middleware(['auth'])->name('entrenamientosanadir');

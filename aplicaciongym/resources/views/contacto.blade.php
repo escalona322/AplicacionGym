@@ -35,7 +35,7 @@
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.11135406578!2d-3.6915725846104652!3d40.20658587939014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421ee3b86e375d%3A0x8139803780dd1991!2sColegio%20Biling%C3%BCe%20Valle%20del%20Miro!5e0!3m2!1ses!2ses!4v1620577763777!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6  text-center">
-                  <p>
+                  <p class="font-size13">
                     Estamos en Valdemoro en el colegio valle del miro ,
                     nuestro horario es de 8 de la mañana hasta las 8 de la tarde .
                     Si tiene alguna pregunta no dude en contactarnos por telefono (658985785) ,por correo electronico

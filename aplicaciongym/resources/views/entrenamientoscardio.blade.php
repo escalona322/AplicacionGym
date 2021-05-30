@@ -33,7 +33,7 @@
                 <div class="row">
                     <p class="textogymxl text-center"> Cardio </p>
                 </div>
-                <div class="container contenedorentrenos">
+                <div class="container contenedorentrenos overflow-auto">
                     <div class="row fondoentrenos">
                       <div class="col"><p class="textogymxl">Sentadillas</p></div>
                       <div class="col">
@@ -42,33 +42,7 @@
                             <div class="row"><p class="textogym">Repeticiones: 15</p></div>
                         </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
                       <div class="col">
-                        <!-- Button trigger modal -->
-            <!-- El id del boton tiene que ser el id deL entrenamiento -->
-  <button id="Modal1" type="button" class="btn btn-primary textogym botonentrenos" data-toggle="modal" data-target="#ModalCenter">
-    Más informacion
-  </button>
-
-  <!-- Modal -->
-  <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+                       <a class="botonentrenos"href="{{ route('verentrenamiento') }}"> <button class="botonentrenos textogym" type="button" name="button">Más información</button></a>
                        </div>
                     </div>
                     <div class="row fondoentrenos">
