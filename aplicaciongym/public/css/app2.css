@@ -157,3 +157,13 @@ border-radius: 6em;
 .labelinputs{
   margin-left: -4em;
 }
+
+/*switch de horarios*/
+.form-switch.form-switch-sm .form-check-input {
+
+  height: 1rem;
+  width: calc(1rem + 0.75rem);
+  border-radius: 2rem;
+  background-color: rgba(149,90,90,1);
+outline-style: none;
+}

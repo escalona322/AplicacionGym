@@ -132,10 +132,6 @@
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
                                       <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
-                                      <div class="form-check form-switch form-switch-sm">
-                                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                      <label class="form-check-label" for="flexSwitchCheckDefault">Apuntado</label>
-                                      </div>
                                   </td>
                                  @break
 
