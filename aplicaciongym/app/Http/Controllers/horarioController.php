@@ -32,11 +32,48 @@ class horarioController extends Controller
                 default:
                   salir();
                 break;
+              }
+            }
+
+          public function modificarHorario(Request $datos){
+               $claseMod=clase::find($datos->id);
+               $users = User::All();
+               $usr = User::where('rol','monitor')->get();
+
+                return view('modificarHorario',['clase' => $claseMod],['users'=>$usr]);
+            }
+
+            public function Modificar(Request $datos,$id){
+              $clase=clase::find($datos->id);
+              $clase->nombre=$datos->nombre;
+              $clase->aforo=$datos->aforo;
+              $clase->duracion=$datos->duracion;
+              $clase->save();
+
+
+              $clases=clase::All();
+               return redirect('/horarios');
+
+            }
+
+            public function asignarMonitor(Request $datos){
+                 $claseMod=clase::find($datos->id);
+                 $users = User::All();
+                 $usr = User::where('rol','monitor')->get();
+
+                  return view('asignarMonitor',['clase' => $claseMod],['users'=>$usr]);
+              }
+
+              public function monitorAsignado(Request $datos, $id){
+
+                $cla=clase::where('id',$id)->first();
+                $cla->user_id=$datos->mon;
+                $cla->save();
+                return redirect('/horarios');
 
               }
 
 
-            }
 }
 
 

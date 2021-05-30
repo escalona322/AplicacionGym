@@ -49,69 +49,126 @@
 
 
                             <tr>
-                                <td class="align-middle">09:00 (TURNO 1)</td>
+                                <td class="align-middle">09:00</td>
 
                               @foreach($clases as $clase)
 
                                 @switch($clase)
                                 @case($clase->turno==1 && $clase->dia=="Lunes")
                                 <td>
-                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
-                                    <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                  <form class="" action="modificarHorario" method="get">
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Nombre: {{$clase->nombre}}</span>
+                                    <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                    <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                    <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                    <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                    </form>
+                                    <form class="" action="asignarMonitor" method="get">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                      <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                    </form>
                                 </td>
                                @break
 
                                 @case($clase->turno==1 && $clase->dia=="Martes")
                                 <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
-                                    <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                  <form class="" action="modificarHorario" method="get">
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                    <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                    <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                    <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                    <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                    <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                    </form>
+                                    <form class="" action="asignarMonitor" method="get">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                    </form>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Miercoles")
                                 <td>
+                                  <form class="" action="modificarHorario" method="get">
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
-                                    <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                    <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                    <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                    <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                    <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                    <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                    </form>
+                                    <form class="" action="asignarMonitor" method="get">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                    </form>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Jueves")
                                 <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
-                                    <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                  <form class="" action="modificarHorario" method="get">
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                    <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                    <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                    <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                    <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                    <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                    </form>
+                                    <form class="" action="asignarMonitor" method="get">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                    </form>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Viernes")
                                 <td>
+                                  <form class="" action="modificarHorario" method="get">
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
-                                    <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                    <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                    <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                    <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                    <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                    <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                    </form>
+                                    <form class="" action="asignarMonitor" method="get">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                    </form>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Sabado")
                                 <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
-                                    <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                  <form class="" action="modificarHorario" method="get">
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                    <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                    <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                    <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                    <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                    <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                    </form>
+                                    <form class="" action="asignarMonitor" method="get">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                    </form>
                                 </td>
                                 @break
                                 @endswitch
 
                                 @if($loop->last && $loop->iteration < 6)
                                   @for($i = 0; $i < (6-($loop->iteration)); $i++)
-                                <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Sin clase</span>
-                                    <div class="margin-10px-top font-size14">--:--</div>
-                                    <div class="font-size13 text-light-gray">Sin Monitor</div>
-                                </td>
+                                  <td>
+                                    <form class="" action="modificarHorario" method="get">
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">Tiempo: {{$clase->duracion}} min.</div>
+                                      <div class="font-size13 text-light-gray">Monitor: {{$clase->User["nombre"]}}</div>
+                                      <div class="font-size13 text-light-gray">Aforo: {{$clase->aforo}}</div>
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <input type="submit" id="editar" name="button" class="btn-sm btn-danger" value="Editar"></input>
+                                      </form>
+                                      <form class="" action="asignarMonitor" method="get">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <input type="submit" id="asignar" name="button" class="btn-sm btn-danger" value="Asignar"></input>
+                                      </form>
+                                  </td>
                                   @endfor
                                 @endif
                               @endforeach
@@ -347,8 +404,14 @@
                 </div>
 
             </div>
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"><button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%;">Editar</button></div>
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2">
+
+
+
+            </div>
+
         </div>
+
       </div>
 
 

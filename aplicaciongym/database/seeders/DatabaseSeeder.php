@@ -34,6 +34,15 @@ class DatabaseSeeder extends Seeder
         'password'=>Hash::make('profe1'),
         'rol' => 'monitor'
       ]);
+      DB::table('users')->insert([
+        'nombre'=>'profe2',
+        'apellidos'=> 'profe2',
+        'DNI' => '00000000Z',
+        'pagado' => 'si',
+        'email' => 'profe2@profe2.com',
+        'password'=>Hash::make('profe2'),
+        'rol' => 'monitor'
+      ]);
 
       DB::table('users')->insert([
         'nombre'=>'usu1',
