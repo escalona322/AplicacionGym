@@ -38,6 +38,10 @@ Route::get('entrenamientoslow', function(){
   return view('entrenamientoslow');
 })->middleware(['auth'])->name('entrenamientoslow');
 
+Route::get('prueba', function(){
+  return view('prueba');
+})->middleware(['auth'])->name('prueba');
+
 Route::get('entrenamientoscardio', function(){
   return view('entrenamientoscardio');
 })->middleware(['auth'])->name('entrenamientoscardio');

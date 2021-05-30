@@ -110,12 +110,62 @@ body{
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
-.textonavbar{
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  a{
+  font-family: 'Bungee';
+  font-size: 0.5em;
+}
+p{
+font-family: 'Bungee';
+font-size: 0.7em;
+}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  a{
+  font-family: 'Bungee';
+  font-size: 0.6em;
+}
+p{
+font-family: 'Bungee';
+font-size: 0.8em;
+}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  a{
+  font-family: 'Bungee';
+  font-size: 0.8em;
+}
+p{
+font-family: 'Bungee';
+font-size: 0.1em;
+}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  a{
+  font-family: 'Bungee';
+  font-size: 1em;
+}
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  a{
   font-family: 'Bungee';
   font-size: 1.5em;
 }
+
+}
 .textogym{
           font-family: 'Bungee', cursive;
+          font-size: 1em;
        }
 .textogymxl{
        font-family: 'Bungee', cursive;
