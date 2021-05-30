@@ -22,7 +22,7 @@ class ClaseSeeder extends Seeder
          'duracion' => 20,
          'dia' => 'Lunes',
          'turno' => '1',
-         'user_id' => 2
+         'user_id' => 3
        ]);
        DB::table('clases')->insert([
          'nombre'=>'Pilates',
@@ -30,7 +30,7 @@ class ClaseSeeder extends Seeder
          'duracion' => 20,
          'dia' => 'Martes',
          'turno' => '1',
-         'user_id' => 2
+         'user_id' => 3
        ]);
        DB::table('clases')->insert([
          'nombre'=>'AquaGym',

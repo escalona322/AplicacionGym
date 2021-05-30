@@ -26,6 +26,13 @@ Route::get('/dashboard', function () {
 
 Route::get('horarios','App\Http\Controllers\horarioController@listadoClases')->middleware(['auth'])->name('horarios');
 
+Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->middleware(['auth']);
+Route::get('update/{id}', [horarioController::class,'Modificar'])->middleware(['auth']);
+
+Route::get('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
+Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);
+
+
 Route::get('entrenamientos', function(){
   return view('entrenamientos');
 })->middleware(['auth'])->name('entrenamientos');
