@@ -29,9 +29,9 @@
 
       <form class="" action="monitorAsignado/{{$clase->id}}" method="get">
 
-                    <table class="table table-bordered table-striped text-center">
+                    <table class="table table-bordered table-striped text-center textogym">
                     <thead>
-                        <tr>
+                        <tr class="textogymmd">
                             <th>Nombre</th>
                             <th>Dia</th>
                             <th>Turno</th>
@@ -45,25 +45,25 @@
 
                     <tr>
                         <td>
-                          <div class="font-size13 ">{{$clase->nombre}}</div>
+                          <div class="font-size20">{{$clase->nombre}}</div>
                         </td>
                         <td>
-                          <div class="font-size13 ">{{$clase->dia}}</div>
+                          <div class="font-size20 ">{{$clase->dia}}</div>
                         </td>
                         <td>
                           @if($clase->turno==1)
-                          <div class="font-size13 ">9:00</div>
+                          <div class="font-size20 ">9:00</div>
                           @elseif($clase->turno==2)
-                          <div class="font-size13 ">10:00</div>
+                          <div class="font-size20 ">10:00</div>
                           @elseif($clase->turno==3)
-                          <div class="font-size13 ">17:00</div>
+                          <div class="font-size20 ">17:00</div>
                           @else
-                          <div class="font-size13 ">20:00</div>
+                          <div class="font-size20 ">20:00</div>
                           @endif
 
                         </td>
                         <td>
-                          <div class="font-size13">
+                          <div class="font-size20">
                               @if($clase->user_id==null)
                                   No tiene
                                 @else
@@ -74,8 +74,13 @@
                         <td>
 
                               @foreach($users as $user)
+                               @if($clase->user_id == $user->id)
                               <label>{{$user->nombre}}</label>
                                 <input type="radio" name="mon" value="{{$user->id}}" checked><br/>
+                                @else
+                                <label>{{$user->nombre}}</label>
+                                  <input type="radio" name="mon" value="{{$user->id}}"><br/>
+                              @endif
                               @endforeach
                               <label>Desasignar</label>
                                 <input type="radio" name="mon" value="{{$user->id==null}}"><br/>
@@ -92,7 +97,8 @@
                   </table>
 
 
-    <input type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"></input>
+<button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
+<button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='horarios'"><i class="fas fa-undo"></i></button>
 </form>
 
 

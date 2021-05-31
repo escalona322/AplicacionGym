@@ -31,8 +31,10 @@
 
                     <table class="table table-bordered table-striped text-center">
                     <thead>
-                        <tr>
+                        <tr class="textogymmd">
                             <th>Nombre</th>
+                            <th>Dia</th>
+                            <th>Turno</th>
                             <th>Aforo</th>
                             <th>Duracion</th>
                             <th>Monitor</th>
@@ -42,18 +44,44 @@
 
 
 
-                    <tr>
+                    <tr class="textogymmd">
                         <td>
-                          <div class="font-size13 "><input type="text" name="nombre" value="{{$clase->nombre}}"></div>
+                          <div class="font-size14"><input type="text" name="nombre" value="{{$clase->nombre}}" size="10"></div>
                         </td>
                         <td>
-                          <div class="font-size13"><input type="text" name="aforo" value="{{$clase->aforo}}"> personas</div>
+                          <div class="font-size14 ">{{$clase->dia}}</div>
                         </td>
                         <td>
-                          <div class="font-size13 "><input type="text" name="duracion" value="{{$clase->duracion}}"> minutos</div>
+                          @if($clase->turno==1)
+                          <div class="font-size14 ">9:00</div>
+                          @elseif($clase->turno==2)
+                          <div class="font-size14 ">10:00</div>
+                          @elseif($clase->turno==3)
+                          <div class="font-size14 ">17:00</div>
+                          @else
+                          <div class="font-size14 ">20:00</div>
+                          @endif
+
                         </td>
                         <td>
-                          <div class="font-size13 ">{{$clase->User['nombre']}}</div>
+                          <div class="font-size14"><input type="number" min="10" max="50" name="aforo" value="{{$clase->aforo}}" size="10"> personas</div>
+                        </td>
+                        <td>
+                          <div class="font-size14"><input type="number" min="10" max="50" name="duracion" value="{{$clase->duracion}}" size="10"> minutos</div>
+                        </td>
+
+                        <td>
+
+
+
+
+                           @if($clase->user_id==null)
+                              <div class="font-size13">Sin asignar</div>
+                            @else
+
+                            <div class="font-size13 ">{{$clase->User['nombre']}}</div>
+                          @endif
+
                         </td>
 
                     </tr>
@@ -62,7 +90,9 @@
                   </table>
 
 
-    <input type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"></input>
+    <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
+    <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='horarios'"><i class="fas fa-undo"></i></button>
+
 </form>
 
 
