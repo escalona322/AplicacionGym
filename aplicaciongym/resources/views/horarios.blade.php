@@ -58,48 +58,72 @@
                                 <td>
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                     <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                    @if($clase->user_id==null)
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                    @else
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                    @endif
                                     <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                 </td>
                                @break
 
                                 @case($clase->turno==1 && $clase->dia=="Martes")
                                 <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                     <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                    @if($clase->user_id==null)
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                    @else
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                    @endif
                                     <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Miercoles")
                                 <td>
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                    <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                    @if($clase->user_id==null)
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                    @else
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                    @endif
                                     <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Jueves")
                                 <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                    <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                    @if($clase->user_id==null)
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                    @else
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                    @endif
                                     <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Viernes")
                                 <td>
                                     <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                    <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                    @if($clase->user_id==null)
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                    @else
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                    @endif
                                     <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                 </td>
                                 @break
                                 @case($clase->turno==1 && $clase->dia=="Sabado")
                                 <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                    <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                    <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                    <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                    <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                    @if($clase->user_id==null)
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                    @else
+                                    <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                    @endif
                                     <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                 </td>
                                 @break
@@ -107,11 +131,16 @@
 
                                 @if($loop->last && $loop->iteration < 6)
                                   @for($i = 0; $i < (6-($loop->iteration)); $i++)
-                                <td>
-                                    <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Sin clase</span>
-                                    <div class="margin-10px-top font-size14">--:--</div>
-                                    <div class="font-size13 text-light-gray">Sin Monitor</div>
-                                </td>
+                                  <td>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
+                                      <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                  </td>
                                   @endfor
                                 @endif
                               @endforeach
@@ -130,52 +159,72 @@
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
-                                      <div class="form-check form-switch form-switch-sm">
-                                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                                      <label class="form-check-label" for="flexSwitchCheckDefault">Apuntado</label>
-                                      </div>
                                   </td>
                                  @break
 
                                   @case($clase->turno==2 && $clase->dia=="Martes")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==2 && $clase->dia=="Miercoles")
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==2 && $clase->dia=="Jueves")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==2 && $clase->dia=="Viernes")
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==2 && $clase->dia=="Sabado")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
@@ -185,11 +234,16 @@
                                   @endswitch
                                   @if($loop->last && $loop->iteration < 6)
                                     @for($i = 0; $i < (6-($loop->iteration)); $i++)
-                                  <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Sin clase</span>
-                                      <div class="margin-10px-top font-size14">--:--</div>
-                                      <div class="font-size13 text-light-gray">Sin Monitor</div>
-                                  </td>
+                                    <td>
+                                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                        <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                        @if($clase->user_id==null)
+                                        <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                        @else
+                                        <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                        @endif
+                                        <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                    </td>
                                     @endfor
                                   @endif
 
@@ -208,48 +262,72 @@
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                  @break
 
                                   @case($clase->turno==3 && $clase->dia=="Martes")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==3 && $clase->dia=="Miercoles")
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==3 && $clase->dia=="Jueves")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==3 && $clase->dia=="Viernes")
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==3 && $clase->dia=="Sabado")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
@@ -259,11 +337,16 @@
                                   @endswitch
                                   @if($loop->last && $loop->iteration < 6)
                                     @for($i = 0; $i < (6-($loop->iteration)); $i++)
-                                  <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Sin clase</span>
-                                      <div class="margin-10px-top font-size14">--:--</div>
-                                      <div class="font-size13 text-light-gray">Sin Monitor</div>
-                                  </td>
+                                    <td>
+                                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                        <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                        @if($clase->user_id==null)
+                                        <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                        @else
+                                        <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                        @endif
+                                        <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                    </td>
                                     @endfor
                                   @endif
 
@@ -280,48 +363,72 @@
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                  @break
 
                                   @case($clase->turno==4 && $clase->dia=="Martes")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                       <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==4 && $clase->dia=="Miercoles")
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==4 && $clase->dia=="Jueves")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==4 && $clase->dia=="Viernes")
                                   <td>
                                       <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
                                   @case($clase->turno==4 && $clase->dia=="Sabado")
                                   <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
-                                      <div class="margin-10px-top font-size14">{{$clase->duracion}}  min.</div>
-                                      <div class="font-size13 text-light-gray">{{$clase->User["nombre"]}}</div>
+                                      <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                      <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                      @if($clase->user_id==null)
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                      @else
+                                      <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                      @endif
                                       <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
                                   </td>
                                   @break
@@ -331,11 +438,16 @@
                                   @endswitch
                                   @if($loop->last && $loop->iteration < 6)
                                     @for($i = 0; $i < (6-($loop->iteration)); $i++)
-                                  <td>
-                                      <span class="bg-yellow padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">Sin clase</span>
-                                      <div class="margin-10px-top font-size14">--:--</div>
-                                      <div class="font-size13 text-light-gray">Sin Monitor</div>
-                                  </td>
+                                    <td>
+                                        <span class="bg-sky padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                        <div class="margin-10px-top font-size14">{{$clase->duracion}} min.</div>
+                                        @if($clase->user_id==null)
+                                        <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
+                                        @else
+                                        <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
+                                        @endif
+                                        <div class="font-size13 text-light-gray">0/{{$clase->aforo}}</div>
+                                    </td>
                                     @endfor
                                   @endif
 

@@ -32,7 +32,7 @@
                     <img src="img/content/timetable.png" alt="">
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped text-center table-dark" style="margin-bottom: 10%;">
+                    <table class="table table-bordered table-striped text-center table-active" style="margin-bottom: 10%;">
                         <thead>
                             <tr class="bg-light-gray textogymmd">
                                 <th class="text-uppercase">Hora</th>
@@ -63,7 +63,7 @@
                                     <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                     <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                     <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-danger" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                     </form>
 
                                     <form class="" action="asignarMonitor" method="get">
@@ -73,7 +73,7 @@
                                       @else
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                       @endif
-                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-danger" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                     </form>
                                 </td>
                                @break
@@ -85,7 +85,7 @@
                                     <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                     <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                     <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-info" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                     </form>
 
                                     <form class="" action="asignarMonitor" method="get">
@@ -95,7 +95,7 @@
                                       @else
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                       @endif
-                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-info" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                     </form>
                                 </td>
                                 @break
@@ -106,7 +106,7 @@
                                     <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                     <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                     <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-success" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                     </form>
 
                                     <form class="" action="asignarMonitor" method="get">
@@ -116,7 +116,7 @@
                                       @else
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                       @endif
-                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-success" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                     </form>
                                 </td>
                                 @break
@@ -127,7 +127,7 @@
                                     <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                     <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                     <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-warning" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                     </form>
 
                                     <form class="" action="asignarMonitor" method="get">
@@ -137,7 +137,7 @@
                                       @else
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                       @endif
-                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-warning" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                     </form>
                                 </td>
                                 @break
@@ -148,7 +148,7 @@
                                     <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                     <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                     <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-primary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                     </form>
 
                                     <form class="" action="asignarMonitor" method="get">
@@ -158,7 +158,7 @@
                                       @else
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                       @endif
-                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-primary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                     </form>
                                 </td>
                                 @break
@@ -169,17 +169,17 @@
                                     <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                     <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                     <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-secondary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                    <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                     </form>
 
-                                    <form class="" action="asignarMonitor" method="get" style="display:inline" >
+                                    <form class="" action="asignarMonitor" method="get">
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
                                       @if($clase->user_id==null)
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
                                       @else
                                       <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                       @endif
-                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-secondary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                      <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                     </form>
                                 </td>
                                 @break
@@ -203,7 +203,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-danger" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -213,7 +213,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-danger" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                  @break
@@ -225,7 +225,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-info" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -235,7 +235,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-info" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -246,7 +246,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-success" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -256,7 +256,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-success" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -267,7 +267,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-warning" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -277,7 +277,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-warning" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -288,7 +288,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-primary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -298,7 +298,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-primary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -309,17 +309,17 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-secondary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
-                                      <form class="" action="asignarMonitor" method="get" style="display:inline" >
+                                      <form class="" action="asignarMonitor" method="get">
                                         <input type="text" name="id" value="{{$clase->id}}" hidden>
                                         @if($clase->user_id==null)
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-secondary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -341,7 +341,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-danger" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -351,7 +351,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-danger" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                  @break
@@ -363,7 +363,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-info" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -373,7 +373,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-info" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -384,7 +384,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-success" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -394,7 +394,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-success" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -405,7 +405,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-warning" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -415,7 +415,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-warning" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -426,7 +426,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-primary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -436,7 +436,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-primary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -447,17 +447,17 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-secondary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
-                                      <form class="" action="asignarMonitor" method="get" style="display:inline" >
+                                      <form class="" action="asignarMonitor" method="get">
                                         <input type="text" name="id" value="{{$clase->id}}" hidden>
                                         @if($clase->user_id==null)
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-secondary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -477,7 +477,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-danger" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -487,7 +487,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-danger" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                  @break
@@ -499,7 +499,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-info" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -509,7 +509,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-info" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -520,7 +520,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-success" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -530,7 +530,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-success" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -541,7 +541,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-warning" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -551,7 +551,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-warning" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -562,7 +562,7 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-primary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
                                       <form class="" action="asignarMonitor" method="get">
@@ -572,7 +572,7 @@
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-primary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break
@@ -583,17 +583,17 @@
                                       <div class="margin-10px-top font-size14"><i class="far fa-clock"></i> {{$clase->duracion}} min</div>
                                       <div class="margin-10px-bottom font-size14"><i class="fas fa-users"></i></i> {{$clase->aforo}} personas</div>
                                       <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-secondary" alt="Editar clase"><i class="fas fa-edit"></i></button>
+                                      <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                       </form>
 
-                                      <form class="" action="asignarMonitor" method="get" style="display:inline" >
+                                      <form class="" action="asignarMonitor" method="get">
                                         <input type="text" name="id" value="{{$clase->id}}" hidden>
                                         @if($clase->user_id==null)
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> Sin asignar</div>
                                         @else
                                         <div class="margin-10px-bottom margin-10px-top font-size14"><i class="fas fa-chalkboard-teacher"></i> {{$clase->User["nombre"]}}</div>
                                         @endif
-                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-secondary" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
+                                        <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor"><i class="fas fa-user-tag"></i></button>
                                       </form>
                                   </td>
                                   @break

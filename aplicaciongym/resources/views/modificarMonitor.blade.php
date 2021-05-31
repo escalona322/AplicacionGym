@@ -27,17 +27,16 @@
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
 
-      <form class="" action="update/{{$clase->id }}" method="get">
+      <form class="" action="updateMoni/{{$monis->id }}" method="get">
 
                     <table class="table table-bordered table-striped text-center">
                     <thead>
                         <tr class="textogymmd">
-                            <th>Nombre</th>
-                            <th>Dia</th>
-                            <th>Turno</th>
-                            <th>Aforo</th>
-                            <th>Duracion</th>
-                            <th>Monitor</th>
+                          <th>Nombre</th>
+                          <th>Apellidos</th>
+                          <th>DNI</th>
+                          <th>Email</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -46,43 +45,18 @@
 
                     <tr class="textogymmd">
                         <td>
-                          <div class="font-size14"><input type="text" name="nombre" value="{{$clase->nombre}}" size="10" required></div>
+                          <div class="font-size14"><input type="text" name="nombre" value="{{$monis->nombre}}" size="15"></div>
                         </td>
                         <td>
-                          <div class="font-size14 ">{{$clase->dia}}</div>
+                          <div class="font-size14"><input type="text" name="apellidos" value="{{$monis->apellidos}}" size="15"></div>
                         </td>
                         <td>
-                          @if($clase->turno==1)
-                          <div class="font-size14 ">9:00</div>
-                          @elseif($clase->turno==2)
-                          <div class="font-size14 ">10:00</div>
-                          @elseif($clase->turno==3)
-                          <div class="font-size14 ">17:00</div>
-                          @else
-                          <div class="font-size14 ">20:00</div>
-                          @endif
-
+                          <div class="font-size14"><input type="text" name="dni" value="{{$monis->DNI}}" size="15" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra"></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="number" min="10" max="50" name="aforo" value="{{$clase->aforo}}" size="10" required> personas</div>
-                        </td>
-                        <td>
-                          <div class="font-size14"><input type="number" min="10" max="120" name="duracion" value="{{$clase->duracion}}" size="10" required> minutos</div>
+                          <div class="font-size14"><input type="email" name="email" value="{{$monis->email}}" size="25"></div>
                         </td>
 
-                        <td>
-
-
-
-
-                           @if($clase->user_id==null)
-                              <div class="font-size13">Sin asignar</div>
-                            @else
-
-                            <div class="font-size13 ">{{$clase->User['nombre']}}</div>
-                          @endif
-
-                        </td>
 
                     </tr>
 
@@ -91,7 +65,7 @@
 
 
     <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
-    <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='horarios'"><i class="fas fa-undo"></i></button>
+    <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='entrenamientos'"><i class="fas fa-undo"></i></button>
 
 </form>
 

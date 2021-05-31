@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
   </head>
   <body>
       @section('navbar')

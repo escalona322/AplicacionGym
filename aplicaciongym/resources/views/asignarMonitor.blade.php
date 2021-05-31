@@ -35,8 +35,8 @@
                             <th>Nombre</th>
                             <th>Dia</th>
                             <th>Turno</th>
-                            <th>Asignado</th>
-                            <th>Lista Monitores</th>
+                            <th>Actual</th>
+                            <th>Monitores</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,12 +82,11 @@
                                   <input type="radio" name="mon" value="{{$user->id}}"><br/>
                               @endif
                               @endforeach
-                              <label>Desasignar</label>
+                              <label>Sin monitor</label>
                                 <input type="radio" name="mon" value="{{$user->id==null}}"><br/>
 
 
                         </td>
-
                     </tr>
 
 

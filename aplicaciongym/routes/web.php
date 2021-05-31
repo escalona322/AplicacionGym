@@ -3,8 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\horarioController;
 use App\Http\Controllers\gimnasioController;
+use App\Http\Controllers\entrenamientoController;
 use App\Models\clase;
 use App\Models\User;
+use App\Models\entrenamiento;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,18 +26,26 @@ Route::get('/dashboard', function () {
     return view('inicio');
 })->middleware(['auth'])->name('inicio');
 
+//Ruta que lleva a la controladora y separa el usaro sgún el rol a una u otra pagina
 Route::get('horarios','App\Http\Controllers\horarioController@listadoClases')->middleware(['auth'])->name('horarios');
+//Ruta que lleva a la controladora y separa el usaro sgún el rol a una u otra pagina
+Route::get('entrenamientos','App\Http\Controllers\entrenamientoController@listadoMonitoresOEntrenamientos')->middleware(['auth'])->name('entrenamientos');
 
+
+//Ruta modificar horario
 Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->middleware(['auth']);
 Route::get('update/{id}', [horarioController::class,'Modificar'])->middleware(['auth']);
-
+//Ruta asignar monitor a una clase
 Route::get('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
 Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);
-
-
-Route::get('entrenamientos', function(){
-  return view('entrenamientos');
-})->middleware(['auth'])->name('entrenamientos');
+//Ruta para modificar un monitor
+Route::get('modificarMonitor', [entrenamientoController::class,'modificarMonitor'])->middleware(['auth']);
+Route::get('updateMoni/{id}', [entrenamientoController::class,'Modificar'])->middleware(['auth']);
+//Ruta para crear un monitor
+Route::get('crearMonitor', [entrenamientoController::class,'crearMonitor'])->middleware(['auth']);
+Route::get('createMoni', [entrenamientoController::class,'Crear'])->middleware(['auth']);
+//Ruta para eliminar un monitor
+Route::get('eliminarMonitor', [entrenamientoController::class,'eliminarMonitor'])->middleware(['auth']);
 
 Route::get('entrenamientosupper', function(){
   return view('entrenamientosupper');
