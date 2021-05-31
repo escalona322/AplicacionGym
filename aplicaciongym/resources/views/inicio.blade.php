@@ -42,7 +42,7 @@
 
               </div>
           <div class="row my-5">
-              <h4>Bienvenido a Sportakus, durante más de 20 años hemos estado ayudando a nuestros clientes para encontrar su estado físico óptimo.
+              <h4 class="textogym">Bienvenido a Sportakus, durante más de 20 años hemos estado ayudando a nuestros clientes para encontrar su estado físico óptimo.
               Redescubre nuestro nuevo aspecto, clases, horarios , y todo tipo de dudas sobre nosotros y nuestras instalaciones.
               <br>Te esperamos!</h4>
           </div>
@@ -61,8 +61,8 @@
                   <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{asset('imgs/gym5.jpg')}}" alt="Card image cap">
                       <div class="card-body">
-                    <h5 class="card-title">Entrenamientos</h5>
-                  <p class="card-text">Disfruta de nuestros entrenamientos personalizados de la mano de nuestros monitores. </p>
+                    <h5 class="card-title textogym">Entrenamientos</h5>
+                  <p class="card-text texto">Disfruta de nuestros entrenamientos personalizados de la mano de nuestros monitores. </p>
                   <a href="{{ route('entrenamientos') }}" class="btn btn-primary">Entrenamientos </a>
                       </div>
                   </div>
@@ -73,8 +73,8 @@
                   <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{asset('imgs/gym4.jpg')}}" alt="Card image cap">
                       <div class="card-body">
-                    <h5 class="card-title">Horarios</h5>
-                  <p class="card-text">Disfruta de nuestros horarios actualizados al dia y ven a la clase que mas se amolde a tu tiempo.</p>
+                    <h5 class="card-title textogym">Horarios</h5>
+                  <p class="card-text texto">Disfruta de nuestros horarios actualizados al dia y ven a la clase que mas se amolde a tu tiempo.</p>
                   <a href="{{ route('horarios') }}" class="btn btn-primary">Horarios</a>
                       </div>
                   </div>
@@ -85,8 +85,8 @@
                   <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{asset('imgs/perfil.jpg')}}" alt="Card image cap">
                       <div class="card-body">
-                    <h5 class="card-title">Perfil</h5>
-                  <p class="card-text">Revisa si estas al corriente de pago y tu informacion personal, podras editarla y revisar todo lo referente a tu estancia en Sportakus.</p>
+                    <h5 class="card-title textogym">Perfil</h5>
+                  <p class="card-text texto">Revisa si estas al corriente de pago y tu informacion personal, podras editarla y revisar todo lo referente a tu estancia en Sportakus.</p>
                   <a  href="{{ route('perfil') }}" class="btn btn-primary">Perfil</a>
                       </div>
                   </div>

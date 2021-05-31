@@ -61,7 +61,7 @@ text-align: center;
 </style>
   <footer class="footer bg-dark rounded-top text-center">
     <div class="container py-2">
-      <p class="text-white my-2 "> Gimnasio Sportakus &copy;</p>
+      <h4 class="text-white my-3 "> Gimnasio Sportakus &copy;</h4>
 
 
     </div>
