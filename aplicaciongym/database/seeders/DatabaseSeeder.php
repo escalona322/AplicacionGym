@@ -57,5 +57,9 @@ class DatabaseSeeder extends Seeder
       $this->call([
           ClaseSeeder::class
         ]);
+
+        $this->call([
+            EntrenamientoSeeder::class
+          ]);
     }
 }

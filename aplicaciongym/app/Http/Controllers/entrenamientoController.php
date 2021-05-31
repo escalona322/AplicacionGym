@@ -25,7 +25,7 @@ class entrenamientoController extends Controller
                break;
 
                case 'monitor':
-                   return view('entrenamientos',['clases' => $clases]);
+                   return view('entrenamientosanadir',['clases' => $clases]);
                break;
 
                case 'usuario':
@@ -37,6 +37,7 @@ class entrenamientoController extends Controller
                break;
              }
            }
+
 
           //Crear monitor
            public function crearMonitor(Request $datos){

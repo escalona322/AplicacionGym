@@ -31,7 +31,6 @@ Route::get('horarios','App\Http\Controllers\horarioController@listadoClases')->m
 //Ruta que lleva a la controladora y separa el usaro sgún el rol a una u otra pagina
 Route::get('entrenamientos','App\Http\Controllers\entrenamientoController@listadoMonitoresOEntrenamientos')->middleware(['auth'])->name('entrenamientos');
 
-
 //Ruta modificar horario
 Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->middleware(['auth']);
 Route::get('update/{id}', [horarioController::class,'Modificar'])->middleware(['auth']);
