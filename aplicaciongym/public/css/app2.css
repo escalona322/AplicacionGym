@@ -163,6 +163,29 @@ border-radius: 6em;
 .labelinputs{
   width: 5em;
 }
+.textoejercicio{
+       font-family: 'Bungee', cursive;
+        font-size: 2em;
+  }
+  .cardsejercicio{
+  border-radius: 3em;
+  box-shadow:  5px -5px 10px black,
+              -5px 5px 10px black;
+  width: 10em;
+  height: 4em;
+}
+.texto{
+  font-size: 1em;
+}
+.videoyt{
+  height: 25em;
+  width: 45em;
+}
+
+
+
+
+
 
 /*switch de horarios*/
 .form-switch.form-switch-sm .form-check-input {
