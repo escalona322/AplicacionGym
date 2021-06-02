@@ -24,41 +24,46 @@
   <body>
     <div style="margin: 6em;">
       <div class="container-fluid">
+        @foreach($entre as $entrenamiento)
 
         <div class="row my-2">
-            <p class="textoejercicio text-center">Ejercicio: Sentadillas</p>
+            <p class="textoejercicio text-center">Ejercicio:<span class="text-center mx-2 txblack">{{$entrenamiento->nombre}}</span>
         </div>
         <div class="row my-2">
-          <p class="textoejercicio text-center">Intensidad: Baja</p>
+          <p class="textoejercicio text-center">Intensidad: <span class="text-center mx-2 txblack">{{$entrenamiento->intensidad}}</span>
         </div>
         <div class="row my-2">
-            <p class="textoejercicio text-center">Tipo: Low Body</p>
+            <p class="textoejercicio text-center">Tipo: <span class="text-center mx-2 txblack"> {{$entrenamiento->tipo}}</span>
         </div>
         <div class="row my-2">
-          <p class="textoejercicio text-center">Repeticiones: 15</p>
+          <p class="textoejercicio text-center ">Repeticiones: <span class="text-center mx-2 txblack">{{$entrenamiento->repeticiones}}</span>
         </div>
         <div class="row my-2">
-            <p class="textoejercicio text-center">Series: 3</p>
+            <p class="textoejercicio text-center">Series: <span class="text-center mx-2 txblack">{{$entrenamiento->series}}</span></p>
+        </div>
+        <div class="row my-2">
+            <p class="textoejercicio text-center">Kcalorias medias:<span class="text-center mx-2 txblack">{{$entrenamiento->Kcalorias}}</span>
         </div>
         <div class="row my-2">
           <p class="textoejercicio text-center">Descripción</p>
         </div>
         <div class="row my-2">
-          <p class="textogym text-center">El ejercicio consiste en flexionar las rodillas y bajar el cuerpo manteniendo la verticalidad, <br>
-            para luego regresar a una posición erguida.<br>
-             Por lo general, mientras realiza sentadillas,<br>
-             la persona sostiene algún peso con sus brazos o el cuello.</p>
+          <div class="col">                    </div>
+          <div class="col"> <p class="textogym text-center">{{$entrenamiento->descripcion}}</p>                   </div>
+          <div class="col">                    </div>
+
         </div>
         <div class="row my-5">
           <div class="col">
           </div>
           <div class="col">
-            <iframe class="videoyt" src="https://www.youtube.com/embed/Yw86UcprH1M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="videoyt" src="{{$entrenamiento->videoyt}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="col">
           </div>
           </div>
       </div>
+      @endforeach
     </div>
 
   </body>

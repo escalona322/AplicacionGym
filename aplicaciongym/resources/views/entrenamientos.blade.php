@@ -32,61 +32,14 @@
                 <div class="row">
                     <p class="textogymxl text-center"> Página Principal </p>
                 </div>
-                <div class="container contenedorentrenos overflow-auto">
-                    <div class="row fondoentrenos">
-                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
-                      <div class="col">
-
-                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
-                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
-                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
-                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
-                    </div>
-                    <div class="row fondoentrenos">
-                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
-                      <div class="col">
-
-                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
-                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
-                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
-                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
-                    </div>
-                    <div class="row fondoentrenos">
-                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
-                      <div class="col">
-
-                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
-                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
-                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
-                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
-                    </div>
-                    <div class="row fondoentrenos">
-                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
-                      <div class="col">
-
-                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
-                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
-                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
-                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
-                    </div>
-                    <div class="row fondoentrenos">
-                      <div class="col"><p class="textogymxl">Sentadillas</p></div>
-                      <div class="col">
-
-                            <div class="row"><p class="textogym my-3">Series: 3</p></div>
-                            <div class="row"><p class="textogym">Repeticiones: 15</p></div>
-                        </div>                           <!--   el numero de enseñarentreno() corresponde al identrenos -->
-                      <div class="col"> <button class="botonentrenos" onclick="enseñarentreno(1)"> Más Información </button></div>
-                    </div>
-
-                </div>
                 <div class="container contenedorcards ">
                     <div class="row">
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno">
                             <div class="card-body">
-                              <h5 class="card-title">Entrenamiento Upper Body</h5>
-                              <a href="{{ route('entrenamientosupper') }}" class="btn btn-primary"> Upper Body </a>
+                              <form class="" action="listadoEntreUpper" method="get">
+                                <button class="botonentrenos" type="submit" name="button">Entrenamiento Upper</button>
+                              </form>
                             </div>
                         </div>
                       </div>
@@ -94,19 +47,20 @@
                         <div class="card text-center textogym cardsentreno">
 
                             <div class="card-body">
-                          <h5 class="card-title">Entrenamiento Low body</h5>
-
-                        <a href="{{ route('entrenamientoslow') }}" class="btn btn-primary"> Low Body </a>
+                        <form class="" action="listadoEntreLow" method="get">
+                          <button class="botonentrenos" type="submit" name="button">Entrenamiento low</button>
+                        </form>
                             </div>
                         </div>
                       </div>
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno" >
 
-                            <div class="card-body">
-                          <h5 class="card-title">Entrenamiento Cardio</h5>
+                            <div class="card-body">                      
 
-                        <a href="{{ route('entrenamientoscardio') }}" class="btn btn-primary"> Cardio </a>
+                          <form class="" action="listadoEntreCardio" method="get">
+                            <button class="botonentrenos" type="submit" name="button">Entrenamiento Cardio</button>
+                          </form>
                             </div>
                         </div>
                       </div>

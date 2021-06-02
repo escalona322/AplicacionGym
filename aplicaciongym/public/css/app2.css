@@ -143,6 +143,12 @@ a:hover {
        margin-top: 0.5em;
        margin-bottom: 0.5em;
 }
+.textogyml{
+       font-family: 'Bungee', cursive;
+       font-size: 1.75em;
+       margin-top: 0.5em;
+       margin-bottom: 0.5em;
+}
 .fondoentrenos{
   background: rgb(149,90,90);
 background: linear-gradient(90deg, rgba(149,90,90,1) 0%, rgba(215,70,70,1) 50%, rgba(149,90,90,1) 100%);
@@ -169,7 +175,7 @@ margin-top: 2em;
 font-family: 'Bungee', cursive;
 font-size: 1em;
 color: black;
-margin-top: 1.8em;
+margin-top: 1em;
 height: 3em;
 width: 16em;
 border-radius: 6em;
@@ -177,9 +183,20 @@ border-radius: 6em;
 .labelinputs{
   width: 5em;
 }
+.inputtextarea{
+  height: 7em;
+  resize: none;
+}
+.inputcalorias{
+  margin-left: -25em;
+}
 .textoejercicio{
        font-family: 'Bungee', cursive;
         font-size: 2em;
+      color: #AF0606;
+  }
+  .txblack{
+    color: black;
   }
   .cardsejercicio{
   border-radius: 3em;
@@ -199,14 +216,11 @@ border-radius: 6em;
 
 
 
-
-
 /*switch de horarios*/
 .form-switch.form-switch-sm .form-check-input {
-
   height: 1rem;
   width: calc(1rem + 0.75rem);
   border-radius: 2rem;
   background-color: rgba(149,90,90,1);
-outline-style: none;
+  outline-style: none;
 }

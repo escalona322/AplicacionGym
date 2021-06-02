@@ -16,6 +16,7 @@ class entrenamientoController extends Controller
       $clases=clase::All();
       $users = User::All();
       $user=Auth::user();
+      $entrenamientos = Entrenamiento::All();
        //Ver diferentes blades conforme a tu Auth
        $usr = User::where('rol','monitor')->get();
          switch(Auth::user()->rol){
@@ -25,7 +26,7 @@ class entrenamientoController extends Controller
                break;
 
                case 'monitor':
-                   return view('entrenamientosanadir',['clases' => $clases]);
+                   return view('entrenamientosmoni',['clases' => $clases]);
                break;
 
                case 'usuario':
@@ -38,10 +39,32 @@ class entrenamientoController extends Controller
              }
            }
 
+          public function listadoEntreLow(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Low')->get();
+            return view('entrenamientoslow',['entre' => $entr]);
+          }
+
+          public function listadoEntreUpper(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Upper')->get();
+            return view('entrenamientosupper',['entre' => $entr]);
+          }
+
+          public function listadoEntreCardio(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Cardio')->get();
+            return view('entrenamientoscardio',['entre' => $entr]);
+          }
+
+          public function verDetallesEntrenamiento(Request $request, $id){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('id', $id)->get();
+            return view('verentrenamiento',['entre' => $entr]);
+          }
 
           //Crear monitor
            public function crearMonitor(Request $datos){
-
                 return view('crearMonitor');
            }
 
@@ -55,6 +78,25 @@ class entrenamientoController extends Controller
                 $user->DNI=$datos->dni;
                 $user->email=$datos->email;
                 $user->save();
+
+              return redirect('/entrenamientos');
+           }
+
+           public function CrearEntrenamiento(Request $datos, $id){
+             $entrenamiento = new User;
+             $user=user::find($datos->id);
+
+                $entrenamiento = new Entrenamiento;
+                $entrenamiento->intensidad=$datos->intensidad;
+                $entrenamiento->tipo=$datos->tipo;
+                $entrenamiento->nombre=$datos->nombre;
+                $entrenamiento->repeticiones=$datos->repeticiones;
+                $entrenamiento->series=$datos->series;
+                $entrenamiento->videoyt=$datos->videoyt;
+                $entrenamiento->descripcion=$datos->descripcion;
+
+                $entrenamiento->Kcalorias=$datos->Kcalorias;
+                $entrenamiento->save();
 
               return redirect('/entrenamientos');
            }

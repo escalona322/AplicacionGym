@@ -73,15 +73,22 @@
                                                </div>
                                        </div>
                                    </div>
-                                   <div class="form-group">
-                                      <input type="file" name="" value="">
-                                   </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col mx-3"> <span class="textogym">Kcalorias:  </div>
+                                    <div class="col"> <input class="inputcalorias" type="number" name="Kcalorias" value="">  </div>
+                                    </div>
+                                  <div class="row">
+                                    <span class="textogym">Descripción</span>
+
+                                    </div>
+                                    <div class="row">
+                                    <textarea class="inputtextarea"name="descripcion" rows="4" cols="30"></textarea>
+                                      </div>
                                <div class="card-footer"> <button type="button" class="subscribe btn btn-primary btn-block shadow-sm">Guardar entrenamiento </button>
                            </form>
                 </div>
-                <div class="container contenedorcards ">
 
-                </div>
             </div>
 
         </div>
