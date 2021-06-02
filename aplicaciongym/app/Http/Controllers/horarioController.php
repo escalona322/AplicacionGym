@@ -1,10 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 use App\Models\clase;
+use App\Models\Seapuntan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+
 
 class horarioController extends Controller
 {
@@ -13,20 +16,23 @@ class horarioController extends Controller
        $clases=clase::All();
        $users = User::All();
        $user=Auth::user();
+
         //Ver diferentes blades conforme a tu Auth
+
+        $apuntados = Seapuntan::All();
 
           switch(Auth::user()->rol){
 
                 case 'admin':
-                  return view('horariosAdmin',['clases' => $clases]);
+                  return view('horariosAdmin',['clases' => $clases],['clase1' => $apuntados]);
                 break;
 
                 case 'monitor':
-                    return view('horariosMonitor',['clases' => $clases]);
+                    return view('horariosMonitor',['clases' => $clases],['apuntados' => $apuntados]);
                 break;
 
                 case 'usuario':
-                  return view('horarios',['clases' => $clases]);
+                  return view('horarios',['clases' => $clases],['apuntados' => $apuntados]);
                 break;
 
                 default:
@@ -53,6 +59,70 @@ class horarioController extends Controller
 
               $clases=clase::All();
                return redirect('/horarios');
+
+            }
+
+            public function MasClase(Request $datos){
+              //datos ==  seapuntan
+
+              $idclase = Seapuntan::find($datos->id);
+
+              $iduser = Auth::user()->id;
+
+              $apuntados = Seapuntan::All();
+              $esta=0;
+
+              foreach ($apuntados as $key) {
+                if($key->clase_id===$idclase->clase_id && $key->user_id===$iduser)
+                $esta=1;
+              }
+
+                if ($esta==1) {
+                  return redirect('/horarios');
+
+                }else{
+                  $seapuntan = new Seapuntan;
+                  $seapuntan->user_id=$iduser;
+                  $seapuntan->clase_id=$idclase->clase_id;
+                  $seapuntan->save();
+                  return redirect('/horarios');
+                }
+
+
+
+
+
+
+
+            }
+
+            public function MenosClase(Request $datos){
+              $idclase = Seapuntan::find($datos->id);
+
+              $iduser = Auth::user()->id;
+
+              $apuntados = Seapuntan::All();
+              $esta=0;
+
+              foreach ($apuntados as $key) {
+                if($key->clase_id===$idclase->clase_id && $key->user_id===$iduser)
+                $esta=1;
+              }
+
+                if ($esta==1) {
+                  $seapuntan = Seapuntan::where('user_id',$iduser)->where('clase_id',$idclase->clase_id);
+                 $seapuntan->delete();
+                  return redirect('/horarios');
+
+                }else{
+
+
+                  return redirect('/horarios');
+                }
+
+
+
+
 
             }
 
