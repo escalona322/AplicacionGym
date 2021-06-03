@@ -22,7 +22,7 @@ class CreateEntrenamientosTable extends Migration
             $table->integer('repeticiones');
             $table->integer('series');
             $table->string('videoyt');
-            $table->string('descripcion');
+            $table->string('descripcion', 500);
             $table->string('Kcalorias');
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
         });

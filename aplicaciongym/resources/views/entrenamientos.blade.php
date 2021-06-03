@@ -25,7 +25,7 @@
       <div style="margin-top: 6em;">
         <div class="row" >
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
-                  <a href="{{ route('entrenamientosanadir') }}" class="btn btn-primary"> Link añadir entrenamiento </a>
+                  
             </div>
             <!-- PARTE DEL MEDIO -->
             <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
@@ -56,7 +56,7 @@
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno" >
 
-                            <div class="card-body">                      
+                            <div class="card-body">
 
                           <form class="" action="listadoEntreCardio" method="get">
                             <button class="botonentrenos" type="submit" name="button">Entrenamiento Cardio</button>
