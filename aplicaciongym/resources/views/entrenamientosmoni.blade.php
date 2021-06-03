@@ -25,20 +25,55 @@
       <div style="margin-top: 6em;">
         <div class="row" >
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
-                  <a href="{{ route('entrenamientosanadir') }}" class="btn btn-primary"> Link añadir entrenamiento </a>
+
             </div>
             <!-- PARTE DEL MEDIO -->
             <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
                 <div class="row">
                     <p class="textogymxl text-center"> Página Principal </p>
                 </div>
-                <div class="container contenedorcards ">
+            <div class="container contenedormonis">
+              <div class="row">
+                <div class="col my-3">
+                  <div class="card text-center textogym cardsentreno">
+                      <div class="card-body">
+                        <form class="" action="linkEditarEntreno" method="get">
+                          <button class="botonforms" type="submit" name="button">Editar entrenamiento</button>
+                        </form>
+                      </div>
+                  </div>
+                </div>
+                <div class="col my-3">
+                  <div class="card text-center textogym cardsentreno">
+
+                      <div class="card-body">
+                  <form class="" action="entrenamientosanadir" method="get">
+                    <button class="botonforms" type="submit" name="button">Añadir entrenamiento</button>
+                  </form>
+                      </div>
+                  </div>
+                </div>
+                <div class="col my-3">
+                  <div class="card text-center textogym cardsentreno" >
+
+                      <div class="card-body">
+
+                    <form class="" action="linkBorrarEntrenamiento" method="get">
+                      <button class="botonforms" type="submit" name="button">Borrar entrenamiento</button>
+                    </form>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                <div class="container contenedorcards">
                     <div class="row">
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno">
                             <div class="card-body">
                               <form class="" action="listadoEntreUpper" method="get">
-                                <button class="botonentrenos" type="submit" name="button">Entrenamiento Upper</button>
+                                <button class="botonforms" type="submit" name="button">Entrenamiento Upper</button>
                               </form>
                             </div>
                         </div>
@@ -48,7 +83,7 @@
 
                             <div class="card-body">
                         <form class="" action="listadoEntreLow" method="get">
-                          <button class="botonentrenos" type="submit" name="button">Entrenamiento low</button>
+                          <button class="botonforms" type="submit" name="button">Entrenamiento low</button>
                         </form>
                             </div>
                         </div>
@@ -59,7 +94,7 @@
                             <div class="card-body">
 
                           <form class="" action="listadoEntreCardio" method="get">
-                            <button class="botonentrenos" type="submit" name="button">Entrenamiento Cardio</button>
+                            <button class="botonforms" type="submit" name="button">Entrenamiento Cardio</button>
                           </form>
                             </div>
                         </div>

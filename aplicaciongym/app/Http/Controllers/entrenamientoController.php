@@ -45,6 +45,47 @@ class entrenamientoController extends Controller
             return view('entrenamientoslow',['entre' => $entr]);
           }
 
+          public function listaEntrenos(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            return view('entrenamientosborrar',['entre' => $entrenamientos]);
+          }
+          public function listaEntrenosEditar(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            return view('entrenamientoeditar',['entre' => $entrenamientos]);
+          }
+
+          public function borrarEntrenos(Request $datos){
+            $entrenamiento = Entrenamiento::find($datos->id);
+            $entrenamiento->delete();
+            return redirect('/entrenamientos');
+          }
+
+          public function modificarentrenamiento(Request $datos){
+               $entreMod=Entrenamiento::find($datos->id);
+
+               return view('modificarentrenamiento',['entre' => $entreMod]);
+              }
+
+
+              public function editarEntreno(Request $datos,$id){
+
+                $entrenamiento=Entrenamiento::find($datos->id);
+
+                $entrenamiento = new Entrenamiento;
+                $entrenamiento->intensidad=$datos->intensidad;
+                $entrenamiento->tipo=$datos->tipo;
+                $entrenamiento->nombre=$datos->nombre;
+                $entrenamiento->repeticiones=$datos->repeticiones;
+                $entrenamiento->series=$datos->series;
+                $entrenamiento->videoyt=$datos->videoyt;
+                $entrenamiento->descripcion=$datos->descripcion;
+
+                $entrenamiento->Kcalorias=$datos->Kcalorias;
+                $entrenamiento->save();
+
+                 return redirect('/modificarentrenamiento');
+
+              }
           public function listadoEntreUpper(Request $request){
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Upper')->get();

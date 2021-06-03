@@ -36,6 +36,8 @@ Route::get('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpp
 Route::get('listadoEntreCardio', [entrenamientoController::class,'listadoEntreCardio'])->middleware(['auth']);
 Route::get('verDetallesEntrenamiento/{id}', [entrenamientoController::class,'verDetallesEntrenamiento'])->middleware(['auth']);
 
+Route::get('linkBorrarEntrenamiento', [entrenamientoController::class,'listaEntrenos'])->middleware(['auth']);
+Route::get('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);
 
 
 //Ruta modificar horario
@@ -45,9 +47,11 @@ Route::get('MenosClase', 'App\Http\Controllers\horarioController@MenosClase')->m
 Route::get('MasClase',  'App\Http\Controllers\horarioController@MasClase')->middleware(['auth']);
 
 
+Route::get('borrarEntrenos/{id}', [entrenamientoController::class,'borrarEntrenos'])->middleware(['auth']);
 
-
-
+//Ruta para modificar un entrenamiento
+Route::get('linkEditarEntreno', [entrenamientoController::class,'listaEntrenosEditar'])->middleware(['auth']);
+Route::get('editarEntreno/{id}', [entrenamientoController::class,''])->middleware(['auth']);
 //Ruta asignar monitor a una clase
 Route::get('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
 Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);
@@ -68,6 +72,9 @@ Route::get('entrenamientoslow', function(){
   return view('entrenamientoslow');
 })->middleware(['auth'])->name('entrenamientoslow');
 
+Route::get('entrenamientosborrar', function(){
+  return view('entrenamientosborrar');
+})->middleware(['auth'])->name('entrenamientosborrar');
 
 Route::get('entrenamientoscardio', function(){
   return view('entrenamientoscardio');
@@ -80,6 +87,14 @@ Route::get('verentrenamiento', function(){
 Route::get('entrenamientosanadir', function(){
   return view('entrenamientosanadir');
 })->middleware(['auth'])->name('entrenamientosanadir');
+
+Route::get('entrenamientoeditar', function(){
+  return view('entrenamientoeditar');
+})->middleware(['auth'])->name('entrenamientoeditar');
+
+Route::get('modificarentrenamiento', function(){
+  return view('modificarentrenamiento');
+})->middleware(['auth'])->name('modificarentrenamiento');
 
 Route::get('soporte', function(){
   return view('soporte');
