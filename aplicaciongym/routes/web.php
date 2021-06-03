@@ -34,6 +34,13 @@ Route::get('entrenamientos','App\Http\Controllers\entrenamientoController@listad
 //Ruta modificar horario
 Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->middleware(['auth']);
 Route::get('update/{id}', [horarioController::class,'Modificar'])->middleware(['auth']);
+Route::get('MenosClase', 'App\Http\Controllers\horarioController@MenosClase')->middleware(['auth']);
+Route::get('MasClase',  'App\Http\Controllers\horarioController@MasClase')->middleware(['auth']);
+
+
+
+
+
 //Ruta asignar monitor a una clase
 Route::get('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
 Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);

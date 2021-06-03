@@ -58,6 +58,7 @@ width: 100%;
 background-color: red;
 color: white;
 text-align: center;
+
 }
 </style>
   <footer class="footer bg-dark rounded-top text-center">

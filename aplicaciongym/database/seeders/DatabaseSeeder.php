@@ -61,5 +61,8 @@ class DatabaseSeeder extends Seeder
         $this->call([
             EntrenamientoSeeder::class
           ]);
+          $this->call([
+              SeapuntanSeeder::class
+            ]);
     }
 }

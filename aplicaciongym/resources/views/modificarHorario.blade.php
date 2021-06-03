@@ -27,7 +27,7 @@
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
 
-      <form class="" action="update/{{$clase->id }}" method="get">
+      <form class="" action="update/{{ $clase->id }}" method="get">
 
                     <table class="table table-bordered table-striped text-center">
                     <thead>
@@ -36,7 +36,8 @@
                             <th>Dia</th>
                             <th>Turno</th>
                             <th>Aforo</th>
-                            <th>Duracion</th>
+                            <th>Ocupación Actual</th>
+                            <th>Duración</th>
                             <th>Monitor</th>
                         </tr>
                     </thead>
@@ -49,22 +50,25 @@
                           <div class="font-size14"><input type="text" name="nombre" value="{{$clase->nombre}}" size="10" required></div>
                         </td>
                         <td>
-                          <div class="font-size14 ">{{$clase->dia}}</div>
+                          <div class="font-size16 "><span>{{$clase->dia}}</span></div>
                         </td>
                         <td>
                           @if($clase->turno==1)
-                          <div class="font-size14 ">9:00</div>
+                          <div class="font-size16 ">9:00</div>
                           @elseif($clase->turno==2)
-                          <div class="font-size14 ">10:00</div>
+                          <div class="font-size16 ">10:00</div>
                           @elseif($clase->turno==3)
-                          <div class="font-size14 ">17:00</div>
+                          <div class="font-size16 ">17:00</div>
                           @else
-                          <div class="font-size14 ">20:00</div>
+                          <div class="font-size16 ">20:00</div>
                           @endif
 
                         </td>
                         <td>
                           <div class="font-size14"><input type="number" min="10" max="50" name="aforo" value="{{$clase->aforo}}" size="10" required> personas</div>
+                        </td>
+                        <td>
+                          <div class="font-size16 ">{{$clase->ocupacion}}</div>
                         </td>
                         <td>
                           <div class="font-size14"><input type="number" min="10" max="120" name="duracion" value="{{$clase->duracion}}" size="10" required> minutos</div>
@@ -76,10 +80,10 @@
 
 
                            @if($clase->user_id==null)
-                              <div class="font-size13">Sin asignar</div>
+                              <div class="font-size16">Sin asignar</div>
                             @else
 
-                            <div class="font-size13 ">{{$clase->User['nombre']}}</div>
+                            <div class="font-size16 ">{{$clase->User['nombre']}}</div>
                           @endif
 
                         </td>

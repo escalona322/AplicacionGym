@@ -20,6 +20,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
     </head>
     <body>
       <div style="margin-top: 6em;">
@@ -44,21 +45,21 @@
 
 
 
-                    <tr class="textogymmd">
+                    <tr class="textogymsm">
                         <td>
-                          <div class="font-size14"><input type="text" name="nombre" placeholder="Introduce tu nombre" size="25" required></div>
+                          <div class="font-size14"><input type="text" name="nombre" placeholder="Introduce tu nombre" size="10" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="apellidos" placeholder="Escribe tus apellidos" size="25" required></div>
+                          <div class="font-size14"><input type="text" name="apellidos" placeholder="Escribe tus apellidos" size="10" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="dni" placeholder="Introduce tu dni" size="15" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required></div>
+                          <div class="font-size14"><input type="text" name="dni" placeholder="Introduce tu dni" size="10" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="email" name="email" placeholder="Introduce un email válido" size="25" required></div>
+                          <div class="font-size14"><input type="email" name="email" placeholder="Introduce un email válido" size="10" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="password" name="password" size="25" required></div>
+                          <div class="font-size14"><input type="password" name="password" size="10" required></div>
                         </td>
 
 
