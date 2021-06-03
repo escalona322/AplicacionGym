@@ -31,7 +31,6 @@
               <div class="timetable-img text-center">
                     <img src="img/content/timetable.png" alt="">
                 </div>
-
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped text-center table-active" style="margin-bottom: 10%;">
                         <thead>
@@ -77,17 +76,22 @@
                                       @endif
 
                                     </form>
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
                                               @forelse($clase1 as $ocu)
                                                   {{$loop->count}}/{{$clase->aforo}}
                                                   @break
                                               @empty
                                                   0/{{$clase->aforo}}
                                               @endforelse
-                                        <form class="" action="VaciarClase" method="get" style="display:inline-block">
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
                                           <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
                                         </form>
-
+                                    </div>
                                 </td>
                                @break
 
@@ -110,17 +114,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase2 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase2 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                 @break
                                 @case($clase->id==3)
@@ -142,17 +151,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase3 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase3 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
 
                                 @break
@@ -175,17 +189,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase4 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase4 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==5)
@@ -207,17 +226,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase5 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase5 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==6)
@@ -239,17 +263,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase6 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase6 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @endswitch
@@ -286,17 +315,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase7 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase7 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                @break
 
@@ -319,17 +353,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase8 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase8 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                 @break
                                 @case($clase->id==9)
@@ -351,17 +390,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase9 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase9 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
 
                                 @break
@@ -384,17 +428,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase10 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase10 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==11)
@@ -416,17 +465,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase11 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase11 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==12)
@@ -448,17 +502,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase12 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase12 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @endswitch
@@ -493,17 +552,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase13 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase13 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                @break
 
@@ -526,17 +590,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase14 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase14 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                 @break
                                 @case($clase->id==15)
@@ -558,17 +627,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase15 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase15 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
 
                                 @break
@@ -591,17 +665,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase16 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase16 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==17)
@@ -623,17 +702,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase17 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase17 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==18)
@@ -655,17 +739,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase18 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
-
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase18 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @endswitch
@@ -698,16 +787,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase19 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase19 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                @break
 
@@ -730,16 +825,22 @@
                                       @endif
 
                                     </form>
-                                    @forelse($clase20 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
+                                    <div class="font-size14" >
+                                      <form class="" action="MasClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                      </form>
+                                              @forelse($clase20 as $ocu)
+                                                  {{$loop->count}}/{{$clase->aforo}}
+                                                  @break
+                                              @empty
+                                                  0/{{$clase->aforo}}
+                                              @endforelse
+                                        <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                          <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                          <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                                 @break
                                 @case($clase->id==21)
@@ -761,16 +862,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase21 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase21 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
 
                                 @break
@@ -793,16 +900,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase22 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase22 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==23)
@@ -824,16 +937,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase23 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase23 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @case($clase->id==24)
@@ -855,16 +974,22 @@
                                       @endif
                                     </form>
 
-                                    @forelse($clase24 as $ocu)
-                                        {{$loop->count}}/{{$clase->aforo}}
-                                        @break
-                                    @empty
-                                        0/{{$clase->aforo}}
-                                    @endforelse
-                              <form class="" action="VaciarClase" method="get" style="display:inline-block">
-                                <input type="text" name="id" value="{{$clase->id}}" hidden>
-                                <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-users-slash"></i></button>
-                              </form>
+                                  <div class="font-size14" >
+                                    <form class="" action="MasClase" method="get" style="display:inline-block">
+                                      <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                      <button type="submit" class="btn-sm btn-outline-dark" alt="MasClase"><i class="fas fa-user-plus"></i></i></button>
+                                    </form>
+                                            @forelse($clase24 as $ocu)
+                                                {{$loop->count}}/{{$clase->aforo}}
+                                                @break
+                                            @empty
+                                                0/{{$clase->aforo}}
+                                            @endforelse
+                                      <form class="" action="MenosClase" method="get" style="display:inline-block">
+                                        <input type="text" name="id" value="{{$clase->id}}" hidden>
+                                        <button type="submit" class="btn-sm btn-outline-dark" alt="MenosClase"><i class="fas fa-user-times"></i></i></button>
+                                      </form>
+                                  </div>
                                 </td>
                                 @break
                                 @endswitch
