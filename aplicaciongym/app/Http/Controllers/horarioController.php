@@ -206,25 +206,39 @@ class horarioController extends Controller
 
               foreach ($apuntados as $key) {
                 if($key->clase_id===$idclase->id && $key->user_id===$iduser)
-                $esta=1;
-              }
-
+                  $esta=1;
+                }
                 if ($esta==1) {
                   $seapuntan = Seapuntan::where('user_id',$iduser)->where('clase_id',$idclase->id);
-                 $seapuntan->delete();
-                  return redirect('/horarios');
-
+                  $seapuntan->delete();
+                    return redirect('/horarios');
                 }else{
-
-
                   return redirect('/horarios');
                 }
+              }
 
 
+              public function VaciarClase(Request $datos){
+                $idclase = clase::find($datos->id);
 
+                $iduser = Auth::user()->id;
 
+                $apuntados = Seapuntan::All();
+                $esta=0;
 
-            }
+                foreach ($apuntados as $key) {
+                  if($key->clase_id===$idclase->id)
+                    $esta=1;
+                  }
+                  if ($esta==1) {
+                    $seapuntan = Seapuntan::where('clase_id',$idclase->id);
+                    $seapuntan->delete();
+                      return redirect('/horarios');
+                  }else{
+                    return redirect('/horarios');
+                  }
+                }
+
 
             public function asignarMonitor(Request $datos){
                  $claseMod=clase::find($datos->id);

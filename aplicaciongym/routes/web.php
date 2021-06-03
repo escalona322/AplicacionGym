@@ -45,6 +45,7 @@ Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->m
 Route::get('update/{id}', [horarioController::class,'Modificar'])->middleware(['auth']);
 Route::get('MenosClase', 'App\Http\Controllers\horarioController@MenosClase')->middleware(['auth']);
 Route::get('MasClase',  'App\Http\Controllers\horarioController@MasClase')->middleware(['auth']);
+Route::get('VaciarClase',  'App\Http\Controllers\horarioController@VaciarClase')->middleware(['auth']);
 
 
 Route::get('borrarEntrenos/{id}', [entrenamientoController::class,'borrarEntrenos'])->middleware(['auth']);

@@ -36,7 +36,6 @@
                             <th>Dia</th>
                             <th>Turno</th>
                             <th>Aforo</th>
-                            <th>Ocupación Actual</th>
                             <th>Duración</th>
                             <th>Monitor</th>
                         </tr>
@@ -66,9 +65,6 @@
                         </td>
                         <td>
                           <div class="font-size14"><input type="number" min="10" max="50" name="aforo" value="{{$clase->aforo}}" size="10" required> personas</div>
-                        </td>
-                        <td>
-                          <div class="font-size16 ">{{$clase->ocupacion}}</div>
                         </td>
                         <td>
                           <div class="font-size14"><input type="number" min="10" max="120" name="duracion" value="{{$clase->duracion}}" size="10" required> minutos</div>
