@@ -30,18 +30,20 @@
             <!-- PARTE DEL MEDIO -->
             <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
                 <div class="row">
-                    <p class="textogymxl text-center"> -Añadir entrenamientos- </p>
+                    <p class="textogymxl text-center"> -Editar entrenamientos- </p>
                 </div>
                 <div class="container contenedorentrenos">
-                  <form role="form">
-                               <div class="form-group my-3"> <label for="nombreentreno">
-                                       <h6 class="textogym">Nombre del nuevo entreno</h6>
-                                   </label> <input type="text" name="nombreentreno" placeholder="EJ: Sentiadillas" required class="form-control "> </div>
-                               <div class="form-group my-3">
+
+                  <form class="" action="crearEntrenamiento" method="get">
+
+                               <div class="form-group "> <label for="nombreentreno">
+                                       <h6 class="textogym">Nombre</h6>
+                                   </label> <input type="text" name="nombre" placeholder="Nombre" required class="form-control "> </div>
+                               <div class="form-group ">
                                  <label for="cardNumber">
                                        <h6 class="textogym">Link video YouTube</h6>
                                    </label>
-                                   <div class="input-group"> <input type="text" name="linkyt" placeholder="EJ: youtube.com/watch?ejemplo" class="form-control " required>
+                                   <div class="input-group"> <input type="text" name="videoyt" placeholder="Link video youtube" class="form-control " required>
 
                                    </div>
                                </div>
@@ -51,33 +53,41 @@
                                                    <h6 class="textogym my-3">Datos Varios</h6>
                                                </span></label>
                                                <div class="container">
-                                                 <div class="row">
+                                                 <div class="row my-3">
                                                     <div class="col"> <span class="textogym">Series: </span> </div>
-                                                    <div class="col"> <input class="inputnumber" type="number" name="Series" value="">  </div>
+                                                    <div class="col"> <input class="inputnumber" placeholder="1" type="number" name="series">  </div>
                                                     <div class="col"> <span class="textogym">Intensidad: </span> </div>
-                                                    <div class="col"> <select class="" name="Tipo">
+                                                    <div class="col"> <select class="" name="intensidad">
                                                       <option value="Alta" selected>Alta</option>
                                                       <option value="Media">Media</option>
                                                       <option value="Baja">Baja</option>
                                                     </select>  </div></div>
-                                                 <div class="row">
+                                                 <div class="row my-3">
                                                     <div class="col"> <span class="textogym">Repeticiones: </span> </div>
-                                                    <div class="col"><input class="inputnumber" type="number" name="Repeticiones" value=""></div>
+                                                    <div class="col"><input class="inputnumber" placeholder="10" type="number" name="repeticiones" value=""></div>
                                                     <div class="col"> <span class="textogym">Tipo: </span> </div>
-                                                    <div class="col"> <select class="" name="Tipo">
+                                                    <div class="col"> <select class="" name="tipo">
                                                       <option value="Low" selected>Low body</option>
                                                       <option value="Upper">Upper body</option>
                                                       <option value="Cardio">Cardio</option>
                                                     </select>  </div>
                                                  </div>
-                                               </div>
-                                       </div>
-                                   </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col mx-3"> <span class="textogym">Kcalorias:  </div>
-                                    <div class="col"> <input class="inputcalorias" type="number" name="Kcalorias" value="">  </div>
+
+
+                                <div class="row my-3">
+                                    <div class="col "> <span class="textogym">Kcalorias:  </div>
+                                    <div class="col"> <input class="inputnumber"  type="number" name="Kcalorias" placeholder="100">  </div>
+                                    <div class="col "> <span class="textogym">Monitor especialista:  </div>
+                                    <div class="col"> <select class="" name="user_id">
+                                      <option value="2" selected> Paco</option>
+                                      <option value="3">Nuria</option>
+                                      <option value="4">Carlos</option>
+                                      <option value="5">Sofia</option>
+                                    </select> </div>  </div>  </div>
                                     </div>
+                                  </div>
+                              </div>
+
                                   <div class="row">
                                     <span class="textogym">Descripción</span>
 
@@ -85,8 +95,9 @@
                                     <div class="row">
                                     <textarea class="inputtextarea"name="descripcion" rows="4" cols="30"></textarea>
                                       </div>
-                               <div class="card-footer"> <button type="button" class="subscribe btn btn-primary btn-block shadow-sm">Guardar entrenamiento </button>
+                               <div class="card-footer"> <input class="btn btn-primary" type="submit" name="Guardar" value="Guardar">
                            </form>
+</div>
                 </div>
 
             </div>

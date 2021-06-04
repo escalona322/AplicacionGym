@@ -34,15 +34,17 @@
                 </div>
                 <div class="container contenedorentrenos">
                     @foreach($entre as $entrenamiento)
-                  <form role="form">
+
+                  <form class="" action="modificarEntreno/{{$entrenamiento->id}}" method="get">
+
                                <div class="form-group my-3"> <label for="nombreentreno">
                                        <h6 class="textogym">Nombre</h6>
-                                   </label> <input type="text" name="nombreentreno" value="{{$entrenamiento->series}}" required class="form-control "> </div>
+                                   </label> <input type="text" name="nombre" value="{{$entrenamiento->nombre}}" required class="form-control "> </div>
                                <div class="form-group my-3">
                                  <label for="cardNumber">
                                        <h6 class="textogym">Link video YouTube</h6>
                                    </label>
-                                   <div class="input-group"> <input type="text" name="linkyt" value="{{$entrenamiento->series}}" class="form-control " required>
+                                   <div class="input-group"> <input type="text" name="videoyt" value="{{$entrenamiento->videoyt}}" class="form-control " required>
 
                                    </div>
                                </div>
@@ -54,18 +56,18 @@
                                                <div class="container">
                                                  <div class="row">
                                                     <div class="col"> <span class="textogym">Series: </span> </div>
-                                                    <div class="col"> <input class="inputnumber" value="{{$entrenamiento->series}}" type="number" name="Series">  </div>
+                                                    <div class="col"> <input class="inputnumber" value="{{$entrenamiento->series}}" type="number" name="series">  </div>
                                                     <div class="col"> <span class="textogym">Intensidad: </span> </div>
-                                                    <div class="col"> <select class="" name="Tipo">
+                                                    <div class="col"> <select class="" name="intensidad">
                                                       <option value="Alta" selected>Alta</option>
                                                       <option value="Media">Media</option>
                                                       <option value="Baja">Baja</option>
                                                     </select>  </div></div>
                                                  <div class="row">
                                                     <div class="col"> <span class="textogym">Repeticiones: </span> </div>
-                                                    <div class="col"><input class="inputnumber" {{$entrenamiento->series}} type="number" name="Repeticiones" value=""></div>
+                                                    <div class="col"><input class="inputnumber" value="{{$entrenamiento->repeticiones}}"type="number" name="repeticiones" value=""></div>
                                                     <div class="col"> <span class="textogym">Tipo: </span> </div>
-                                                    <div class="col"> <select class="" name="Tipo">
+                                                    <div class="col"> <select class="" name="tipo">
                                                       <option value="Low" selected>Low body</option>
                                                       <option value="Upper">Upper body</option>
                                                       <option value="Cardio">Cardio</option>
@@ -77,16 +79,16 @@
                                 </div>
                                 <div class="row">
                                     <div class="col mx-3"> <span class="textogym">Kcalorias:  </div>
-                                    <div class="col"> <input class="inputcalorias"  type="number" name="Kcalorias" value="{{$entrenamiento->series}}">  </div>
+                                    <div class="col"> <input class="inputcalorias"  type="number" name="Kcalorias" value="{{$entrenamiento->Kcalorias}}">  </div>
                                     </div>
                                   <div class="row">
                                     <span class="textogym">Descripción</span>
 
                                     </div>
                                     <div class="row">
-                                    <textarea class="inputtextarea"name="descripcion" rows="4" cols="30" value="{{$entrenamiento->series}}"></textarea>
+                                    <textarea class="inputtextarea"name="descripcion" rows="4" cols="30">{{$entrenamiento->descripcion}}</textarea>
                                       </div>
-                               <div class="card-footer"> <button type="button" class="subscribe btn btn-primary btn-block shadow-sm">Guardar entrenamiento </button>
+                               <div class="card-footer"> <input class="btn btn-primary" type="submit" name="Guardar" value="Guardar">
                            </form>
                            @endforeach
                 </div>

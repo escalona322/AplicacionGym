@@ -43,7 +43,8 @@
                                <div class="row"><p class="textogym my-3">Series:  {{$entrenamiento->series}}</p></div>
                                <div class="row"><p class="textogym">Repeticiones: {{$entrenamiento->repeticiones}}</p></div>
                            </div>
-                         <div class="col"><form class="" action="editarEntrenos/{{$entrenamiento->id}}" method="get">
+                         <div class="col"><form class="" action="verEditarEntreno" method="get">
+                           <input hidden type="text" name="id" value="{{$entrenamiento->id}}">
                            <button class="botonentrenos" type="submit" name="button">Editar</button>
                          </form></div>
                        </div>

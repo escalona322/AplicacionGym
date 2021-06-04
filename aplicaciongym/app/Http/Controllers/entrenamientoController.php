@@ -60,32 +60,37 @@ class entrenamientoController extends Controller
             return redirect('/entrenamientos');
           }
 
-          public function modificarentrenamiento(Request $datos){
-               $entreMod=Entrenamiento::find($datos->id);
+          public function linkEditarEntreno(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            return view('verentrenamiento',['entre' => $entrenamientos]);
+          }
 
-               return view('modificarentrenamiento',['entre' => $entreMod]);
+          public function verEditarEntreno(Request $datos){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('id', $datos->id)->get();
+            return view('/modificarentrenamiento',['entre' => $entr]);
+          }
+
+              public function modificarEntreno(Request $datos,$id){
+
+                $entrenamiento= Entrenamiento::find($datos->id);
+
+
+                  $entrenamiento->intensidad=$datos->intensidad;
+                  $entrenamiento->tipo=$datos->tipo;
+                  $entrenamiento->nombre=$datos->nombre;
+                  $entrenamiento->repeticiones=$datos->repeticiones;
+                  $entrenamiento->series=$datos->series;
+                  $entrenamiento->videoyt=$datos->videoyt;
+                  $entrenamiento->descripcion=$datos->descripcion;
+
+                  $entrenamiento->Kcalorias=$datos->Kcalorias;
+                  $entrenamiento->save();
+
+                  $entrenamientos = Entrenamiento::All();
+                  return view('entrenamientoeditar',['entre' => $entrenamientos]);
               }
 
-
-              public function editarEntreno(Request $datos,$id){
-
-                $entrenamiento=Entrenamiento::find($datos->id);
-
-                $entrenamiento = new Entrenamiento;
-                $entrenamiento->intensidad=$datos->intensidad;
-                $entrenamiento->tipo=$datos->tipo;
-                $entrenamiento->nombre=$datos->nombre;
-                $entrenamiento->repeticiones=$datos->repeticiones;
-                $entrenamiento->series=$datos->series;
-                $entrenamiento->videoyt=$datos->videoyt;
-                $entrenamiento->descripcion=$datos->descripcion;
-
-                $entrenamiento->Kcalorias=$datos->Kcalorias;
-                $entrenamiento->save();
-
-                 return redirect('/modificarentrenamiento');
-
-              }
           public function listadoEntreUpper(Request $request){
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Upper')->get();
@@ -123,11 +128,9 @@ class entrenamientoController extends Controller
               return redirect('/entrenamientos');
            }
 
-           public function CrearEntrenamiento(Request $datos, $id){
-             $entrenamiento = new User;
-             $user=user::find($datos->id);
+           public function crearEntrenamiento(Request $datos){
+             $entrenamiento = new Entrenamiento;
 
-                $entrenamiento = new Entrenamiento;
                 $entrenamiento->intensidad=$datos->intensidad;
                 $entrenamiento->tipo=$datos->tipo;
                 $entrenamiento->nombre=$datos->nombre;
@@ -135,8 +138,8 @@ class entrenamientoController extends Controller
                 $entrenamiento->series=$datos->series;
                 $entrenamiento->videoyt=$datos->videoyt;
                 $entrenamiento->descripcion=$datos->descripcion;
-
                 $entrenamiento->Kcalorias=$datos->Kcalorias;
+                $entrenamiento->user_id=$datos->user_id;
                 $entrenamiento->save();
 
               return redirect('/entrenamientos');

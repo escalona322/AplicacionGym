@@ -39,6 +39,7 @@ Route::get('verDetallesEntrenamiento/{id}', [entrenamientoController::class,'ver
 Route::get('linkBorrarEntrenamiento', [entrenamientoController::class,'listaEntrenos'])->middleware(['auth']);
 Route::get('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);
 
+Route::get('crearEntrenamiento', [entrenamientoController::class,'crearEntrenamiento'])->middleware(['auth']);
 
 //Ruta modificar horario
 Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->middleware(['auth']);
@@ -52,7 +53,8 @@ Route::get('borrarEntrenos/{id}', [entrenamientoController::class,'borrarEntreno
 
 //Ruta para modificar un entrenamiento
 Route::get('linkEditarEntreno', [entrenamientoController::class,'listaEntrenosEditar'])->middleware(['auth']);
-Route::get('editarEntreno/{id}', [entrenamientoController::class,''])->middleware(['auth']);
+Route::get('verEditarEntreno', [entrenamientoController::class,'verEditarEntreno'])->middleware(['auth']);
+Route::get('modificarEntreno/{id}', [entrenamientoController::class,'modificarEntreno'])->middleware(['auth']);
 //Ruta asignar monitor a una clase
 Route::get('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
 Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);
