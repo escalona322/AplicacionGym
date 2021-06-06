@@ -69,12 +69,12 @@
           </td>
 
         <td>
-            <form class="" action="modificarEntreno" method="get" style="display:inline-block; transform: scale(0.7);">
+            <form class="" action="verEditarEntreno/{{$entre->id}}" method="get" style="display:inline-block; transform: scale(0.7);">
               <input type="text" name="id" value="" hidden>
                 <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
 
             </form>
-            <form class="" action="borrarEntrenos" method="get" style="display:inline-block; transform: scale(0.7);">
+            <form class="" action="borrarEntrenos/{{$entre->id}}" method="get" style="display:inline-block; transform: scale(0.7);">
               <input type="text" name="id" value="" hidden>
                 <button type="submit" id="borrar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-trash-alt"></i></button>
             </form>

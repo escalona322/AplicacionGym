@@ -22,15 +22,15 @@ class entrenamientoController extends Controller
          switch(Auth::user()->rol){
 
                case 'admin':
-                 return view('entrenamientosAdmin',['users'=>$usr],['clases' => $clases]);
+                 return view('entrenamiento/entrenamientosAdmin',['users'=>$usr],['clases' => $clases]);
                break;
 
                case 'monitor':
-                   return view('entrenamientosmoni');
+                   return view('entrenamiento/entrenamientosmoni');
                break;
 
                case 'usuario':
-                 return view('entrenamientos');
+                 return view('entrenamiento/entrenamientos');
                break;
 
                default:
@@ -42,52 +42,48 @@ class entrenamientoController extends Controller
           public function listadoEntreLow(Request $request){
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Low')->get();
-            return view('entrenamientoslow',['entre' => $entr]);
+            return view('entrenamiento/entrenamientoslow',['entre' => $entr]);
+          }
+          public function listadoEntreUpper(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Upper')->get();
+            return view('entrenamiento/entrenamientosupper',['entre' => $entr]);
           }
 
+          public function listadoEntreCardio(Request $request){
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Cardio')->get();
+            return view('entrenamiento/entrenamientoscardio',['entre' => $entr]);
+          }
           public function listadoEntreLowEditar(Request $request){
             $users = User::All();
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Low')->get();
-            return view('entrenamientosEditar',['entres' => $entr],['users'=>$users]);
+            return view('entrenamiento/entrenamientosEditar',['entres' => $entr],['users'=>$users]);
           }
           public function listadoEntreUpperEditar(Request $request){
             $users = User::All();
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Upper')->get();
-            return view('entrenamientosEditar',['entres' => $entr],['users'=>$users]);
+            return view('entrenamiento/entrenamientosEditar',['entres' => $entr],['users'=>$users]);
           }
           public function listadoEntreCardioEditar(Request $request){
             $users = User::All();
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Cardio')->get();
-            return view('entrenamientosEditar',['entres' => $entr],['users'=>$users]);
+            return view('entrenamiento/entrenamientosEditar',['entres' => $entr],['users'=>$users]);
           }
 
-          public function listaEntrenos(Request $request){
-            $entrenamientos = Entrenamiento::All();
-            return view('entrenamientosborrar',['entre' => $entrenamientos]);
-          }
-          public function listaEntrenosEditar(Request $request){
-            $entrenamientos = Entrenamiento::All();
-            return view('entrenamientoeditar',['entre' => $entrenamientos]);
-          }
-
-          public function borrarEntrenos(Request $datos){
-            $entrenamiento = Entrenamiento::find($datos->id);
+          public function borrarEntrenos(Request $datos, $id){
+            $entrenamiento = Entrenamiento::find($id);
             $entrenamiento->delete();
             return redirect('/entrenamientos');
           }
 
-          public function linkEditarEntreno(Request $request){
+          public function verEditarEntreno(Request $datos, $id){
             $entrenamientos = Entrenamiento::All();
-            return view('verentrenamiento',['entre' => $entrenamientos]);
-          }
-
-          public function verEditarEntreno(Request $datos){
-            $entrenamientos = Entrenamiento::All();
-            $entr = Entrenamiento::where('id', $datos->id)->get();
-            return view('/modificarentrenamiento',['entre' => $entr]);
+            $entr = Entrenamiento::where('id', $id)->get();
+            return view('entrenamiento/modificarentrenamiento',['entre' => $entr]);
           }
 
               public function modificarEntreno(Request $datos,$id){
@@ -107,30 +103,18 @@ class entrenamientoController extends Controller
                   $entrenamiento->save();
 
                   $entrenamientos = Entrenamiento::All();
-                  return view('entrenamientoeditar',['entre' => $entrenamientos]);
+                  return view('entrenamiento/entrenamientoeditar',['entre' => $entrenamientos]);
               }
-
-          public function listadoEntreUpper(Request $request){
-            $entrenamientos = Entrenamiento::All();
-            $entr = Entrenamiento::where('tipo', 'Upper')->get();
-            return view('entrenamientosupper',['entre' => $entr]);
-          }
-
-          public function listadoEntreCardio(Request $request){
-            $entrenamientos = Entrenamiento::All();
-            $entr = Entrenamiento::where('tipo', 'Cardio')->get();
-            return view('entrenamientoscardio',['entre' => $entr]);
-          }
 
           public function verDetallesEntrenamiento(Request $request, $id){
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('id', $id)->get();
-            return view('verentrenamiento',['entre' => $entr]);
+            return view('entrenamiento/verentrenamiento',['entre' => $entr]);
           }
 
           //Crear monitor
            public function crearMonitor(Request $datos){
-                return view('crearMonitor');
+                return view('user/crearMonitor');
            }
 
            public function Crear(Request $datos){
@@ -144,8 +128,9 @@ class entrenamientoController extends Controller
                 $user->email=$datos->email;
                 $user->save();
 
-              return redirect('/entrenamientos');
+              return redirect('entrenamiento/entrenamientos');
            }
+
 
            public function crearEntrenamiento(Request $datos){
              $entrenamiento = new Entrenamiento;
@@ -161,7 +146,7 @@ class entrenamientoController extends Controller
                 $entrenamiento->user_id=$datos->user_id;
                 $entrenamiento->save();
 
-              return redirect('/entrenamientos');
+              return redirect('entrenamiento/entrenamientos');
            }
 
 
@@ -170,14 +155,14 @@ class entrenamientoController extends Controller
            public function eliminarMonitor(Request $datos){
              $user = user::find($datos->id);
              $user->delete();
-               return redirect('/entrenamientos');
+               return redirect('entrenamiento/entrenamientos');
            }
 
            //ModificaMonitor
          public function modificarMonitor(Request $datos){
               $monMod=user::find($datos->id);
 
-              return view('modificarMonitor',['monis' => $monMod]);
+              return view('user/modificarMonitor',['monis' => $monMod]);
              }
 
 
@@ -194,7 +179,7 @@ class entrenamientoController extends Controller
 
 
 
-                return redirect('/entrenamientos');
+                return redirect('entrenamiento/entrenamientos');
 
              }
 

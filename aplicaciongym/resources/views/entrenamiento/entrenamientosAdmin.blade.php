@@ -66,6 +66,13 @@
                       </div>
                     </div>
                 </div>
+
+                <form class="my-2" action="crearMonitor" method="get">
+                    <button type="submit" name="button" class="btn btn-primary" style="bottom: 100%;" value="crear">
+                          Editar monitores
+                    </button>
+                </form>
+
             </div>
 
         </div>
