@@ -26,11 +26,11 @@ class entrenamientoController extends Controller
                break;
 
                case 'monitor':
-                   return view('entrenamientosmoni',['clases' => $clases]);
+                   return view('entrenamientosmoni');
                break;
 
                case 'usuario':
-                 return view('entrenamientos',['clases' => $clases]);
+                 return view('entrenamientos');
                break;
 
                default:
@@ -43,6 +43,25 @@ class entrenamientoController extends Controller
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Low')->get();
             return view('entrenamientoslow',['entre' => $entr]);
+          }
+
+          public function listadoEntreLowEditar(Request $request){
+            $users = User::All();
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Low')->get();
+            return view('entrenamientosEditar',['entres' => $entr],['users'=>$users]);
+          }
+          public function listadoEntreUpperEditar(Request $request){
+            $users = User::All();
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Upper')->get();
+            return view('entrenamientosEditar',['entres' => $entr],['users'=>$users]);
+          }
+          public function listadoEntreCardioEditar(Request $request){
+            $users = User::All();
+            $entrenamientos = Entrenamiento::All();
+            $entr = Entrenamiento::where('tipo', 'Cardio')->get();
+            return view('entrenamientosEditar',['entres' => $entr],['users'=>$users]);
           }
 
           public function listaEntrenos(Request $request){

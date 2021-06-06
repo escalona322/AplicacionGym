@@ -24,7 +24,7 @@ class CreateEntrenamientosTable extends Migration
             $table->string('videoyt');
             $table->string('descripcion', 500);
             $table->string('Kcalorias');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
         });
     }
 

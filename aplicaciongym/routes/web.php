@@ -31,6 +31,12 @@ Route::get('horarios','App\Http\Controllers\horarioController@listadoClases')->m
 //Ruta que lleva a la controladora y separa el usaro sgún el rol a una u otra pagina
 Route::get('entrenamientos','App\Http\Controllers\entrenamientoController@listadoMonitoresOEntrenamientos')->middleware(['auth'])->name('entrenamientos');
 
+Route::get('listadoEntreLowEditar', [entrenamientoController::class,'listadoEntreLowEditar'])->middleware(['auth']);
+Route::get('listadoEntreUpperEditar', [entrenamientoController::class,'listadoEntreUpperEditar'])->middleware(['auth']);
+Route::get('listadoEntreCardioEditar', [entrenamientoController::class,'listadoEntreCardioEditar'])->middleware(['auth']);
+
+
+
 Route::get('listadoEntreLow', [entrenamientoController::class,'listadoEntreLow'])->middleware(['auth']);
 Route::get('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);
 Route::get('listadoEntreCardio', [entrenamientoController::class,'listadoEntreCardio'])->middleware(['auth']);
