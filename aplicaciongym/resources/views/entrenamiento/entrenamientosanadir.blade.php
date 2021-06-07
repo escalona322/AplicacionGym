@@ -30,7 +30,7 @@
             <!-- PARTE DEL MEDIO -->
             <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
                 <div class="row">
-                    <p class="textogymxl text-center"> -Editar entrenamientos- </p>
+                    <p class="textogymxl text-center"> -Añadir entrenamientos- </p>
                 </div>
                 <div class="container contenedorentrenos">
 

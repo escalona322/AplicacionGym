@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\horarioController;
 use App\Http\Controllers\gimnasioController;
 use App\Http\Controllers\entrenamientoController;
+use App\Http\Controllers\perfilesController;
 use App\Models\clase;
 use App\Models\User;
 use App\Models\entrenamiento;
@@ -35,6 +36,13 @@ Route::get('listadoEntreLowEditar', [entrenamientoController::class,'listadoEntr
 Route::get('listadoEntreUpperEditar', [entrenamientoController::class,'listadoEntreUpperEditar'])->middleware(['auth']);
 Route::get('listadoEntreCardioEditar', [entrenamientoController::class,'listadoEntreCardioEditar'])->middleware(['auth']);
 
+Route::get('perfil','App\Http\Controllers\perfilesController@perfilPorRol')->middleware(['auth'])->name('perfil');
+
+
+Route::get('pagarUser',[perfilesController::class,'pagarUser'])->middleware(['auth']);
+
+Route::get('confirmarPago/{id}',[perfilesController::class,'confirmarPago'])->middleware(['auth']);
+Route::get('cancelarPago/{id}',[perfilesController::class,'cancelarPago'])->middleware(['auth']);
 
 
 Route::get('listadoEntreLow', [entrenamientoController::class,'listadoEntreLow'])->middleware(['auth']);
@@ -72,6 +80,7 @@ Route::get('createMoni', [entrenamientoController::class,'Crear'])->middleware([
 //Ruta para eliminar un monitor
 Route::get('eliminarMonitor', [entrenamientoController::class,'eliminarMonitor'])->middleware(['auth']);
 
+
 Route::get('entrenamientosupper', function(){
   return view('entrenamientosupper');
 })->middleware(['auth'])->name('entrenamientosupper');
@@ -108,9 +117,6 @@ Route::get('soporte', function(){
   return view('soporte');
 })->middleware(['auth'])->name('soporte');
 
-Route::get('perfil', function(){
-  return view('perfil');
-})->middleware(['auth'])->name('perfil');
 
 Route::get('contacto', function(){
   return view('contacto');

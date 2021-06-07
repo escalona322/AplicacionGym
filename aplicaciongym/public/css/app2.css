@@ -170,7 +170,9 @@ margin-top: 2em;
 .contenedorentrenostabla{
   height: 25em;
 }
-
+.contenedortablausers{
+  height: 10em;
+}
 .contenedormonis{
   height: 26em;
   margin-top: 5em;

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\clase;
 use App\Models\entrenamiento;
@@ -176,7 +175,7 @@ class entrenamientoController extends Controller
            public function eliminarMonitor(Request $datos){
              $user = user::find($datos->id);
              $user->delete();
-               return redirect('entrenamientos');
+               return redirect('perfil');
            }
 
            //ModificaMonitor
@@ -196,7 +195,7 @@ class entrenamientoController extends Controller
                $user->DNI=$datos->dni;
                $user->email=$datos->email;
                $user->save();
-                return redirect('entrenamientos');
+                return redirect('perfil');
 
              }
 

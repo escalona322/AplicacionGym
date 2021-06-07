@@ -65,7 +65,7 @@
 
 
     <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
-    <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='entrenamientos'"><i class="fas fa-undo"></i></button>
+    <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='perfil'"><i class="fas fa-undo"></i></button>
 
 </form>
 
