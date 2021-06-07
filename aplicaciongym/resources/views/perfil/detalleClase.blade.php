@@ -60,7 +60,7 @@
 
                     </tbody>
                   </table>
-                  <form class="" action="perfil" method="get">
+                  <form class="" action="/perfil" method="get">
                     <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver"><i class="fas fa-undo"></i></button>
                   </form>
 
