@@ -77,7 +77,17 @@ class entrenamientoController extends Controller
           public function borrarEntrenos(Request $datos, $id){
             $entrenamiento = Entrenamiento::find($id);
             $entrenamiento->delete();
-            return redirect('entrenamientos');
+            switch($entrenamiento->tipo){
+              case 'Low':
+              return redirect('listadoEntreLowEditar');
+              break;
+            case 'Upper':
+                return redirect('listadoEntreUpperEditar');
+                  break;
+            case 'Cardio':
+                  return redirect('listadoEntreCardioEditar');
+                    break;
+            }
           }
 
           public function verEditarEntreno(Request $datos, $id){
@@ -102,7 +112,18 @@ class entrenamientoController extends Controller
             $entrenamiento->save();
 
             $entrenamientos = Entrenamiento::All();
-              return redirect('entrenamiento');
+
+            switch($entrenamiento->tipo){
+              case 'Low':
+              return redirect('listadoEntreLowEditar');
+              break;
+            case 'Upper':
+                return redirect('listadoEntreUpperEditar');
+                  break;
+            case 'Cardio':
+                  return redirect('listadoEntreCardioEditar');
+                    break;
+            }
               }
 
           public function verDetallesEntrenamiento(Request $request, $id){
@@ -145,7 +166,8 @@ class entrenamientoController extends Controller
                 $entrenamiento->user_id=$datos->user_id;
                 $entrenamiento->save();
 
-              return redirect('entrenamientos');
+                $entr = Entrenamiento::where('tipo', $entrenamiento->tipo)->get();
+                  return view('entrenamiento/entrenamientosEditar',['entres' => $entr]);
            }
 
 

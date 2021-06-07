@@ -58,9 +58,8 @@ Route::get('VaciarClase',  'App\Http\Controllers\horarioController@VaciarClase')
 Route::get('borrarEntrenos/{id}', [entrenamientoController::class,'borrarEntrenos'])->middleware(['auth']);
 
 //Ruta para modificar un entrenamiento
-Route::get('linkEditarEntreno', [entrenamientoController::class,'listaEntrenosEditar'])->middleware(['auth']);
 Route::get('verEditarEntreno/{id}', [entrenamientoController::class,'verEditarEntreno'])->middleware(['auth']);
-Route::get('modificarEntreno/{id}', [entrenamientoController::class,'modificarEntreno'])->middleware(['auth']);
+Route::post('verEditarEntreno/modificarEntreno/{id}', [entrenamientoController::class,'modificarEntreno'])->middleware(['auth']);
 //Ruta asignar monitor a una clase
 Route::get('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
 Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);
@@ -94,7 +93,7 @@ Route::get('verentrenamiento', function(){
 })->middleware(['auth'])->name('verentrenamiento');
 
 Route::get('entrenamientosanadir', function(){
-  return view('entrenamientosanadir');
+  return view('entrenamiento/entrenamientosanadir');
 })->middleware(['auth'])->name('entrenamientosanadir');
 
 Route::get('entrenamientoeditar', function(){

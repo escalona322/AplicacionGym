@@ -92,11 +92,8 @@
       </div>
                 <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1">
 
-                  <form class="my-2" action="crearMonitor" method="get">
-                      <button type="submit" name="button" class="" style="bottom: 100%;" value="crear">
-                      <img src="{{asset('imgs/iconomasentre.png')}}" style="transform:scale(0.5); margin-left: -2em;"></img>
-                      </button>
-                  </form>
+                      <a class="msx-3" href="{{ route('entrenamientosanadir') }}">  <img src="{{asset('imgs/iconomasentre.png')}}" style="transform:scale(0.5); margin-left: -2em;"></img></a>
+
                     <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%;" value="Volver" onclick="location.href='entrenamientos'"><i class="fas fa-undo"></i></button>
                 </div>
 

@@ -35,8 +35,8 @@
                 <div class="container contenedorentrenos">
                     @foreach($entre as $entrenamiento)
 
-                  <form class="" action="modificarEntreno/{{$entrenamiento->id}}" method="get">
-
+                  <form class="" action="modificarEntreno/{{$entrenamiento->id}}" method="post">
+                    @csrf
                                <div class="form-group my-3"> <label for="nombreentreno">
                                        <h6 class="textogym">Nombre</h6>
                                    </label> <input type="text" name="nombre" value="{{$entrenamiento->nombre}}" required class="form-control "> </div>
