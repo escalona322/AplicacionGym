@@ -82,10 +82,12 @@
                                    <input type="text" name="id" value="{{$user->id}}" hidden>
                                      <button type="submit" id="borrar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-trash-alt"></i></button>
                                  </form>
+                                   @if($user -> rol == 'usuario')
                                  <form class="" action="pagarUser" method="get"  style="display:inline-block">
                                    <input type="text" name="id" value="{{$user->id}}" hidden>
                                      <button type="submit" id="pagar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="fas fa-hand-holding-usd"></i></button>
                                  </form>
+                                 @endif
                                </td>
                            </tr>
                            @endif

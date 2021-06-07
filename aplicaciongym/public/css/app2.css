@@ -243,10 +243,10 @@ border-radius: 6em;
   height: 25em;
   width: 45em;
 }
-
-
-
-
+.fotoperfil{
+  width: 15em;
+  height: 15em;
+}
 /*switch de horarios*/
 .form-switch.form-switch-sm .form-check-input {
   height: 1rem;

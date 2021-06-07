@@ -38,6 +38,7 @@
                           <th>DNI</th>
                           <th>Email</th>
                           <th>Contraseña</th>
+                          <th>Rol</th>
 
                         </tr>
                     </thead>
@@ -60,6 +61,15 @@
                         </td>
                         <td>
                           <div class="font-size14"><input type="password" name="password" size="10" required></div>
+                        </td>
+                        <td>
+
+                          <select class="" name="rol">
+                            <option value="usuario" selected>Usuario</option>
+                            @if($user -> rol == 'admin')
+                            <option value="monitor">Monitor</option>
+                            @endif
+                          </select>
                         </td>
 
 

@@ -25,15 +25,67 @@
               <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1"></div>
                   <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
-                    <div class="row">
-                      User
-                      <img class="fotoperfil" src="{{asset('imgs/default.png')}}" alt="">
-                    </div>
-                    <div class="row">
 
+
+                    <div class="row">
+                      <div class="col">
+                        <img class="fotoperfil" src="{{asset('imgs/default.png')}}" alt="Foto de Perfil">
+                        <div style="border:1px solid black; width:50%;">
+                          <p class="textogymmd" style="display:inline-block">Nombre: </p> <span class="textogym" style="display:inline-block">{{$user->nombre}}</span>
+                          <p class="textogymmd" style="display:inline-block">Apellidos: </p><span class="textogym" style="display:inline-block">{{$user->apellidos}}</span>
+                          <p class="textogymmd" style="display:inline-block">Email: </p><span class="textogym" style="display:inline-block">{{$user->email}}</span>
+                          <p class="textogymmd" style="display:inline-block">DNI: </p><span class="textogym" style="display:inline-block">{{$user->DNI}}</span>
+                          <p class="textogymmd" style="display:inline-block">Pagado: </p><span class="textogym" style="display:inline-block">{{$user->pagado}}</span>
+                        </div>
+
+                      </div>
+
+                      <div class="col">
+
+
+
+                        <p class="textogymxl text-center">Mis clases</p>
+                        <table class="table table-bordered table-striped text-center table-active" style="margin-bottom: 10%;">
+                            <thead>
+                                <tr class="bg-light-gray textogymmd">
+                                    <th class="text-uppercase">Nombre</th>
+                                    <th class="text-uppercase">Dia</th>
+                                    <th class="text-uppercase">Hora</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                              @foreach($fullclases as $apuntados)
+                                <tr class="align-middle textogym">
+                                  <td>
+                                    {{$apuntados->Clase["nombre"]}}
+                                  </td>
+                                  <td>
+                                    {{$apuntados->Clase["dia"]}}
+                                  </td>
+                                  <td>
+                                    @if($apuntados->Clase["turno"]=='1')
+                                    <p>09:00</p>
+                                    @elseif($apuntados->Clase["turno"]=='2')
+                                    <p>10:00</p>
+                                    @elseif($apuntados->Clase["turno"]=='3')
+                                    <p>17:00</p>
+                                    @else
+                                    <p>20:00</p>
+                                    @endif
+
+                                  </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                      </div>
+
+                      <div class="col"></div>
                     </div>
+
                   </div>
                   <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1"></div>
-  </div>
+                </div>
+              </div>
     </body>
 </html>

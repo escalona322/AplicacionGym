@@ -23,17 +23,141 @@
     <body>
       <div style="margin-top: 6em;">
               <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1"></div>
-                  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
-                    <div class="row">
-                      Moni
-                      <img class="fotoperfil" src="{{asset('imgs/default.png')}}" alt="">
+                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-3"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-6">
+
+                    <p class="text-center textogymxl">Usuarios</p>
+                      <div class="overflow-auto contenedorentrenos">
+                        <table class="table table-bordered table-striped text-center">
+                       <thead>
+                           <tr class="textogymmd">
+                               <th>Nombre</th>
+                               <th>Apellidos</th>
+                               <th>DNI</th>
+                               <th>Email</th>
+                               <th>Pagado</th>
+                               <th>Acciones</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+
+
+                         @foreach($users as $user)
+                         @if($user -> rol != 'admin' && $user -> rol != 'monitor')
+                           <tr class="textogymmd">
+                               <td>
+                                 <div class="font-size14 ">{{$user->nombre}}</div>
+                               </td>
+                               <td>
+                                 <div class="font-size14 ">{{$user->apellidos}}</div>
+                               </td>
+                               <td>
+                                 <div class="font-size14 ">{{$user->DNI}}</div>
+                               </td>
+                               <td>
+                                 <div class="font-size14 ">{{$user->email}}</div>
+                               </td>
+                               <td>
+                                  @if($user -> rol == 'monitor')
+                                 <div class="font-size14 ">---</div>
+                                 @else
+                                 <div class="font-size14 ">{{$user->pagado}}</div>
+                                 @endif
+                               </td>
+
+                               <td>
+                                 <form class="" action="modificarMonitor" method="get"  style="display:inline-block">
+                                   <input type="text" name="id" value="{{$user->id}}" hidden>
+                                     <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
+
+                                 </form>
+                                 <form class="" action="eliminarMonitor" method="get"  style="display:inline-block">
+                                   <input type="text" name="id" value="{{$user->id}}" hidden>
+                                     <button type="submit" id="borrar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-trash-alt"></i></button>
+                                 </form>
+                                   @if($user -> rol == 'usuario')
+                                 <form class="" action="pagarUser" method="get"  style="display:inline-block">
+                                   <input type="text" name="id" value="{{$user->id}}" hidden>
+                                     <button type="submit" id="pagar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="fas fa-hand-holding-usd"></i></button>
+                                 </form>
+                                 @endif
+                               </td>
+                           </tr>
+                           @endif
+                       @endforeach
+
+
+                  </tbody>
+                </table>
+                <form class="" action="crearMonitor" method="get">
+                    <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="crear"><i class="fas fa-user-plus"></i></button>
+                </form>
                     </div>
-                    <div class="row">
+
+
+                    <p class="text-center textogymxl">Mis Clases</p>
+                      <div class="overflow-auto contenedorentrenos">
+                        <table class="table table-bordered table-striped text-center">
+                       <thead>
+                           <tr class="textogymmd">
+                             <th class="text-uppercase">Nombre</th>
+                             <th class="text-uppercase">Dia</th>
+                             <th class="text-uppercase">Hora</th>
+                             <th class="text-uppercase">Detalle</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+
+
+                         @foreach($clases as $clase)
+                           <tr class="align-middle textogym">
+                             <td>
+                               {{$clase->nombre}}
+                             </td>
+                             <td>
+                               {{$clase->dia}}
+                             </td>
+                             <td>
+                               @if($clase->turno=='1')
+                               <p>09:00</p>
+                               @elseif($clase->turno=='2')
+                               <p>10:00</p>
+                               @elseif($clase->turno=='3')
+                               <p>17:00</p>
+                               @else
+                               <p>20:00</p>
+                               @endif
+
+                             </td>
+                             <td>
+                               <form class="" action="detalleClase/{{$clase->id}}" method="get"  style="display:inline-block">
+                              
+                                  <button type="submit" id="detalle" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-eye"></i></button>
+                               </form>
+                             </td>
+                           </tr>
+                           @endforeach
+
+
+
+
+
+
+
+                  </tbody>
+                </table>
 
                     </div>
+
+
+
+
+
+
+
+
                   </div>
-                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-3"></div>
   </div>
     </body>
 </html>

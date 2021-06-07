@@ -133,21 +133,21 @@ class entrenamientoController extends Controller
 
           //Crear monitor
            public function crearMonitor(Request $datos){
-                return view('user/crearMonitor');
+                return view('user/crearMonitor',['user' => Auth::user()]);
            }
 
            public function Crear(Request $datos){
                 $user = new User;
                 $user->nombre=$datos->nombre;
                 $user->apellidos=$datos->apellidos;
-                $user->pagado="si";
-                $user->rol="monitor";
+                $user->pagado="no";
+                $user->rol=$datos->rol;
                 $user->password=$datos->password;
                 $user->DNI=$datos->dni;
                 $user->email=$datos->email;
                 $user->save();
 
-              return redirect('entrenamientos');
+              return redirect('perfil');
            }
 
 

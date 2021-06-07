@@ -37,7 +37,7 @@ Route::get('listadoEntreUpperEditar', [entrenamientoController::class,'listadoEn
 Route::get('listadoEntreCardioEditar', [entrenamientoController::class,'listadoEntreCardioEditar'])->middleware(['auth']);
 
 Route::get('perfil','App\Http\Controllers\perfilesController@perfilPorRol')->middleware(['auth'])->name('perfil');
-
+Route::get('detalleClase/{id}', [perfilesController::class,'detalleClase'])->middleware(['auth']);
 
 Route::get('pagarUser',[perfilesController::class,'pagarUser'])->middleware(['auth']);
 
