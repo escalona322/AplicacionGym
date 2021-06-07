@@ -57,7 +57,7 @@ class horarioController extends Controller
               $clase->duracion=$datos->duracion;
               $clase->save();
 
-               return redirect('horario/horarios');
+               return redirect('horarios');
             }
 
             public function MasClase(Request $datos){
@@ -78,7 +78,7 @@ class horarioController extends Controller
                   $seapuntan->user_id=$iduser;
                   $seapuntan->clase_id=$idclase->id;
                   $seapuntan->save();
-                    return redirect('horario/horarios');
+                    return redirect('horarios');
                 }
             }
 
@@ -97,9 +97,9 @@ class horarioController extends Controller
                 if ($esta==1) {
                   $seapuntan = Seapuntan::where('user_id',$iduser)->where('clase_id',$idclase->id);
                   $seapuntan->delete();
-                    return redirect('horario//horarios');
+                    return redirect('horarios');
                 }else{
-                    return redirect('horario//horarios');
+                    return redirect('horarios');
                 }
               }
 
@@ -118,9 +118,9 @@ class horarioController extends Controller
                   if ($esta==1) {
                     $seapuntan = Seapuntan::where('clase_id',$idclase->id);
                     $seapuntan->delete();
-                      return redirect('horario//horarios');
+                      return redirect('horarios');
                   }else{
-                      return redirect('horario//horarios');
+                      return redirect('horarios');
                   }
                 }
 
@@ -138,6 +138,6 @@ class horarioController extends Controller
                 $cla=clase::where('id',$id)->first();
                 $cla->user_id=$datos->mon;
                 $cla->save();
-                  return redirect('horario/horarios');
+                  return redirect('horarios');
               }
 }

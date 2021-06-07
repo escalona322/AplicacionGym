@@ -77,7 +77,7 @@ class entrenamientoController extends Controller
           public function borrarEntrenos(Request $datos, $id){
             $entrenamiento = Entrenamiento::find($id);
             $entrenamiento->delete();
-            return redirect('/entrenamientos');
+            return redirect('entrenamientos');
           }
 
           public function verEditarEntreno(Request $datos, $id){
@@ -86,24 +86,23 @@ class entrenamientoController extends Controller
             return view('entrenamiento/modificarentrenamiento',['entre' => $entr]);
           }
 
-              public function modificarEntreno(Request $datos,$id){
+          public function modificarEntreno(Request $datos,$id){
 
-                $entrenamiento= Entrenamiento::find($datos->id);
+            $entrenamiento= Entrenamiento::find($datos->id);
 
+            $entrenamiento->intensidad=$datos->intensidad;
+            $entrenamiento->tipo=$datos->tipo;
+            $entrenamiento->nombre=$datos->nombre;
+            $entrenamiento->repeticiones=$datos->repeticiones;
+            $entrenamiento->series=$datos->series;
+            $entrenamiento->videoyt=$datos->videoyt;
+            $entrenamiento->descripcion=$datos->descripcion;
 
-                  $entrenamiento->intensidad=$datos->intensidad;
-                  $entrenamiento->tipo=$datos->tipo;
-                  $entrenamiento->nombre=$datos->nombre;
-                  $entrenamiento->repeticiones=$datos->repeticiones;
-                  $entrenamiento->series=$datos->series;
-                  $entrenamiento->videoyt=$datos->videoyt;
-                  $entrenamiento->descripcion=$datos->descripcion;
+            $entrenamiento->Kcalorias=$datos->Kcalorias;
+            $entrenamiento->save();
 
-                  $entrenamiento->Kcalorias=$datos->Kcalorias;
-                  $entrenamiento->save();
-
-                  $entrenamientos = Entrenamiento::All();
-                  return view('entrenamiento/entrenamientoeditar',['entre' => $entrenamientos]);
+            $entrenamientos = Entrenamiento::All();
+              return redirect('entrenamiento');
               }
 
           public function verDetallesEntrenamiento(Request $request, $id){
@@ -128,7 +127,7 @@ class entrenamientoController extends Controller
                 $user->email=$datos->email;
                 $user->save();
 
-              return redirect('entrenamiento/entrenamientos');
+              return redirect('entrenamientos');
            }
 
 
@@ -146,7 +145,7 @@ class entrenamientoController extends Controller
                 $entrenamiento->user_id=$datos->user_id;
                 $entrenamiento->save();
 
-              return redirect('entrenamiento/entrenamientos');
+              return redirect('entrenamientos');
            }
 
 
@@ -155,7 +154,7 @@ class entrenamientoController extends Controller
            public function eliminarMonitor(Request $datos){
              $user = user::find($datos->id);
              $user->delete();
-               return redirect('entrenamiento/entrenamientos');
+               return redirect('entrenamientos');
            }
 
            //ModificaMonitor
@@ -174,12 +173,8 @@ class entrenamientoController extends Controller
                $user->apellidos=$datos->apellidos;
                $user->DNI=$datos->dni;
                $user->email=$datos->email;
-
                $user->save();
-
-
-
-                return redirect('entrenamiento/entrenamientos');
+                return redirect('entrenamientos');
 
              }
 
