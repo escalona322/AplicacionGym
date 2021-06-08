@@ -95,7 +95,8 @@
                                     <div class="row">
                                     <textarea class="inputtextarea"name="descripcion" rows="4" cols="30"></textarea>
                                       </div>
-                               <div class="card-footer"> <input class="btn btn-primary" type="submit" name="Guardar" value="Guardar">
+                               <button type="submit" name="button" class="mt-1 btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
+                                 <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='entrenamientos'"><i class="fas fa-undo"></i></button>
                            </form>
 </div>
                 </div>

@@ -24,31 +24,56 @@
     <body>
       <div style="margin-top: 6em;">
         <div class="text-center">
-            <h1 class=" textogym " >Ven a conocernos!</h1>
+            <h1 class=" textogymxl mb-5" >¡Ven a conocernos!</h1>
         </div>
 
         <div class="row">
             <div class="col-sm-12 col-md-0 col-lg-4 col-xl-2 col-xxl-2  "> </div>
             <div class="col-sm-12 col-md-12 col-lg-4 col-xl-8 col-xxl-8 ">
               <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 textogym" >
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.11135406578!2d-3.6915725846104652!3d40.20658587939014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd421ee3b86e375d%3A0x8139803780dd1991!2sColegio%20Biling%C3%BCe%20Valle%20del%20Miro!5e0!3m2!1ses!2ses!4v1620577763777!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <p class="textogym">De Lunes a Viernes de 7:00h a 22:00h</p>
+                    <p class="textogym">Sábados de 9:00h a 14:00h</p>
+                    <p class="textogym">Domingos: CERRADO</p>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6  text-center">
-                  <p class="font-size13">
-                    Estamos en Valdemoro en el colegio valle del miro ,
-                    nuestro horario es de 8 de la mañana hasta las 8 de la tarde .
-                    Si tiene alguna pregunta no dude en contactarnos por telefono (658985785) ,por correo electronico
-                    (Sportakus@gmail.com) o hablanos en nuestras redes sociales.
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                  <p class="font-size22"><b>En Sportakus buscamos los mejores porfesionales para incorporarlos a nuestro equipo y que juntos trabajemos por mejorar día a día para nuestros socios.<br><br>
+                    Si eres uno de esos grandes profesionales, por favor, envíanos tu currículum por cualquier red social o email.</b>
+
                   </p>
+                  <h2 class="textogymmd mt-20" >¡Siguenos!</h2>
+                </div>
 
+                <div class="col text-center mt-10">
 
-                  <a class="my-5" href="https://www.facebook.com/ColegioValleDelMiro/"><img src="{{asset('imgs/facebook.png')}}"width="15%" height="17%"></a>
-                  <a  class="my-5"href="https://twitter.com/ValledelMiro"><img src="{{asset('imgs/twitter.png')}}"width="15%" height="17%"></a>
-                  <a  class="my-5"href="https://www.instagram.com/valledelmiro/"><img src="{{asset('imgs/insta.png')}}"width="19%" height="21%"></a>
+                  <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Facebook" onclick="location.href='https://www.facebook.com/ColegioValleDelMiro/'"><i class="fab fa-facebook-square" style="transform:scale(2)"></i></button>
+                  <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="instagram" onclick="location.href='https://www.instagram.com/valledelmiro/'"><i class="fab fa-instagram" style="transform:scale(2)"></i></button>
+                  <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Twitter" onclick="location.href='https://twitter.com/ValledelMiro'"><i class="fab fa-twitter" style="transform:scale(2)"></i></button>
+                  <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Phone" onclick="ocultarPhone()"><i class="fas fa-phone-alt" style="transform:scale(2)"></i></button>
+                  <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Email" onclick="ocultarEmail()"><i class="fas fa-envelope-open-text" style="transform:scale(2)"></i></button>
+<script type="text/javascript">
+      function ocultarPhone(id) {
+        if (document.getElementById('phone').style.display=='block') {
+          document.getElementById('phone').style.display='none';
+        }else{
+          document.getElementById('phone').style.display='block';
+        }
 
+      }
 
-                  <h2 class="textogym my-4" >Siguenos!</h2>
+      function ocultarEmail(id) {
+        if (document.getElementById('email').style.display=='block') {
+          document.getElementById('email').style.display='none';
+        }else{
+          document.getElementById('email').style.display='block';
+        }
+
+      }
+</script>
+
+                  <p id="phone" class="textogym my-4" style="display: none">658985785</p>
+                  <p id="email" class="textogym my-4"style="display: none">Sportakus@gmail.com</p>
                 </div>
               </div>
 
