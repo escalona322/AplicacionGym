@@ -37,7 +37,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                  @foreach($apuntado as $apuntados)
+                  @forelse($apuntado as $apuntados)
                     @if($apuntados->User["rol"] == 'usuario')
                     <tr class="textogymmd">
                           <td>
@@ -46,16 +46,17 @@
                           <td>
                             <div class="font-size16 ">{{$apuntados->User["apellidos"]}}</div>
                           </td>
-                          @else
-                          <td>
-                            <div class="font-size16 ">---</div>
-                          </td>
-                          <td>
-                            <div class="font-size16 ">---</div>
-                          </td>
                           @endif
+
+                        @empty
+                        <td>
+                          <div class="font-size16 ">---</div>
+                        </td>
+                        <td>
+                          <div class="font-size16 ">---</div>
+                        </td>
                       </tr>
-                  @endforeach
+                  @endforelse
 
 
                     </tbody>

@@ -100,9 +100,9 @@
                         <table class="table table-bordered table-striped text-center">
                        <thead>
                            <tr class="textogymmd">
-                             <th class="text-uppercase">Nombre</th>
                              <th class="text-uppercase">Dia</th>
                              <th class="text-uppercase">Hora</th>
+                             <th class="text-uppercase">Nombre</th>
                              <th class="text-uppercase">Detalle</th>
                            </tr>
                        </thead>
@@ -111,9 +111,7 @@
 
                          @foreach($clases as $clase)
                            <tr class="align-middle textogym">
-                             <td>
-                               {{$clase->nombre}}
-                             </td>
+
                              <td>
                                {{$clase->dia}}
                              </td>
@@ -128,6 +126,9 @@
                                <p>20:00</p>
                                @endif
 
+                             </td>
+                             <td>
+                               {{$clase->nombre}}
                              </td>
                              <td>
                                <form class="" action="detalleClase/{{$clase->id}}" method="get"  style="display:inline-block">

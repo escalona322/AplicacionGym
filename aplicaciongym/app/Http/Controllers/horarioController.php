@@ -7,6 +7,7 @@ use App\Models\clase;
 use App\Models\Seapuntan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Alert;
 
 
 class horarioController extends Controller
@@ -65,19 +66,19 @@ class horarioController extends Controller
               $iduser = Auth::user()->id;
               $apuntados = Seapuntan::All();
               $esta=0;
-
               foreach ($apuntados as $key) {
                 if($key->clase_id===$idclase->id && $key->user_id===$iduser)
                 $esta=1;
               }
 
               if ($esta==1) {
-                  return redirect('horario/horarios');
+                  return redirect('horarios');
               }else{
                   $seapuntan = new Seapuntan;
                   $seapuntan->user_id=$iduser;
                   $seapuntan->clase_id=$idclase->id;
                   $seapuntan->save();
+
                     return redirect('horarios');
                 }
             }

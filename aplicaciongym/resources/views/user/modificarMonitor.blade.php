@@ -46,19 +46,19 @@
 
                     <tr class="textogymmd">
                         <td>
-                          <div class="font-size14"><input type="text" name="nombre" value="{{$monis->nombre}}" size="15"></div>
+                          <div class="font-size14"><input type="text" name="nombre" value="{{$monis->nombre}}" size="15" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="apellidos" value="{{$monis->apellidos}}" size="15"></div>
+                          <div class="font-size14"><input type="text" name="apellidos" value="{{$monis->apellidos}}" size="15" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="dni" value="{{$monis->DNI}}" size="15" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra"></div>
+                          <div class="font-size14"><input type="text" name="dni" value="{{$monis->DNI}}" size="15" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="email" name="email" value="{{$monis->email}}" size="25"></div>
+                          <div class="font-size14"><input type="email" name="email" value="{{$monis->email}}" size="25" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="password" value="{{Crypt::decrypt($monis->encriptedPass)}}" size="25"></div>
+                          <div class="font-size14"><input type="password" name="password" value="{{Crypt::decrypt($monis->encriptedPass)}}" size="25" required></div>
                         </td>
 
 
