@@ -7,6 +7,7 @@ use App\Models\entrenamiento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 
 
 class entrenamientoController extends Controller
@@ -190,10 +191,13 @@ class entrenamientoController extends Controller
              public function Modificar(Request $datos,$id){
 
                $user=user::find($datos->id);
+               $pass=$datos->password;
 
                $user->nombre=$datos->nombre;
                $user->apellidos=$datos->apellidos;
                $user->DNI=$datos->dni;
+               $user->password=Hash::make($pass);
+               $user->encriptedPass=Crypt::encrypt($pass);
                $user->email=$datos->email;
                $user->save();
                 return redirect('perfil');

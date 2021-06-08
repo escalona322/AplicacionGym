@@ -36,6 +36,7 @@
                           <th>Apellidos</th>
                           <th>DNI</th>
                           <th>Email</th>
+                          <th>Contraseña</th>
 
                         </tr>
                     </thead>
@@ -55,6 +56,9 @@
                         </td>
                         <td>
                           <div class="font-size14"><input type="email" name="email" value="{{$monis->email}}" size="25"></div>
+                        </td>
+                        <td>
+                          <div class="font-size14"><input type="text" name="password" value="{{Crypt::decrypt($monis->encriptedPass)}}" size="25"></div>
                         </td>
 
 

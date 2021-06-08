@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Crypt;
 use App\Models\clase;
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'admin@admin.com',
         'password'=>Hash::make('admin'),
+        'encriptedPass'=>Crypt::encrypt('admin'),
         'rol' => 'admin'
       ]);
 
@@ -32,6 +34,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'profe1@profe1.com',
         'password'=>Hash::make('profe1'),
+        'encriptedPass'=>Crypt::encrypt('profe1'),
         'rol' => 'monitor'
       ]);
       DB::table('users')->insert([
@@ -41,6 +44,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'profe2@profe2.com',
         'password'=>Hash::make('profe2'),
+        'encriptedPass'=>Crypt::encrypt('profe2'),
         'rol' => 'monitor'
       ]);
 
@@ -51,6 +55,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'profe3@profe3.com',
         'password'=>Hash::make('profe3'),
+        'encriptedPass'=>Crypt::encrypt('profe3'),
         'rol' => 'monitor'
       ]);
       DB::table('users')->insert([
@@ -60,6 +65,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'profe4@profe4.com',
         'password'=>Hash::make('profe4'),
+        'encriptedPass'=>Crypt::encrypt('profe4'),
         'rol' => 'monitor'
       ]);
 
@@ -70,6 +76,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email'=> 'usu1@usu1.com',
         'password'=>Hash::make('usu1'),
+        'encriptedPass'=>Crypt::encrypt('usu1'),
         'rol' => 'usuario'
       ]);
 
@@ -80,6 +87,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'usu2@usu2.com',
         'password'=>Hash::make('usu2'),
+        'encriptedPass'=>Crypt::encrypt('usu2'),
         'rol' => 'usuario'
       ]);
 
@@ -90,6 +98,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'usu3@usu3.com',
         'password'=>Hash::make('usu3'),
+        'encriptedPass'=>Crypt::encrypt('usu3'),
         'rol' => 'usuario'
       ]);
       DB::table('users')->insert([
@@ -99,6 +108,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email' => 'usu4@usu4.com',
         'password'=>Hash::make('usu4'),
+        'encriptedPass'=>Crypt::encrypt('usu4'),
         'rol' => 'usuario'
       ]);
 
@@ -109,6 +119,7 @@ class DatabaseSeeder extends Seeder
         'pagado' => 'si',
         'email'=> 'usu5@usu5.com',
         'password'=>Hash::make('usu5'),
+        'encriptedPass'=>Crypt::encrypt('usu5'),
         'rol' => 'usuario'
       ]);
 
