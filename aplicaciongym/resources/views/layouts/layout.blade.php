@@ -42,6 +42,13 @@
   </li>
 </ul>
 </div>
+<form class="" action="salir" method="get">
+  <button type="submit" name="button" class="btn btn-dark" style="bottom: 100%" value="Logout">
+    <i class="fas fa-sign-out-alt" style="transform:scale(2)"></i>
+
+  </button>
+</form>
+
 </div>
 </nav>
 

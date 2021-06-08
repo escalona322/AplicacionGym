@@ -22,6 +22,7 @@ use App\Models\entrenamiento;
 Route::get('/', function () {
     return view('/inicio');
 });
+Route::get('salir','App\Http\Controllers\entrenamientoController@salir')->middleware(['auth'])->name('salir');
 
 Route::get('/dashboard', function () {
     return view('inicio');

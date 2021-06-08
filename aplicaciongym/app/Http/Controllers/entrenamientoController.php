@@ -6,6 +6,7 @@ use App\Models\clase;
 use App\Models\entrenamiento;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 
 class entrenamientoController extends Controller
@@ -142,7 +143,7 @@ class entrenamientoController extends Controller
                 $user->apellidos=$datos->apellidos;
                 $user->pagado="no";
                 $user->rol=$datos->rol;
-                $user->password=$datos->password;
+                $user->password=Hash::make($datos->password);
                 $user->DNI=$datos->dni;
                 $user->email=$datos->email;
                 $user->save();
@@ -197,6 +198,14 @@ class entrenamientoController extends Controller
                $user->save();
                 return redirect('perfil');
 
+             }
+             public function salir(Request $request){
+               Auth::logout();
+
+               $request->session()->invalidate();
+               $request->session()->regenerateToken();
+
+               return redirect('login');
              }
 
 
