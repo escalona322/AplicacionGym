@@ -59,6 +59,7 @@ Route::get('crearEntrenamiento', [entrenamientoController::class,'crearEntrenami
 Route::get('modificarHorario', [horarioController::class,'modificarHorario'])->middleware(['auth']);
 Route::get('update/{id}', [horarioController::class,'Modificar'])->middleware(['auth']);
 Route::get('MenosClase', 'App\Http\Controllers\horarioController@MenosClase')->middleware(['auth']);
+Route::get('Desapuntar', 'App\Http\Controllers\horarioController@Desapuntar')->middleware(['auth']);
 Route::get('MasClase',  'App\Http\Controllers\horarioController@MasClase')->middleware(['auth']);
 Route::get('VaciarClase',  'App\Http\Controllers\horarioController@VaciarClase')->middleware(['auth']);
 

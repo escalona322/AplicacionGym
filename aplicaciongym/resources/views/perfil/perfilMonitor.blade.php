@@ -131,7 +131,7 @@
                              </td>
                              <td>
                                <form class="" action="detalleClase/{{$clase->id}}" method="get"  style="display:inline-block">
-                              
+
                                   <button type="submit" id="detalle" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-eye"></i></button>
                                </form>
                              </td>
@@ -148,7 +148,9 @@
                 </table>
 
                     </div>
-
+                    <div class="row" style="margin-top: 6em;">
+                      a
+                    </div>
 
 
 

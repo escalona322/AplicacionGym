@@ -82,7 +82,15 @@ class horarioController extends Controller
                 }
             }
 
+            public function Desapuntar(Request $datos){
+              $idclase = clase::find($datos->id);
+              $iduser = Auth::user()->id;
+              $apuntados = Seapuntan::All();
+              $seapuntan = Seapuntan::where('user_id',$iduser)->where('clase_id',$idclase->id);
+              $seapuntan->delete();
+              return redirect('perfil');
 
+              }
             public function MenosClase(Request $datos){
               $idclase = clase::find($datos->id);
               $iduser = Auth::user()->id;
