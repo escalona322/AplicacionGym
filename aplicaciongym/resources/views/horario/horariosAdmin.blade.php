@@ -28,10 +28,29 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+              @if (session('vaciar'))
+                  <div class="alert alert-success text-center">
+                      {{ session('vaciar') }}
+                  </div>
+              @endif
+              @if (session('vaciada'))
+                  <div class="alert alert-danger text-center">
+                      {{ session('vaciada') }}
+                  </div>
+              @endif
+              @if (session('asignado'))
+                  <div class="alert alert-success text-center">
+                      {{ session('asignado') }}
+                  </div>
+              @endif
+              @if (session('modificado'))
+                  <div class="alert alert-success text-center">
+                      {{ session('modificado') }}
+                  </div>
+              @endif
               <div class="timetable-img text-center">
                     <img src="img/content/timetable.png" alt="">
                 </div>
-
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped text-center table-active" style="margin-bottom: 10%;">
                         <thead>

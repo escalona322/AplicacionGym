@@ -26,6 +26,21 @@
               <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1"></div>
                   <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
+                    @if (session('borrado'))
+                        <div class="alert alert-danger">
+                            {{ session('borrado') }}
+                        </div>
+                    @endif
+                    @if (session('update'))
+                        <div class="alert alert-success">
+                            {{ session('update') }}
+                        </div>
+                    @endif
+                    @if (session('create'))
+                        <div class="alert alert-success">
+                            {{ session('create') }}
+                        </div>
+                    @endif
 <div class="overflow-auto contenedorentrenos">
   <table class="table table-bordered table-striped text-center">
   <thead>

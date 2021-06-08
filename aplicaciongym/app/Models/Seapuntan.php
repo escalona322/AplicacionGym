@@ -10,11 +10,11 @@ class Seapuntan extends Model
     use HasFactory;
     public function clase()
         {
-        return $this->belongsTo(clase::class);
+        return $this->belongsToMany(clase::class);
         }
         public function User()
         {
-        return $this->belongsTo(User::class);
+        return $this->belongsToMany(User::class);
         }
         public $timestamps = false;
 }

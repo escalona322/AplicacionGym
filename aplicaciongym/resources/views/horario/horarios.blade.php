@@ -94,6 +94,16 @@
                           </tr>
                       </tbody>
                   </table>
+                  @if (session('alert'))
+                      <div class="alert alert-success">
+                          {{ session('alert') }}
+                      </div>
+                  @endif
+                  @if (session('alerta'))
+                      <div class="alert alert-danger">
+                          {{ session('alerta') }}
+                      </div>
+                  @endif
                 </div>
             </div>
         </div>

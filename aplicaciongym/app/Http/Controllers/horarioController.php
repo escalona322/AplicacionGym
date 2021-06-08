@@ -58,7 +58,7 @@ class horarioController extends Controller
               $clase->duracion=$datos->duracion;
               $clase->save();
 
-               return redirect('horarios');
+               return redirect('horarios')->with('modificado', 'Clase actualizada');
             }
 
             public function MasClase(Request $datos){
@@ -72,14 +72,14 @@ class horarioController extends Controller
               }
 
               if ($esta==1) {
-                  return redirect('horarios');
+                  return redirect('horarios')->with('alerta', 'Ya estás en esa clase');
               }else{
                   $seapuntan = new Seapuntan;
                   $seapuntan->user_id=$iduser;
                   $seapuntan->clase_id=$idclase->id;
                   $seapuntan->save();
 
-                    return redirect('horarios');
+                    return redirect('horarios')->with('alert', 'Te has añadido a la clase  "'. $idclase->nombre . '" del ' . $idclase->dia);
                 }
             }
 
@@ -106,9 +106,9 @@ class horarioController extends Controller
                 if ($esta==1) {
                   $seapuntan = Seapuntan::where('user_id',$iduser)->where('clase_id',$idclase->id);
                   $seapuntan->delete();
-                    return redirect('horarios');
+                    return redirect('horarios')->with('alert', 'Te has borrado de la clase  "'. $idclase->nombre . '" del ' . $idclase->dia);
                 }else{
-                    return redirect('horarios');
+                  return redirect('horarios')->with('alerta', 'No estás apuntado a esta clase');
                 }
               }
 
@@ -127,9 +127,9 @@ class horarioController extends Controller
                   if ($esta==1) {
                     $seapuntan = Seapuntan::where('clase_id',$idclase->id);
                     $seapuntan->delete();
-                      return redirect('horarios');
+                    return redirect('horarios')->with('vaciar', 'Acabas de vaciar la clase de "'.$idclase->nombre.'" del '.$idclase->dia );
                   }else{
-                      return redirect('horarios');
+                      return redirect('horarios')->with('vaciada', 'La clase ya está vacía' );
                   }
                 }
 
@@ -145,8 +145,16 @@ class horarioController extends Controller
               public function monitorAsignado(Request $datos, $id){
 
                 $cla=clase::where('id',$id)->first();
+
                 $cla->user_id=$datos->mon;
+                $usu=User::find($cla->user_id);
                 $cla->save();
-                  return redirect('horarios');
+
+                if ($cla->user_id==null) {
+                  return redirect('horarios')->with('asignado', 'Monitor Asignado: Sin Monitor' );
+                }else{
+                  return redirect('horarios')->with('asignado', 'Monitor Asignado: '.$usu->nombre );
+                }
+
               }
 }

@@ -17,7 +17,7 @@ class perfilesController extends Controller
     $user = Auth::user();
     $entrenamientos = Entrenamiento::All();
     $apuntados = Seapuntan::where('user_id',$user->id)->get();
-    $misclases = clase::where('user_id',$user->id)->orderBy('dia', 'asc')->get();
+    $misclases = clase::where('user_id',$user->id)->get();
 
 
      //Ver diferentes blades conforme a tu Auth

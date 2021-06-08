@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\clase;
 use App\Models\entrenamiento;
+use App\Models\Seapuntan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -50,12 +51,12 @@ class entrenamientoController extends Controller
             $entr = Entrenamiento::where('tipo', 'Upper')->get();
             return view('entrenamiento/entrenamientosupper',['entre' => $entr]);
           }
-
           public function listadoEntreCardio(Request $request){
             $entrenamientos = Entrenamiento::All();
             $entr = Entrenamiento::where('tipo', 'Cardio')->get();
             return view('entrenamiento/entrenamientoscardio',['entre' => $entr]);
           }
+
           public function listadoEntreLowEditar(Request $request){
             $users = User::All();
             $entrenamientos = Entrenamiento::All();
@@ -80,13 +81,13 @@ class entrenamientoController extends Controller
             $entrenamiento->delete();
             switch($entrenamiento->tipo){
               case 'Low':
-              return redirect('listadoEntreLowEditar');
+              return redirect('listadoEntreLowEditar')->with('borrado', 'Entrenamiento eliminado: '. $entrenamiento->nombre);
               break;
             case 'Upper':
-                return redirect('listadoEntreUpperEditar');
+                return redirect('listadoEntreUpperEditar')->with('borrado', 'Entrenamiento eliminado: '. $entrenamiento->nombre);
                   break;
             case 'Cardio':
-                  return redirect('listadoEntreCardioEditar');
+                  return redirect('listadoEntreCardioEditar')->with('borrado', 'Entrenamiento eliminado: '. $entrenamiento->nombre);
                     break;
             }
           }
@@ -116,13 +117,13 @@ class entrenamientoController extends Controller
 
             switch($entrenamiento->tipo){
               case 'Low':
-              return redirect('listadoEntreLowEditar');
+              return redirect('listadoEntreLowEditar')->with('update', 'Entrenamiento actualizado: '. $entrenamiento->nombre);
               break;
             case 'Upper':
-                return redirect('listadoEntreUpperEditar');
+                return redirect('listadoEntreUpperEditar')->with('update', 'Entrenamiento actualizado: '. $entrenamiento->nombre);
                   break;
             case 'Cardio':
-                  return redirect('listadoEntreCardioEditar');
+                  return redirect('listadoEntreCardioEditar')->with('update', 'Entrenamiento actualizado: '. $entrenamiento->nombre);
                     break;
             }
               }
@@ -167,8 +168,18 @@ class entrenamientoController extends Controller
                 $entrenamiento->user_id=$datos->user_id;
                 $entrenamiento->save();
 
-                $entr = Entrenamiento::where('tipo', $entrenamiento->tipo)->get();
-                  return view('entrenamiento/entrenamientosEditar',['entres' => $entr]);
+                switch($entrenamiento->tipo){
+                  case 'Low':
+                  return redirect('listadoEntreLowEditar')->with('create', 'Nuevo entrenamiento: '. $entrenamiento->nombre);
+                  break;
+                case 'Upper':
+                    return redirect('listadoEntreUpperEditar')->with('create', 'Nuevo entrenamiento: '. $entrenamiento->nombre);
+                      break;
+                case 'Cardio':
+                      return redirect('listadoEntreCardioEditar')->with('create', 'Nuevo entrenamiento: '. $entrenamiento->nombre);
+                        break;
+                }
+
            }
 
 
@@ -176,8 +187,10 @@ class entrenamientoController extends Controller
 
            public function eliminarMonitor(Request $datos){
              $user = user::find($datos->id);
+             $seapuntan = Seapuntan::where('user_id',$datos->id);
+             $seapuntan->delete();
              $user->delete();
-               return redirect('perfil');
+              return redirect('perfil')->with('createUser', 'Usuario eliminado: '. $user->nombre);
            }
 
            //ModificaMonitor
@@ -200,7 +213,7 @@ class entrenamientoController extends Controller
                $user->encriptedPass=Crypt::encrypt($pass);
                $user->email=$datos->email;
                $user->save();
-                return redirect('perfil');
+                return redirect('perfil')->with('updateUser', 'Usuario actualizado: '. $user->nombre);
 
              }
              public function salir(Request $request){
