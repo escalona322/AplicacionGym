@@ -15,7 +15,7 @@ class CreateSeapuntansTable extends Migration
     {
         Schema::create('seapuntans', function (Blueprint $table) {
             $table->id()->constrained();
-            $table->foreignId('clase_id')->constrained()->onDelete('cascade');
+            $table->foreignId('clase_id')->constrained();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
 
         });

@@ -20,7 +20,7 @@ class CreateClasesTable extends Migration
             $table->integer('duracion');
             $table->string('dia');
             $table->string('turno');
-            $table->foreignId('user_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->nullable()->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -187,10 +187,16 @@ class entrenamientoController extends Controller
 
            public function eliminarMonitor(Request $datos){
              $user = user::find($datos->id);
+             $clases = clase::where('user_id', $datos->id);
              $seapuntan = Seapuntan::where('user_id',$datos->id);
              $seapuntan->delete();
              $user->delete();
-              return redirect('perfil')->with('createUser', 'Usuario eliminado: '. $user->nombre);
+             if($clases==null){
+               return redirect('perfil')->with('deleteUser', 'Usuario eliminado: '. $user->nombre);
+             }else{
+               return redirect('perfil')->with('deleteUser', 'Ha habido un problema: el monitor esta asignado a una clase.');
+             }
+
            }
 
            //ModificaMonitor
