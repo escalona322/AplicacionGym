@@ -17,7 +17,7 @@
   <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top" style="background: rgb(236,99,116);
     background: linear-gradient(0deg, rgba(236,99,116,1) 0%, rgba(51,40,40,1) 100%);">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('inicio') }}">
             <img src="{{asset('imgs/logo.png')}}" height="55" width="130"alt="">
   </a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" >
