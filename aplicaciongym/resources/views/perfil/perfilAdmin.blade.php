@@ -30,9 +30,9 @@
                             {{ session('updateUser') }}
                         </div>
                     @endif
-                    @if (session('CreateUser'))
-                        <div class="alert alert-success text-center">
-                            {{ session('updateUser') }}
+                    @if (session('deleteUser'))
+                        <div class="alert alert-danger text-center">
+                            {{ session('deleteUser') }}
                         </div>
                     @endif
                     <div class="row">

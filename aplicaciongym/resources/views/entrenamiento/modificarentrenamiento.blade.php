@@ -24,11 +24,11 @@
     <body>
       <div style="margin-top: 6em;">
         <div class="row" >
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1 contenedorentrenos">
 
             </div>
             <!-- PARTE DEL MEDIO -->
-            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
                 <div class="row">
                     <p class="textogymxl text-center"> -Editar entrenamientos- </p>
                 </div>
@@ -71,8 +71,43 @@
                                                       <option value="Low" selected>Low body</option>
                                                       <option value="Upper">Upper body</option>
                                                       <option value="Cardio">Cardio</option>
-                                                    </select>  </div>
+                                                    </select>
+                                                  </div>
+                                                  <div class="row">
+                                                    <div class="col">
+                                                     <span class="textogym">Monitor:</span>
+                                                    </div>
+
+                                                      @foreach($users as $user)
+                                                      @if($user->rol=="monitor")
+                                                        @if($entrenamiento->user_id==$user->id)
+                                                        <div class="col">
+                                                        <label>{{$user->nombre}}</label>
+                                                          <input type="radio" name="mon" value="{{$user->id}}" checked><br/>
+                                                        </div>
+                                                        @else
+                                                        <div class="col">
+                                                          <label>{{$user->nombre}}</label>
+                                                          <input type="radio" name="mon" value="{{$user->id}}"><br/>
+                                                        </div>
+
+                                                        @endif
+                                                      @endif
+                                                      @endforeach
+                                                      <div class="col">
+                                                        <label>Sin monitor</label>
+                                                          <input type="radio" name="mon" value="{{$user->id==null}}"><br/>
+                                                      </div>
+
+
+
+
+
+
+                                                  </div>
+
                                                  </div>
+
                                                </div>
                                        </div>
                                    </div>
@@ -80,11 +115,14 @@
                                 <div class="row">
                                     <div class="col mx-3"> <span class="textogym">Kcalorias:  </div>
                                     <div class="col"> <input class="inputcalorias"  type="number" name="Kcalorias" value="{{$entrenamiento->Kcalorias}}">  </div>
+
                                     </div>
+
                                   <div class="row">
                                     <span class="textogym">Descripción</span>
 
                                     </div>
+
                                     <div class="row">
                                     <textarea class="inputtextarea"name="descripcion" rows="4" cols="30">{{$entrenamiento->descripcion}}</textarea>
                                       </div>

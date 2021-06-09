@@ -103,9 +103,8 @@ Route::get('verentrenamiento', function(){
   return view('verentrenamiento');
 })->middleware(['auth'])->name('verentrenamiento');
 
-Route::get('entrenamientosanadir', function(){
-  return view('entrenamiento/entrenamientosanadir');
-})->middleware(['auth'])->name('entrenamientosanadir');
+
+Route::get('entrenamientosanadir', [entrenamientoController::class,'entrenamientosanadir'])->middleware(['auth'])->name('entrenamientosanadir');
 
 Route::get('entrenamientoeditar', function(){
   return view('entrenamientoeditar');

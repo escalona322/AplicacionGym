@@ -78,13 +78,18 @@
                                     <div class="col "> <span class="textogym">Kcalorias:  </div>
                                     <div class="col"> <input class="inputnumber"  type="number" name="Kcalorias" placeholder="100">  </div>
                                     <div class="col "> <span class="textogym">Monitor especialista:  </div>
-                                    <div class="col"> <select class="" name="user_id">
-                                      <option value="2" selected> Paco</option>
-                                      <option value="3">Nuria</option>
-                                      <option value="4">Carlos</option>
-                                      <option value="5">Sofia</option>
-                                    </select> </div>  </div>  </div>
-                                    </div>
+                                    <div class="col">
+                                      <select class="" name="user_id">
+                                        @foreach($users as $user)
+                                        @if($user->rol=="monitor")
+                                          <option value="{{$user->id}}">{{$user->nombre}}</option>
+                                        @endif
+                                        @endforeach
+                                      <option value="{{$user->id==null}}" selected> Sin monitor</option>
+
+
+                                    </select>
+                                    </div>                              
                                   </div>
                               </div>
 

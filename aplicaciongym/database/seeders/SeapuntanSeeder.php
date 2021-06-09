@@ -19,10 +19,7 @@ class SeapuntanSeeder extends Seeder
      */
     public function run()
     {
-      DB::table('seapuntans')->insert([
-        'clase_id'=> 1,
-        'user_id'=>6
-      ]);
+
       DB::table('seapuntans')->insert([
         'clase_id'=> 1,
         'user_id'=>6
@@ -33,6 +30,10 @@ class SeapuntanSeeder extends Seeder
       ]);
       DB::table('seapuntans')->insert([
         'clase_id'=> 3,
+        'user_id'=>6
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 4,
         'user_id'=>6
       ]);
     }

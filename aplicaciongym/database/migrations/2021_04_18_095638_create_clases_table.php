@@ -14,7 +14,7 @@ class CreateClasesTable extends Migration
     public function up()
     {
         Schema::create('clases', function (Blueprint $table) {
-            $table->id()->onDelete('cascade');
+            $table->id();
             $table->string('nombre');
             $table->integer('aforo');
             $table->integer('duracion');

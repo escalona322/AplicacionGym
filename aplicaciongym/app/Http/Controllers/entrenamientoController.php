@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 
 
 class entrenamientoController extends Controller
@@ -94,8 +95,9 @@ class entrenamientoController extends Controller
 
           public function verEditarEntreno(Request $datos, $id){
             $entrenamientos = Entrenamiento::All();
+             $users = User::All();
             $entr = Entrenamiento::where('id', $id)->get();
-            return view('entrenamiento/modificarentrenamiento',['entre' => $entr]);
+            return view('entrenamiento/modificarentrenamiento',['entre' => $entr, 'users' => $users]);
           }
 
           public function modificarEntreno(Request $datos,$id){
@@ -109,7 +111,7 @@ class entrenamientoController extends Controller
             $entrenamiento->series=$datos->series;
             $entrenamiento->videoyt=$datos->videoyt;
             $entrenamiento->descripcion=$datos->descripcion;
-
+            $entrenamiento->user_id=$datos->mon;
             $entrenamiento->Kcalorias=$datos->Kcalorias;
             $entrenamiento->save();
 
@@ -153,7 +155,11 @@ class entrenamientoController extends Controller
               return redirect('perfil');
            }
 
+           public function entrenamientosanadir(Request $datos){
+             $users = User::All();
 
+             return view('entrenamiento/entrenamientosanadir',['users' => $users]);
+           }
            public function crearEntrenamiento(Request $datos){
              $entrenamiento = new Entrenamiento;
 
@@ -187,10 +193,23 @@ class entrenamientoController extends Controller
 
            public function eliminarMonitor(Request $datos){
              $user = user::find($datos->id);
+
              $seapuntan = Seapuntan::where('user_id',$datos->id);
              $seapuntan->delete();
-             $user->delete();
-              return redirect('perfil')->with('createUser', 'Usuario eliminado: '. $user->nombre);
+
+
+             $clases = DB::table('clases')
+                 ->where('user_id', '=', $user->id)
+                 ->update(['user_id' => null]);
+
+              $entrenamientos = DB::table('entrenamientos')
+                  ->where('user_id', '=', $user->id)
+                  ->update(['user_id' => null]);
+
+                 $user->delete();
+
+            // $user->delete();
+              return redirect('perfil')->with('deleteUser', 'Usuario eliminado: '. $user->nombre);
            }
 
            //ModificaMonitor
