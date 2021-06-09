@@ -73,6 +73,10 @@
                                                       <option value="Cardio">Cardio</option>
                                                     </select>
                                                   </div>
+                                                  @php
+                                                  $usA= Auth::user();
+                                                  @endphp
+                                                  @if($usA->rol == "admin")
                                                   <div class="row">
                                                     <div class="col">
                                                      <span class="textogym">Monitor:</span>
@@ -98,13 +102,8 @@
                                                         <label>Sin monitor</label>
                                                           <input type="radio" name="mon" value="{{$user->id==null}}"><br/>
                                                       </div>
-
-
-
-
-
-
                                                   </div>
+                                                  @endif
 
                                                  </div>
 
