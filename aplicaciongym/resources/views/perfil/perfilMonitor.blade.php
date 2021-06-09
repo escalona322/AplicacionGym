@@ -23,77 +23,79 @@
     <body>
       <div style="margin-top: 6em;">
               <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-3"></div>
-                  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-6">
-
-                    <p class="text-center textogymxl">Usuarios</p>
-                      <div class="overflow-auto contenedorentrenos">
-                        <table class="table table-bordered table-striped text-center">
-                       <thead>
-                           <tr class="textogymmd">
-                               <th>Nombre</th>
-                               <th>Apellidos</th>
-                               <th>DNI</th>
-                               <th>Email</th>
-                               <th>Pagado</th>
-                               <th>Acciones</th>
-                           </tr>
-                       </thead>
-                       <tbody>
-
-
-                         @foreach($users as $user)
-                         @if($user -> rol != 'admin' && $user -> rol != 'monitor')
-                           <tr class="textogymmd">
-                               <td>
-                                 <div class="font-size14 ">{{$user->nombre}}</div>
-                               </td>
-                               <td>
-                                 <div class="font-size14 ">{{$user->apellidos}}</div>
-                               </td>
-                               <td>
-                                 <div class="font-size14 ">{{$user->DNI}}</div>
-                               </td>
-                               <td>
-                                 <div class="font-size14 ">{{$user->email}}</div>
-                               </td>
-                               <td>
-                                  @if($user -> rol == 'monitor')
-                                 <div class="font-size14 ">---</div>
-                                 @else
-                                 <div class="font-size14 ">{{$user->pagado}}</div>
-                                 @endif
-                               </td>
-
-                               <td>
-                                 <form class="" action="modificarMonitor" method="get"  style="display:inline-block">
-                                   <input type="text" name="id" value="{{$user->id}}" hidden>
-                                     <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
-
-                                 </form>
-                                 <form class="" action="eliminarMonitor" method="get"  style="display:inline-block">
-                                   <input type="text" name="id" value="{{$user->id}}" hidden>
-                                     <button type="submit" id="borrar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-trash-alt"></i></button>
-                                 </form>
-                                   @if($user -> rol == 'usuario')
-                                 <form class="" action="pagarUser" method="get"  style="display:inline-block">
-                                   <input type="text" name="id" value="{{$user->id}}" hidden>
-                                     <button type="submit" id="pagar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="fas fa-hand-holding-usd"></i></button>
-                                 </form>
-                                 @endif
-                               </td>
-                           </tr>
-                           @endif
-                       @endforeach
+                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+<div class="col">
+            <p class="text-center textogymxl">Usuarios</p>
+              <div class="overflow-auto contenedorentrenos">
+                <table class="table table-bordered table-striped text-center">
+               <thead>
+                   <tr class="textogymmd">
+                       <th>Nombre</th>
+                       <th>Apellidos</th>
+                       <th>DNI</th>
+                       <th>Email</th>
+                       <th>Pagado</th>
+                       <th>Acciones</th>
+                   </tr>
+               </thead>
+               <tbody>
 
 
-                  </tbody>
-                </table>
-                <form class="" action="crearMonitor" method="get">
-                    <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="crear"><i class="fas fa-user-plus"></i></button>
-                </form>
-                    </div>
+                 @foreach($users as $user)
+                 @if($user -> rol != 'admin' && $user -> rol != 'monitor')
+                   <tr class="textogymmd">
+                       <td>
+                         <div class="font-size14 ">{{$user->nombre}}</div>
+                       </td>
+                       <td>
+                         <div class="font-size14 ">{{$user->apellidos}}</div>
+                       </td>
+                       <td>
+                         <div class="font-size14 ">{{$user->DNI}}</div>
+                       </td>
+                       <td>
+                         <div class="font-size14 ">{{$user->email}}</div>
+                       </td>
+                       <td>
+                          @if($user -> rol == 'monitor')
+                         <div class="font-size14 ">---</div>
+                         @else
+                         <div class="font-size14 ">{{$user->pagado}}</div>
+                         @endif
+                       </td>
 
+                       <td>
+                         <form class="" action="modificarMonitor" method="get"  style="display:inline-block">
+                           <input type="text" name="id" value="{{$user->id}}" hidden>
+                             <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
+
+                         </form>
+                         <form class="" action="eliminarMonitor" method="get"  style="display:inline-block">
+                           <input type="text" name="id" value="{{$user->id}}" hidden>
+                             <button type="submit" id="borrar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-trash-alt"></i></button>
+                         </form>
+                           @if($user -> rol == 'usuario')
+                         <form class="" action="pagarUser" method="get"  style="display:inline-block">
+                           <input type="text" name="id" value="{{$user->id}}" hidden>
+                             <button type="submit" id="pagar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="fas fa-hand-holding-usd"></i></button>
+                         </form>
+                         @endif
+                       </td>
+                   </tr>
+                   @endif
+               @endforeach
+
+
+          </tbody>
+          </table>
+          <form class="" action="crearMonitor" method="get">
+              <button type="submit" name="button" class="btn-lg btn-danger" value="crear"><i class="fas fa-user-plus"></i></button>
+          </form>
+            </div>
+
+
+</div>
 
                     <p class="text-center textogymxl">Mis Clases</p>
                       <div class="overflow-auto contenedorentrenos">
@@ -150,7 +152,7 @@
 
                     </div>
                     <div class="row" style="margin-top: 6em;">
-                      a
+                      <p>  </p>
                     </div>
 
 
@@ -160,7 +162,7 @@
 
 
                   </div>
-                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-3"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
   </div>
     </body>
 </html>

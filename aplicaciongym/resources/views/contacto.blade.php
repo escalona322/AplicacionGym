@@ -43,9 +43,11 @@
 
                   </p>
                   <h2 class="textogymmd mt-20" >¡Siguenos!</h2>
+                  <p id="phone" class="textogym my-4" style="display: none">658985785</p>
+                  <p id="email" class="textogym my-4"style="display: none">Sportakus@gmail.com</p>
                 </div>
 
-                <div class="col text-center mt-10">
+                <div class="col text-center">
 
                   <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Facebook" onclick="location.href='https://www.facebook.com/ColegioValleDelMiro/'"><i class="fab fa-facebook-square" style="transform:scale(2)"></i></button>
                   <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="instagram" onclick="location.href='https://www.instagram.com/valledelmiro/'"><i class="fab fa-instagram" style="transform:scale(2)"></i></button>
@@ -72,8 +74,7 @@
       }
 </script>
 
-                  <p id="phone" class="textogym my-4" style="display: none">658985785</p>
-                  <p id="email" class="textogym my-4"style="display: none">Sportakus@gmail.com</p>
+
                 </div>
               </div>
 

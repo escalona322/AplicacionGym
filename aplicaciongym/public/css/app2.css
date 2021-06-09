@@ -163,7 +163,9 @@ box-shadow:  11px -11px 21px grey,
 margin-bottom: 2em;
 margin-top: 2em;
 }
-
+.contenedorInicio{
+  background-color:rgb(149,90,90);
+}
 .contenedorentrenos{
   height: 30em;
 }

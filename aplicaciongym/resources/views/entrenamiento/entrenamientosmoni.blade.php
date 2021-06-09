@@ -24,11 +24,11 @@
     <body>
       <div style="margin-top: 6em;">
         <div class="row" >
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1 contenedorentrenos">
 
             </div>
             <!-- PARTE DEL MEDIO -->
-            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
                 <div class="row">
                     <p class="textogymxl text-center"> Página Principal </p>
                 </div>

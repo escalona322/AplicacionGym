@@ -28,7 +28,7 @@
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
 
 
-              <p class="textogymxl text-center">Mi clase</p>
+              <p class="textogymxl text-center">{{$clase->nombre}}</p>
                     <table class="table table-bordered table-striped text-center">
                     <thead>
                         <tr class="textogymmd">

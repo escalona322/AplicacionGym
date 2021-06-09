@@ -64,8 +64,9 @@ class perfilesController extends Controller
 
     public function detalleClase(Request $datos, $id){
       $apuntados = Seapuntan::where('clase_id',$id)->get();
+      $clase = clase::find($id);
 
-      return view ('perfil/detalleClase', ['apuntado'=>$apuntados]);
+      return view ('perfil/detalleClase', ['apuntado'=>$apuntados,'clase'=>$clase]);
 
     }
 }
