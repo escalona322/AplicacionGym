@@ -59,6 +59,7 @@
       <style>
 .footer {
 position: fixed;
+height: auto;
 left: 0;
 bottom: 0;
 width: 100%;

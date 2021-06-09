@@ -23,7 +23,7 @@
           <link rel="script/javascript" href="{{ URL::asset('js/app2.js') }}">
     </head>
     <body>
-      <div style="margin-top: 6em;">
+      <div style="margin-top: 6em; margin-bottom: 3em;">
         <div class="row" >
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
 

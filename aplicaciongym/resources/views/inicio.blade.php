@@ -77,18 +77,13 @@
             </div>
 
             <!-- Left and right controls -->
-            <a class="carousel-control-prev" href="#myCarousel">
-            <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel">
-            <span class="carousel-control-next-icon"></span>
-            </a>
+
           </div>
 
 <script>
   $(document).ready(function(){
     // Activate Carousel with a specified interval
-    $("#imagenes").carousel({interval: 6000});
+    $("#imagenes").carousel({interval: 4000});
 
     // Enable Carousel Indicators
     $(".item1").click(function(){

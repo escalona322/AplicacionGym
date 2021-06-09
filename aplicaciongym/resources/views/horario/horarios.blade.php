@@ -22,10 +22,20 @@
         <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
     </head>
     <body>
-      <div style="margin-top: 6em;">
+      <div style="margin-top: 6em; margin-bottom: 3em;">
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+              @if (session('alert'))
+                  <div class="alert alert-success">
+                      {{ session('alert') }}
+                  </div>
+              @endif
+              @if (session('alerta'))
+                  <div class="alert alert-danger">
+                      {{ session('alerta') }}
+                  </div>
+              @endif
               <div class="timetable-img text-center">
                     <img src="img/content/timetable.png" alt="">
                 </div>
@@ -94,16 +104,6 @@
                           </tr>
                       </tbody>
                   </table>
-                  @if (session('alert'))
-                      <div class="alert alert-success">
-                          {{ session('alert') }}
-                      </div>
-                  @endif
-                  @if (session('alerta'))
-                      <div class="alert alert-danger">
-                          {{ session('alerta') }}
-                      </div>
-                  @endif
                 </div>
             </div>
         </div>

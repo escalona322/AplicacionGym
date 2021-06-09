@@ -22,7 +22,7 @@
           <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
     </head>
     <body>
-      <div style="margin-top: 6em;">
+      <div style="margin-top: 6em; margin-bottom: 3em;">
         <div class="row" >
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
 
