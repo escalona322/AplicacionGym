@@ -84,7 +84,8 @@
           </td>
 
         <td>
-            <form class="" action="verEditarEntreno/{{$entre->id}}" method="get" style="display:inline-block; transform: scale(0.7);">
+            <form class="" action="verEditarEntreno/{{$entre->id}}" method="post" style="display:inline-block; transform: scale(0.7);">
+              @csrf
               <input type="text" name="id" value="" hidden>
                 <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
 

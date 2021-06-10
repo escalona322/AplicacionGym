@@ -82,13 +82,15 @@
                                     <td class="align-middle textogymmd">20:00</td>
                                 @endif
                                     <td>
-                                        <form class="" action="modificarHorario" method="get">
+                                        <form class="" action="modificarHorario" method="post">
+                                          @csrf
                                           <span class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
                                           <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                           <div class="margin-10px-top font-size14"><i class="far fa-clock" style="margin-right: 0.5em;"></i>{{$clase->duracion}} min</div>
                                           <input type="text" name="id" value="{{$clase->id}}" hidden>
                                         </form>
-                                        <form class="" action="asignarMonitor" method="get">
+                                        <form class="" action="asignarMonitor" method="post">
+                                          @csrf
                                           <input type="text" name="id" value="{{$clase->id}}" hidden>
                                           <button type="submit" id="asignar" name="button" class="btn-sm btn-outline-dark" value="Asignar monitor" style="display:inline-block"><i class="fas fa-user-tag"></i></button>
                                             @if($clase->user_id==null)

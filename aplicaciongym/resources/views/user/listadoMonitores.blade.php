@@ -59,7 +59,8 @@
                             </td>
 
                             <td>
-                              <form class="" action="modificarMonitor" method="get"  style="display:inline-block">
+                              <form class="" action="modificarMonitor" method="post"  style="display:inline-block">
+                                @csrf
                                 <input type="text" name="id" value="{{$user->id}}" hidden>
                                   <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
 

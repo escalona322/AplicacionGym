@@ -84,7 +84,8 @@
                                </td>
 
                                <td>
-                                 <form class="" action="modificarMonitor" method="get"  style="display:inline-block">
+                                 <form class="" action="modificarMonitor" method="post"  style="display:inline-block">
+                                   @csrf
                                    <input type="text" name="id" value="{{$user->id}}" hidden>
                                      <button type="submit" id="editar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-edit"></i></button>
 
@@ -94,7 +95,8 @@
                                      <button type="submit" id="borrar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="far fa-trash-alt"></i></button>
                                  </form>
                                    @if($user -> rol == 'usuario')
-                                 <form class="" action="pagarUser" method="get"  style="display:inline-block">
+                                 <form class="" action="pagarUser" method="post"  style="display:inline-block">
+                                   @csrf
                                    <input type="text" name="id" value="{{$user->id}}" hidden>
                                      <button type="submit" id="pagar" name="button" class="btn-lg btn-danger" style="bottom: 100%"><i class="fas fa-hand-holding-usd"></i></button>
                                  </form>
