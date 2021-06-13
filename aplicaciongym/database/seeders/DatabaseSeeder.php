@@ -38,34 +38,34 @@ class DatabaseSeeder extends Seeder
         'rol' => 'monitor'
       ]);
       DB::table('users')->insert([
-        'nombre'=>'profe2',
-        'apellidos'=> 'profe2',
+        'nombre'=>'Carlos',
+        'apellidos'=> 'Lopez Pisuegra',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email' => 'profe2@profe2.com',
-        'password'=>Hash::make('profe2'),
-        'encriptedPass'=>Crypt::encrypt('profe2'),
+        'email' => 'Carlosmoni@correo.com',
+        'password'=>Hash::make('carlos'),
+        'encriptedPass'=>Crypt::encrypt('carlos'),
         'rol' => 'monitor'
       ]);
 
       DB::table('users')->insert([
-        'nombre'=>'profe3',
-        'apellidos'=> 'profe3',
+        'nombre'=>'Eustaquio',
+        'apellidos'=> 'Ramirez Conde',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email' => 'profe3@profe3.com',
-        'password'=>Hash::make('profe3'),
-        'encriptedPass'=>Crypt::encrypt('profe3'),
+        'email' => 'Eustaquiomoni@correo.com',
+        'password'=>Hash::make('eustaquio'),
+        'encriptedPass'=>Crypt::encrypt('eustaquio'),
         'rol' => 'monitor'
       ]);
       DB::table('users')->insert([
-        'nombre'=>'profe4',
-        'apellidos'=> 'profe4',
+        'nombre'=>'Claudia',
+        'apellidos'=> 'Campos Bolsa',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email' => 'profe4@profe4.com',
-        'password'=>Hash::make('profe4'),
-        'encriptedPass'=>Crypt::encrypt('profe4'),
+        'email' => 'Claudiamoni@correo.com',
+        'password'=>Hash::make('claudia'),
+        'encriptedPass'=>Crypt::encrypt('claudia'),
         'rol' => 'monitor'
       ]);
 
@@ -81,45 +81,45 @@ class DatabaseSeeder extends Seeder
       ]);
 
       DB::table('users')->insert([
-        'nombre'=>'usu2',
-        'apellidos'=> 'usu2',
+        'nombre'=>'Juan',
+        'apellidos'=> 'Ramirez Gonzalez',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email' => 'usu2@usu2.com',
-        'password'=>Hash::make('usu2'),
-        'encriptedPass'=>Crypt::encrypt('usu2'),
+        'email' => 'Juanusuario@correo.com',
+        'password'=>Hash::make('juan'),
+        'encriptedPass'=>Crypt::encrypt('juan'),
         'rol' => 'usuario'
       ]);
 
       DB::table('users')->insert([
-        'nombre'=>'usu3',
-        'apellidos'=> 'usu3',
+        'nombre'=>'Francisco',
+        'apellidos'=> 'Zamora Ibañez',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email' => 'usu3@usu3.com',
-        'password'=>Hash::make('usu3'),
-        'encriptedPass'=>Crypt::encrypt('usu3'),
+        'email' => 'Franciscousuario@correo.com',
+        'password'=>Hash::make('francisco'),
+        'encriptedPass'=>Crypt::encrypt('francisco'),
         'rol' => 'usuario'
       ]);
       DB::table('users')->insert([
-        'nombre'=>'usu4',
-        'apellidos'=> 'usu4',
+        'nombre'=>'Lucia',
+        'apellidos'=> 'Olivos Soria',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email' => 'usu4@usu4.com',
-        'password'=>Hash::make('usu4'),
-        'encriptedPass'=>Crypt::encrypt('usu4'),
+        'email' => 'Luciausuario@correo.com',
+        'password'=>Hash::make('lucia'),
+        'encriptedPass'=>Crypt::encrypt('lucia'),
         'rol' => 'usuario'
       ]);
 
       DB::table('users')->insert([
-        'nombre'=>'usu5',
-        'apellidos'=> 'usu5',
+        'nombre'=>'Belen',
+        'apellidos'=> 'Hidalgo Sanchez',
         'DNI' => '00000000Z',
         'pagado' => 'si',
-        'email'=> 'usu5@usu5.com',
-        'password'=>Hash::make('usu5'),
-        'encriptedPass'=>Crypt::encrypt('usu5'),
+        'email'=> 'Belenusuario@correo.com',
+        'password'=>Hash::make('belen'),
+        'encriptedPass'=>Crypt::encrypt('belen'),
         'rol' => 'usuario'
       ]);
 

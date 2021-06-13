@@ -19,22 +19,117 @@ class SeapuntanSeeder extends Seeder
      */
     public function run()
     {
-
       DB::table('seapuntans')->insert([
         'clase_id'=> 1,
-        'user_id'=>6
+        'user_id'=>7
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 1,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 1,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 1,
+        'user_id'=>10
       ]);
       DB::table('seapuntans')->insert([
         'clase_id'=> 2,
-        'user_id'=>6
+        'user_id'=>7
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 2,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 2,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 2,
+        'user_id'=>10
       ]);
       DB::table('seapuntans')->insert([
         'clase_id'=> 3,
-        'user_id'=>6
+        'user_id'=>7
       ]);
       DB::table('seapuntans')->insert([
-        'clase_id'=> 4,
-        'user_id'=>6
+        'clase_id'=> 3,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 3,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 3,
+        'user_id'=>10
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 16,
+        'user_id'=>7
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 16,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 16,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 16,
+        'user_id'=>10
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 6,
+        'user_id'=>7
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 6,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 6,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 6,
+        'user_id'=>10
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 9,
+        'user_id'=>7
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 9,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 9,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 9,
+        'user_id'=>10
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 12,
+        'user_id'=>7
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 12,
+        'user_id'=>8
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 12,
+        'user_id'=>9
+      ]);
+      DB::table('seapuntans')->insert([
+        'clase_id'=> 12,
+        'user_id'=>10
       ]);
     }
 }

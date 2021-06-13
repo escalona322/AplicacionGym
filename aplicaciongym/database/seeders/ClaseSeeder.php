@@ -25,7 +25,7 @@ class ClaseSeeder extends Seeder
          'user_id' => 3
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'Pilates',
+         'nombre'=>'Yoga',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Martes',
@@ -33,7 +33,7 @@ class ClaseSeeder extends Seeder
          'user_id' => 3
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'AquaGym',
+         'nombre'=>'Yoga',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Miercoles',
@@ -41,154 +41,154 @@ class ClaseSeeder extends Seeder
          'user_id' => 2
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'Ciclo',
+         'nombre'=>'Yoga',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Jueves',
          'turno' => '1',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'PAblo',
+         'nombre'=>'Yoga',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Viernes',
          'turno' => '1',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'PAblo',
+         'nombre'=>'Boxeo',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Sabado',
          'turno' => '1',
-         'user_id' => 2
+         'user_id' => 4
        ]);
 
        //turno 2
        DB::table('clases')->insert([
-         'nombre'=>'Yoga',
+         'nombre'=>'Aerobic',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Lunes',
          'turno' => '2',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'Pilates',
+         'nombre'=>'Aerobic',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Martes',
          'turno' => '2',
-         'user_id' => 2
+         'user_id' => 4
+       ]);
+       DB::table('clases')->insert([
+         'nombre'=>'Aerobic',
+         'aforo'=> 20,
+         'duracion' => 60,
+         'dia' => 'Miercoles',
+         'turno' => '2',
+         'user_id' => 4
+       ]);
+       DB::table('clases')->insert([
+         'nombre'=>'Aerobic',
+         'aforo'=> 20,
+         'duracion' => 60,
+         'dia' => 'Jueves',
+         'turno' => '2',
+         'user_id' => 5
+       ]);
+       DB::table('clases')->insert([
+         'nombre'=>'Aerobic',
+         'aforo'=> 20,
+         'duracion' => 60,
+         'dia' => 'Viernes',
+         'turno' => '2',
+         'user_id' => 5
        ]);
        DB::table('clases')->insert([
          'nombre'=>'AquaGym',
          'aforo'=> 20,
          'duracion' => 60,
-         'dia' => 'Miercoles',
-         'turno' => '2',
-         'user_id' => 2
-       ]);
-       DB::table('clases')->insert([
-         'nombre'=>'Ciclo',
-         'aforo'=> 20,
-         'duracion' => 60,
-         'dia' => 'Jueves',
-         'turno' => '2',
-         'user_id' => 2
-       ]);
-       DB::table('clases')->insert([
-         'nombre'=>'PAblo',
-         'aforo'=> 20,
-         'duracion' => 60,
-         'dia' => 'Viernes',
-         'turno' => '2',
-         'user_id' => 2
-       ]);
-       DB::table('clases')->insert([
-         'nombre'=>'PAblo',
-         'aforo'=> 20,
-         'duracion' => 60,
          'dia' => 'Sabado',
          'turno' => '2',
-         'user_id' => 2
+         'user_id' => 5
        ]);
 
        //turno 3
        DB::table('clases')->insert([
-         'nombre'=>'Yoga',
+         'nombre'=>'Ciclo',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Lunes',
          'turno' => '3',
-         'user_id' => 2
+         'user_id' => 5
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'Pilates',
+         'nombre'=>'Crossfit',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Martes',
          'turno' => '3',
-         'user_id' => 2
-       ]);
-       DB::table('clases')->insert([
-         'nombre'=>'AquaGym',
-         'aforo'=> 20,
-         'duracion' => 60,
-         'dia' => 'Miercoles',
-         'turno' => '3',
-         'user_id' => 2
+         'user_id' => 5
        ]);
        DB::table('clases')->insert([
          'nombre'=>'Ciclo',
          'aforo'=> 20,
          'duracion' => 60,
-         'dia' => 'Jueves',
+         'dia' => 'Miercoles',
          'turno' => '3',
-         'user_id' => 2
+         'user_id' => 3
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'PAblo',
+         'nombre'=>'Crossfit',
+         'aforo'=> 20,
+         'duracion' => 60,
+         'dia' => 'Jueves',
+         'turno' => '3',
+         'user_id' => 3
+       ]);
+       DB::table('clases')->insert([
+         'nombre'=>'Aquagym',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Viernes',
          'turno' => '3',
-         'user_id' => 2
+         'user_id' => 3
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'PAblo',
+         'nombre'=>'Boxeo',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Sabado',
          'turno' => '3',
-         'user_id' => 2
+         'user_id' => 3
        ]);
 
        //turno 4
        DB::table('clases')->insert([
-         'nombre'=>'Yoga',
+         'nombre'=>'Crossfit',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Lunes',
          'turno' => '4',
-         'user_id' => 2
+         'user_id' => 3
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'Pilates',
+         'nombre'=>'Ciclo',
          'aforo'=> 20,
          'duracion' => 20,
          'dia' => 'Martes',
          'turno' => '4',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'AquaGym',
+         'nombre'=>'Crossfit',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Miercoles',
          'turno' => '4',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
          'nombre'=>'Ciclo',
@@ -196,23 +196,23 @@ class ClaseSeeder extends Seeder
          'duracion' => 60,
          'dia' => 'Jueves',
          'turno' => '4',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'PAblo',
+         'nombre'=>'Crossfit',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Viernes',
          'turno' => '4',
-         'user_id' => 2
+         'user_id' => 4
        ]);
        DB::table('clases')->insert([
-         'nombre'=>'PAblo',
+         'nombre'=>'Aquagym',
          'aforo'=> 20,
          'duracion' => 60,
          'dia' => 'Sabado',
          'turno' => '4',
-         'user_id' => 2
+         'user_id' => 5
        ]);
 
 
