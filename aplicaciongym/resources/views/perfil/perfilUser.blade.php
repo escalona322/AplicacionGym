@@ -57,19 +57,38 @@
                       </div>
                       <div class="col-8">
                         <div class="row">
-                            <p class="textoperfil text-center">Nombre:<span class="text-center mx-2 txblack">{{$user->nombre}}</span></p>
+                          <div class="col-3">   <p class="textoperfil">Nombre:</p>     </div>
+                          <div class="col-3">   <p class="textoperfil2">{{$user->nombre}}</p>     </div>
+                          <div class="col-3"></div>
+                          <div class="col-3"></div>
                         </div>
                         <div class="row">
-                          <p class="textoperfil text-center">Apellido: <span class="text-center mx-2 txblack">{{$user->apellidos}}</span></p>
+                          <div class="col-3">   <p class="textoperfil">Apellido:</p>     </div>
+                          <div class="col-3">   <p class="textoperfil2">{{$user->apellidos}}</p>     </div>
+                          <div class="col-3"></div>
+                          <div class="col-3"></div>
+
                         </div>
                         <div class="row">
-                            <p class="textoperfil text-center">DNI: <span class="text-center mx-2 txblack"> {{$user->DNI}}</span></p>
+                          <div class="col-3">   <p class="textoperfil">DNI:</p>     </div>
+                          <div class="col-3">   <p class="textoperfil2">{{$user->DNI}}</p>     </div>
+                          <div class="col-3"></div>
+                          <div class="col-3"></div>
+
                         </div>
                         <div class="row">
-                          <p class="textoperfil text-center ">Email: <span class="text-center mx-1 txblack">{{$user->email}}</span></p>
+                          <div class="col-3">   <p class="textoperfil">Email:</p>     </div>
+                          <div class="col-3">   <p class="textoperfil2">{{$user->email}}</p>     </div>
+                          <div class="col-3"></div>
+                          <div class="col-3"></div>
+
                         </div>
                         <div class="row">
-                            <p class="textoperfil text-center">Pagado: <span class="text-center mx-2 txblack">{{$user->pagado}}</span></p>
+                          <div class="col-3">   <p class="textoperfil">Pagado:</p>     </div>
+                          <div class="col-3">   <p class="textoperfil2">{{$user->pagado}}</p>     </div>
+                          <div class="col-3"></div>
+                          <div class="col-3"></div>
+
                         </div>
                       </div>
 

@@ -223,9 +223,7 @@ border-radius: 6em;
   height: 7em;
   resize: none;
 }
-.inputcalorias{
-  margin-left: -25em;
-}
+
 .textoejercicio{
        font-family: 'Bungee', cursive;
         font-size: 2em;
@@ -236,9 +234,14 @@ border-radius: 6em;
           font-size: 1.6em;
         color: #AF0606;
     }
+    .textoperfil2{
+           font-family: 'Bungee', cursive;
+            font-size: 1.4em;
+          color: black;
+      }
   .txblack{
     color: black;
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
   .cardsejercicio{
   border-radius: 3em;
