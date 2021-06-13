@@ -26,13 +26,33 @@
                   <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
                   <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
                     <div class="row">
+                      @if (session('modificado'))
+                          <div class="alert alert-success text-center">
+                              {{ session('modificado') }}
+                          </div>
+                      @endif
+                      @if (session('sinFoto'))
+                          <div class="alert alert-danger text-center">
+                              {{ session('sinFoto') }}
+                          </div>
+                      @endif
                       <p class="textogymxl text-center">Perfil</p>
                     </div>
 
                     <div class="row">
 
                       <div class="col-3" style="margin-left: 6em;">
-                        <img class="fotoperfil" src="{{asset('imgs/default.png')}}" alt="Foto de Perfil">
+                        @php
+                        $imagen = $user->imagen;
+                        @endphp
+                        <img class="fotoperfil" src="{{ asset("img/post/$imagen")}} " alt="Foto de Perfil">
+
+
+                        <form action="codeaguardar" enctype="multipart/form-data" method="POST">
+                           @csrf
+                           <input type="file" name="imagen">
+                           <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="fas fa-file-import"></i></button>
+                        </form>
 
                       </div>
                       <div class="col-8">

@@ -8,6 +8,7 @@ use App\Models\clase;
 use App\Models\entrenamiento;
 use App\Models\Seapuntan;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 class perfilesController extends Controller
 {
@@ -67,6 +68,28 @@ class perfilesController extends Controller
       $clase = clase::find($id);
 
       return view ('perfil/detalleClase', ['apuntado'=>$apuntados,'clase'=>$clase]);
+
+    }
+
+
+    public function codeaguardar(Request $request){
+        $user=Auth::user();
+        // script para subir la imagen
+        if($request->hasFile("imagen")){
+
+            $imagen = $request->file("imagen");
+            $nombreimagen = Str::slug($user->id).".".$imagen->guessExtension();
+            $ruta = public_path("img/post/");
+
+            //$imagen->move($ruta,$nombreimagen);
+            $imagen->move($ruta,$nombreimagen);
+            $user->imagen = $nombreimagen;
+            $user->save();
+            return redirect('perfil')->with('modificado', 'Foto de perfil actualizada, es posible que tarde unos segundos...');
+        }else{
+            return redirect('perfil')->with('sinFoto', 'No has elegido ningún archivo.');
+        }
+
 
     }
 }

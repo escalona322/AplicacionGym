@@ -45,6 +45,8 @@ Route::post('pagarUser',[perfilesController::class,'pagarUser'])->middleware(['a
 Route::get('confirmarPago/{id}',[perfilesController::class,'confirmarPago'])->middleware(['auth']);
 Route::get('cancelarPago/{id}',[perfilesController::class,'cancelarPago'])->middleware(['auth']);
 
+Route::post('codeaguardar',[perfilesController::class , 'codeaguardar' ] );
+
 
 Route::post('listadoEntreLow', [entrenamientoController::class,'listadoEntreLow'])->middleware(['auth']);
 Route::post('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);
