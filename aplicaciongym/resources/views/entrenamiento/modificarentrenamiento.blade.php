@@ -44,78 +44,68 @@
                                  <label for="cardNumber">
                                        <h6 class="textogym">Link video YouTube</h6>
                                    </label>
-                                   <div class="input-group"> <input type="text" name="videoyt" value="{{$entrenamiento->videoyt}}" class="form-control " required>
+                               <input type="text" name="videoyt" value="{{$entrenamiento->videoyt}}" class="form-control " required>
 
-                                   </div>
+
                                </div>
                                <div class="row">
                                    <div class="col-sm-8">
-                                       <div class="form-group my-3"> <label><span class="hidden-xs">
+                                    <span class="hidden-xs">
                                                    <h6 class="textogym my-3">Datos Varios</h6>
                                                </span></label>
-                                               <div class="container">
+
                                                  <div class="row">
-                                                    <div class="col"> <span class="textogym">Series: </span> </div>
-                                                    <div class="col"> <input class="inputnumber" value="{{$entrenamiento->series}}" type="number" name="series">  </div>
-                                                    <div class="col"> <span class="textogym">Intensidad: </span> </div>
-                                                    <div class="col"> <select class="" name="intensidad">
+                                                    <div class="col-2"> <span class="textogym">Series: </span> </div>
+                                                    <div class="col-2"> <input class="inputnumber" value="{{$entrenamiento->series}}" type="number" name="series" size="5" min="1" max="9999">  </div>
+                                                    <div class="col-2"> <span class="textogym">Intensidad: </span> </div>
+                                                    <div class="col-2"> <select class="" name="intensidad">
                                                       <option value="Alta" selected>Alta</option>
                                                       <option value="Media">Media</option>
                                                       <option value="Baja">Baja</option>
-                                                    </select>  </div></div>
-                                                 <div class="row">
-                                                    <div class="col"> <span class="textogym">Repeticiones: </span> </div>
-                                                    <div class="col"><input class="inputnumber" value="{{$entrenamiento->repeticiones}}"type="number" name="repeticiones" value=""></div>
-                                                    <div class="col"> <span class="textogym">Tipo: </span> </div>
-                                                    <div class="col"> <select class="" name="tipo">
+                                                    </select>  </div>
+
+                                                    <div class="col-2"> <span class="textogym">Kcalorias:  </div>
+                                                    <div class="col-2"> <input class="inputnumber"  type="number" name="Kcalorias" value="{{$entrenamiento->Kcalorias}}"  size="5" min="1" max="9999">  </div>
+                                                  </div>
+                                                 <div class="row my-1">
+                                                    <div class="col-2"> <span class="textogym">Reps.: </span> </div>
+                                                    <div class="col-2"> <input class="inputnumber" value="{{$entrenamiento->repeticiones}}"type="number" name="repeticiones" size="5" min="1" max="9999"></div>
+                                                    <div class="col-2"> <span class="textogym">Tipo: </span> </div>
+                                                    <div class="col-2"> <select class="" name="tipo">
                                                       <option value="Low" selected>Low body</option>
                                                       <option value="Upper">Upper body</option>
                                                       <option value="Cardio">Cardio</option>
                                                     </select>
                                                   </div>
-                                                  @php
-                                                  $usA= Auth::user();
-                                                  @endphp
-                                                  @if($usA->rol == "admin")
-                                                  <div class="row">
-                                                    <div class="col">
-                                                     <span class="textogym">Monitor:</span>
-                                                    </div>
 
-                                                      @foreach($users as $user)
-                                                      @if($user->rol=="monitor")
-                                                        @if($entrenamiento->user_id==$user->id)
-                                                        <div class="col">
-                                                        <label>{{$user->nombre}}</label>
-                                                          <input type="radio" name="mon" value="{{$user->id}}" checked><br/>
-                                                        </div>
-                                                        @else
-                                                        <div class="col">
-                                                          <label>{{$user->nombre}}</label>
-                                                          <input type="radio" name="mon" value="{{$user->id}}"><br/>
-                                                        </div>
+                                                    @php
+                                                    $usA= Auth::user();
+                                                    @endphp
+                                                    @if($usA->rol == "admin")
 
-                                                        @endif
-                                                      @endif
-                                                      @endforeach
-                                                      <div class="col">
-                                                        <label>Sin monitor</label>
-                                                          <input type="radio" name="mon" value="{{$user->id==null}}"><br/>
+                                                      <div class="col-2"><span class="textogym">Monitor:</span> </div>
+                                                      <div class="col-2">
+                                                        <select class="" name="">
+                                                          @foreach($users as $user)
+                                                          @if($user->rol=="monitor")
+                                                            @if($entrenamiento->user_id==$user->id)
+                                                              <option value="{{$user->nombre}}" selected>{{$user->nombre}}</option>
+                                                            @else
+                                                            <option value="{{$user->nombre}}" selected>{{$user->nombre}}</option>
+                                                            @endif
+                                                          @endif
+                                                          @endforeach
+
+                                                              <option value="{{$user->id==null}}" selected>{{$user->nombre}}</option>
+
                                                       </div>
-                                                  </div>
-                                                  @endif
-
-                                                 </div>
+                                                      @endif
+                                                        </select>
 
                                                </div>
-                                       </div>
-                                   </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col mx-3"> <span class="textogym">Kcalorias:  </div>
-                                    <div class="col"> <input class="inputcalorias"  type="number" name="Kcalorias" value="{{$entrenamiento->Kcalorias}}">  </div>
 
-                                    </div>
+
+                                </div>
 
                                   <div class="row">
                                     <span class="textogym">Descripción</span>
