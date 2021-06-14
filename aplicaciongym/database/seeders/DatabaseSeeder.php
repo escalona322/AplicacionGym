@@ -73,7 +73,7 @@ class DatabaseSeeder extends Seeder
         'nombre'=>'usu1',
         'apellidos'=> 'usu1',
         'DNI' => '00000000Z',
-        'pagado' => 'si',
+        'pagado' => 'no',
         'email'=> 'usu1@usu1.com',
         'password'=>Hash::make('usu1'),
         'encriptedPass'=>Crypt::encrypt('usu1'),

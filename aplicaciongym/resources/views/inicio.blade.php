@@ -77,7 +77,14 @@
             </div>
 
             <!-- Left and right controls -->
-
+            <a class="carousel-control-prev" href="#imagenes" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#imagenes" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
           </div>
 
 <script>
@@ -98,10 +105,10 @@
 
     // Enable Carousel Controls
     $(".carousel-control-prev").click(function(){
-      $("#imagenes").carousel("prev");
+      $("#imagenes").carousel('prev');
     });
     $(".carousel-control-next").click(function(){
-      $("#imagenes").carousel("next");
+      $("#imagenes").carousel('next');
     });
   });
 </script>

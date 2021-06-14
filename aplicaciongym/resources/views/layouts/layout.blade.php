@@ -4,8 +4,9 @@
     <meta charset="utf-8">
     <title>{{ config('app.name', 'Sportakus') }}</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
     <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
   </head>
   <body>
@@ -69,12 +70,38 @@ text-align: center;
 
 }
 </style>
+<div style="margin: 6em;">
+  <script type="text/javascript">
+  $(document).ready(function(){
+
+      $('.ir-arriba').click(function(){
+
+        $('body, html').animate({scrollTop: '0px'}, 300);
+      });
+
+      $(window).scroll(function(){
+        //El numero 400 marca la distancia desde donde quieres que empiece la animacion
+        if($(this).scrollTop() > 100 ){
+          $('.ir-arriba').slideDown(300);
+        } else {
+          $('.ir-arriba').slideUp(300);
+        }
+      });
+
+  });
+  </script>
+  <a class="ir-arriba text-danger"  javascript:void(0) title="Volver arriba">
+
+    <i class="fas fa-arrow-circle-up"></i>
+
+  </a>
   <footer class="footer bg-dark rounded-top text-center">
     <div class="container py-2">
       <h4 class="text-white my-3 "> Gimnasio Sportakus &copy;</h4>
 
 
     </div>
+
   </footer>
 @show
 

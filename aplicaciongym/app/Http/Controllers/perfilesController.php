@@ -45,7 +45,7 @@ class perfilesController extends Controller
     $userpagar = User::find($datos->id);
       $user=Auth::user();
       if($userpagar->pagado==='si'){
-          return redirect('perfil');
+          return redirect('perfil')->with('Yapagado', 'Este usuario está al corriente de pago');
       }else{
         return view ('perfil/confirmarPago', ['user'=>$userpagar]);
       }
@@ -55,11 +55,11 @@ class perfilesController extends Controller
       $userpagar = User::find($id);
       $userpagar->pagado = $request->comprobar;
       $userpagar->save();
-      return redirect('perfil');
+      return redirect('perfil')->with('pagado', 'Pago confirmado');
     }
 
     public function cancelarPago(Request $request){
-      return redirect('perfil');
+      return redirect('perfil')->with('Nopagado', 'El pago se ha cancelado');
     }
 
 

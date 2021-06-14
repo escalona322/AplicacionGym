@@ -23,6 +23,9 @@
   </head>
   <body>
     <div style="margin: 6em;">
+      <form class="" action="/entrenamientos" method="get">
+        <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver"><i class="fas fa-undo"></i></button>
+      </form>
       <div class="container-fluid">
         @foreach($entre as $entrenamiento)
 

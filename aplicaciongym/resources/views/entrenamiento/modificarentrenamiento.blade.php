@@ -23,13 +23,16 @@
     </head>
     <body>
       <div style="margin-top: 6em;">
+
         <div class="row" >
+
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1 contenedorentrenos">
 
             </div>
             <!-- PARTE DEL MEDIO -->
             <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
                 <div class="row">
+
                     <p class="textogymxl text-center"> -Editar entrenamientos- </p>
                 </div>
                 <div class="container contenedorentrenos">
@@ -114,9 +117,19 @@
 
                                     <div class="row">
                                     <textarea class="inputtextarea"name="descripcion" rows="4" cols="30">{{$entrenamiento->descripcion}}</textarea>
-                                      </div>
-                                      <button type="submit" name="button" class="mt-1 btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-2">
+                                        <button type="submit" name="button" class="btn-lg btn-danger mt-1 " style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
                                         <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='/entrenamientos'"><i class="fas fa-undo"></i></button>
+                                      </div>
+                                    
+
+
+
+                                    </div>
+
+
                            </form>
                            @endforeach
                 </div>

@@ -24,8 +24,8 @@
     <body>
       <div style="margin-top: 6em;">
         <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
-            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-1 col-xxl-1"></div>
+            <div class="col-sm-12 col-md-12 col-lg-8 col-xl-10 col-xxl-10">
 
       <form class="" action="updateMoni/{{$monis->id }}" method="get">
 
@@ -46,19 +46,19 @@
 
                     <tr class="textogymmd">
                         <td>
-                          <div class="font-size14"><input type="text" name="nombre" value="{{$monis->nombre}}" size="15" required></div>
+                          <div class="font-size14"><input type="text" name="nombre" value="{{$monis->nombre}}" size="10" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="apellidos" value="{{$monis->apellidos}}" size="15" required></div>
+                          <div class="font-size14"><input type="text" name="apellidos" value="{{$monis->apellidos}}" size="10" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="text" name="dni" value="{{$monis->DNI}}" size="15" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required></div>
+                          <div class="font-size14"><input type="text" name="dni" value="{{$monis->DNI}}" size="10" pattern="[0-9]{8}[A-Za-z]{1}" title="Debe poner 8 números y una letra" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="email" name="email" value="{{$monis->email}}" size="25" required></div>
+                          <div class="font-size14"><input type="email" name="email" value="{{$monis->email}}" size="20" required></div>
                         </td>
                         <td>
-                          <div class="font-size14"><input type="password" name="password" value="{{Crypt::decrypt($monis->encriptedPass)}}" size="25" required></div>
+                          <div class="font-size14"><input type="password" name="password" value="{{Crypt::decrypt($monis->encriptedPass)}}" size="20" required></div>
                         </td>
 
 
@@ -76,6 +76,6 @@
 
 </div>
 
-
+<div class="col-sm-12 col-md-12 col-lg-2 col-xl-1 col-xxl-1"></div>
     </body>
 </html>

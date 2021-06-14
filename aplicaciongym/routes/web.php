@@ -32,29 +32,42 @@ Route::get('/dashboard', function () {
 Route::get('horarios','App\Http\Controllers\horarioController@listadoClases')->middleware(['auth'])->name('horarios');
 //Ruta que lleva a la controladora y separa el usaro sgún el rol a una u otra pagina
 Route::get('entrenamientos','App\Http\Controllers\entrenamientoController@listadoMonitoresOEntrenamientos')->middleware(['auth'])->name('entrenamientos');
+//Idem
+Route::get('perfil','App\Http\Controllers\perfilesController@perfilPorRol')->middleware(['auth'])->name('perfil');
+//Contacto
+Route::get('contacto', function(){
+  return view('contacto');
+})->middleware(['auth'])->name('contacto');
 
+//Rutas a editar entrenamientos
 Route::post('listadoEntreLowEditar', [entrenamientoController::class,'listadoEntreLowEditar'])->middleware(['auth']);
 Route::post('listadoEntreUpperEditar', [entrenamientoController::class,'listadoEntreUpperEditar'])->middleware(['auth']);
 Route::post('listadoEntreCardioEditar', [entrenamientoController::class,'listadoEntreCardioEditar'])->middleware(['auth']);
-
-Route::get('perfil','App\Http\Controllers\perfilesController@perfilPorRol')->middleware(['auth'])->name('perfil');
-Route::post('detalleClase/{id}', [perfilesController::class,'detalleClase'])->middleware(['auth']);
-
-Route::post('pagarUser',[perfilesController::class,'pagarUser'])->middleware(['auth']);
-
-Route::get('confirmarPago/{id}',[perfilesController::class,'confirmarPago'])->middleware(['auth']);
-Route::get('cancelarPago/{id}',[perfilesController::class,'cancelarPago'])->middleware(['auth']);
-
-Route::post('codeaguardar',[perfilesController::class , 'codeaguardar' ] );
-
-
+//Rutas desde Usuario a ver las listas de entenamientos
 Route::post('listadoEntreLow', [entrenamientoController::class,'listadoEntreLow'])->middleware(['auth']);
 Route::post('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);
 Route::post('listadoEntreCardio', [entrenamientoController::class,'listadoEntreCardio'])->middleware(['auth']);
-Route::get('verDetallesEntrenamiento/{id}', [entrenamientoController::class,'verDetallesEntrenamiento'])->middleware(['auth']);
+Route::post('verDetallesEntrenamiento/{id}', [entrenamientoController::class,'verDetallesEntrenamiento'])->middleware(['auth']);
+//Borrar entrenamiento
+Route::get('borrarEntrenos/{id}', [entrenamientoController::class,'borrarEntrenos'])->middleware(['auth']);
+//Ruta para modificar un entrenamiento
+Route::post('verEditarEntreno/{id}', [entrenamientoController::class,'verEditarEntreno'])->middleware(['auth']);
+Route::post('verEditarEntreno/modificarEntreno/{id}', [entrenamientoController::class,'modificarEntreno'])->middleware(['auth']);
 
-Route::get('linkBorrarEntrenamiento', [entrenamientoController::class,'listaEntrenos'])->middleware(['auth']);
-Route::get('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);
+
+
+
+Route::post('detalleClase/{id}', [perfilesController::class,'detalleClase'])->middleware(['auth']);
+
+Route::post('pagarUser',[perfilesController::class,'pagarUser'])->middleware(['auth']);
+Route::get('confirmarPago/{id}',[perfilesController::class,'confirmarPago'])->middleware(['auth']);
+Route::get('cancelarPago/{id}',[perfilesController::class,'cancelarPago'])->middleware(['auth']);
+
+//Ruta para subir la foto de perfil
+Route::post('codeaguardar',[perfilesController::class , 'codeaguardar' ] );
+
+
+
 
 Route::get('crearEntrenamiento', [entrenamientoController::class,'crearEntrenamiento'])->middleware(['auth']);
 
@@ -67,11 +80,9 @@ Route::get('MasClase',  'App\Http\Controllers\horarioController@MasClase')->midd
 Route::get('VaciarClase',  'App\Http\Controllers\horarioController@VaciarClase')->middleware(['auth']);
 
 
-Route::get('borrarEntrenos/{id}', [entrenamientoController::class,'borrarEntrenos'])->middleware(['auth']);
 
-//Ruta para modificar un entrenamiento
-Route::post('verEditarEntreno/{id}', [entrenamientoController::class,'verEditarEntreno'])->middleware(['auth']);
-Route::post('verEditarEntreno/modificarEntreno/{id}', [entrenamientoController::class,'modificarEntreno'])->middleware(['auth']);
+
+
 //Ruta asignar monitor a una clase
 Route::post('asignarMonitor', [horarioController::class,'asignarMonitor'])->middleware(['auth']);
 Route::get('monitorAsignado/{id}', [horarioController::class,'monitorAsignado'])->middleware(['auth']);
@@ -116,13 +127,6 @@ Route::get('modificarentrenamiento', function(){
   return view('modificarentrenamiento');
 })->middleware(['auth'])->name('modificarentrenamiento');
 
-Route::get('soporte', function(){
-  return view('soporte');
-})->middleware(['auth'])->name('soporte');
 
-
-Route::get('contacto', function(){
-  return view('contacto');
-})->middleware(['auth'])->name('contacto');
 
 require __DIR__.'/auth.php';

@@ -2,7 +2,17 @@ body{
     margin-top:20px;
 
 }
-
+.ir-arriba{
+  display:none;
+  background-repeat:no-repeat;
+  font-size:40px;
+  cursor:pointer;
+  position:fixed;
+  bottom:10px;
+  right:10px;
+  z-index:2;
+  border-radius: 35px;
+}
 a:link {
   text-decoration: none
  }
@@ -169,6 +179,9 @@ margin-top: 2em;
 .contenedorentrenos{
   height: 30em;
 }
+.contenedorentrenostablaxl{
+  width: 100%;
+}
 .contenedorentrenostabla{
   height: 25em;
 }
@@ -258,8 +271,12 @@ border-radius: 6em;
   width: 45em;
 }
 .fotoperfil{
-  width: 15em;
-  height: 15em;
+  width: 12em;
+  height: 12em;
+}
+.fotoperfil2{
+  width: 3em;
+  height: 3em;
 }
 /*switch de horarios*/
 .form-switch.form-switch-sm .form-check-input {

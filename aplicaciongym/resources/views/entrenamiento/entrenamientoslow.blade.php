@@ -40,11 +40,12 @@
                     <div class="row fondoentrenos">
                       <div class="col"><p class="textogyml">{{$entrenamiento->nombre}}</p></div>
                       <div class="col">
-
-                            <div class="row"><p class="textogym my-3">Series:  {{$entrenamiento->series}}</p></div>
-                            <div class="row"><p class="textogym">Repeticiones: {{$entrenamiento->repeticiones}}</p></div>
+                          <div class="row"><p class="textogym my-3">Series:  {{$entrenamiento->series}}</p></div>
+                          <div class="row"><p class="textogym">Repeticiones: {{$entrenamiento->repeticiones}}</p></div>
                         </div>
-                      <div class="col"><form class="" action="verDetallesEntrenamiento/{{$entrenamiento->id}}" method="get">
+                      <div class="col">
+                        <form class="" action="verDetallesEntrenamiento/{{$entrenamiento->id}}" method="post">
+                          @csrf
                         <button class="botonentrenos" type="submit" name="button">Más informacion</button>
                       </form></div>
                     </div>
@@ -56,43 +57,37 @@
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno">
                             <div class="card-body">
-
-                              <form class="" action="listadoEntreUpper" method="get">
-                                <button class="btn btn-primary" type="submit" name="button">Entrenamiento Upper</button>
+                              <form class="" action="listadoEntreUpper" method="post">
+                                @csrf
+                                <button class="btn " type="submit" name="button">Entrenamiento Upper</button>
                               </form>
                             </div>
                         </div>
                       </div>
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno">
-
-                            <div class="card-body">
-
-
-                          <form class="" action="listadoEntreLow" method="get">
-                            <button class="btn btn-primary" type="submit" name="button">Entrenamiento low</button>
-                          </form>
-                            </div>
+                          <div class="card-body">
+                              <form class="" action="listadoEntreLow" method="post">
+                                @csrf
+                                <button class="btn " type="submit" name="button">Entrenamiento low</button>
+                              </form>
+                          </div>
                         </div>
                       </div>
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno" >
-
                             <div class="card-body">
-
-
-                          <form class="" action="listadoEntreCardio" method="get">
-                            <button class="btn btn-primary" type="submit" name="button">Entrenamiento cardio</button>
-                          </form>
+                              <form class="" action="listadoEntreCardio" method="post">
+                                @csrf
+                                <button class="btn " type="submit" name="button">Entrenamiento cardio</button>
+                              </form>
                             </div>
                         </div>
                       </div>
                     </div>
                 </div>
             </div>
-
         </div>
       </div>
-
     </body>
 </html>

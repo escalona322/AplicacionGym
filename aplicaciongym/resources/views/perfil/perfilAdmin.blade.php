@@ -35,6 +35,21 @@
                             {{ session('deleteUser') }}
                         </div>
                     @endif
+                    @if (session('pagado'))
+                        <div class="alert alert-success">
+                            {{ session('pagado') }}
+                        </div>
+                    @endif
+                    @if (session('Nopagado'))
+                        <div class="alert alert-danger">
+                            {{ session('Nopagado') }}
+                        </div>
+                    @endif
+                    @if (session('Yapagado'))
+                        <div class="alert alert-danger">
+                            {{ session('Yapagado') }}
+                        </div>
+                    @endif
                     <div class="row">
                       <div class="col">   </div>
                       <div class="col">

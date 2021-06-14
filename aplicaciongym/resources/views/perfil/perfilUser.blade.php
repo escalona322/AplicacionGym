@@ -19,13 +19,17 @@
           <link rel="stylesheet" href="{{ URL::asset('css/app.css') }}">
           <link rel="stylesheet" href="{{ URL::asset('css/app2.css') }}">
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    </head>
-    <body>
-      <div style="margin-top: 6em;">
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" charset="utf-8"></script>
+      </head>
+      <body>
+
+
+        <div style="margin: 6em;">
+
               <div class="row">
-                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
-                  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
-                    <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-1 col-xxl-1"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-8 col-xl-10 col-xxl-10">
+                    <div class="row mb-5">
                       @if (session('modificado'))
                           <div class="alert alert-success text-center">
                               {{ session('modificado') }}
@@ -36,60 +40,46 @@
                               {{ session('sinFoto') }}
                           </div>
                       @endif
-                      <p class="textogymxl text-center">Perfil</p>
+
                     </div>
 
                     <div class="row">
 
-                      <div class="col-3" style="margin-left: 6em;">
+                      <div class="col-4">
                         @php
                         $imagen = $user->imagen;
                         @endphp
                         <img class="fotoperfil" src="{{ asset("img/post/$imagen")}} " alt="Foto de Perfil">
-
-
                         <form action="codeaguardar" enctype="multipart/form-data" method="POST">
                            @csrf
                            <input type="file" name="imagen">
                            <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Guardar"><i class="fas fa-file-import"></i></button>
                         </form>
+                      </div>
+                      <div class="col-1">
 
                       </div>
-                      <div class="col-8">
-                        <div class="row">
-                          <div class="col-3">   <p class="textoperfil">Nombre:</p>     </div>
-                          <div class="col-3">   <p class="textoperfil2">{{$user->nombre}}</p>     </div>
-                          <div class="col-3"></div>
-                          <div class="col-3"></div>
-                        </div>
-                        <div class="row">
-                          <div class="col-3">   <p class="textoperfil">Apellido:</p>     </div>
-                          <div class="col-3">   <p class="textoperfil2">{{$user->apellidos}}</p>     </div>
-                          <div class="col-3"></div>
-                          <div class="col-3"></div>
+                      <div class="col-7">
+                        <table class="table text-justify">
+                          <tr>
+                            <th class="textoperfil">Nombre: </th>
+                            <td class="textogymmd">{{$user->nombre}}</td>
+                          </tr>
+                          <tr>
+                            <th class="textoperfil">Apellidos: </th>
+                            <td class="textogymmd">{{$user->apellidos}}</td>
+                          </tr>
+                          <tr>
+                            <th class="textoperfil">Email: </th>
+                            <td class="textogymmd">{{$user->email}}</td>
+                          </tr>
+                          <tr>
+                            <th class="textoperfil">Pagado: </th>
+                            <td class="textogymmd">{{$user->pagado}}</td>
+                          </tr>
 
-                        </div>
-                        <div class="row">
-                          <div class="col-3">   <p class="textoperfil">DNI:</p>     </div>
-                          <div class="col-3">   <p class="textoperfil2">{{$user->DNI}}</p>     </div>
-                          <div class="col-3"></div>
-                          <div class="col-3"></div>
+                        </table>
 
-                        </div>
-                        <div class="row">
-                          <div class="col-3">   <p class="textoperfil">Email:</p>     </div>
-                          <div class="col-3">   <p class="textoperfil2">{{$user->email}}</p>     </div>
-                          <div class="col-3"></div>
-                          <div class="col-3"></div>
-
-                        </div>
-                        <div class="row">
-                          <div class="col-3">   <p class="textoperfil">Pagado:</p>     </div>
-                          <div class="col-3">   <p class="textoperfil2">{{$user->pagado}}</p>     </div>
-                          <div class="col-3"></div>
-                          <div class="col-3"></div>
-
-                        </div>
                       </div>
 
 
@@ -149,7 +139,7 @@
                     </div>
 
                   </div>
-                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
+                  <div class="col-sm-12 col-md-12 col-lg-2 col-xl-1 col-xxl-1"></div>
                 </div>
               </div>
     </body>

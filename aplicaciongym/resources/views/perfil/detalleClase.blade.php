@@ -26,12 +26,25 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2"></div>
             <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+              <form class="" action="/perfil" method="get">
+                <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver"><i class="fas fa-undo"></i></button>
+              </form>
 
-
-              <p class="textogymxl text-center">{{$clase->nombre}}</p>
+              <p class="textogymxl text-center">{{$clase->nombre}} - {{$clase->dia}} -
+                @if($clase->turno==1)
+                9:00
+                @elseif($clase->turno==2)
+                10:00
+                @elseif($clase->turno==3)
+                17:00
+                @else
+                20:00
+                @endif
+              </p>
                     <table class="table table-bordered table-striped text-center">
                     <thead>
                         <tr class="textogymmd">
+                          <th>Foto</th>
                             <th>Nombre</th>
                             <th>Apellidos</th>
                         </tr>
@@ -39,7 +52,12 @@
                     <tbody>
                   @forelse($apuntado as $apuntados)
                     @if($apuntados->User["rol"] == 'usuario')
+                    @php
+                    $imagen = $apuntados->User["imagen"];
+                    @endphp
                     <tr class="textogymmd">
+                          <td>
+                          <img class="fotoperfil2" src="{{ asset("img/post/$imagen")}} " alt="Foto"></td>
                           <td>
                             <div class="font-size16 ">{{$apuntados->User["nombre"]}}</div>
                           </td>
@@ -61,9 +79,7 @@
 
                     </tbody>
                   </table>
-                  <form class="" action="/perfil" method="get">
-                    <button type="submit" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver"><i class="fas fa-undo"></i></button>
-                  </form>
+
 
 
 
