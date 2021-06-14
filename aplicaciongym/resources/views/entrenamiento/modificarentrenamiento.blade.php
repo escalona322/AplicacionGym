@@ -92,9 +92,9 @@
                                                           @foreach($users as $user)
                                                           @if($user->rol=="monitor")
                                                             @if($entrenamiento->user_id==$user->id)
-                                                              <option value="{{$user->nombre}}" selected>{{$user->nombre}}</option>
+                                                              <option value="{{$user->id}}" selected>{{$user->nombre}}</option>
                                                             @else
-                                                            <option value="{{$user->nombre}}" selected>{{$user->nombre}}</option>
+                                                            <option value="{{$user->id}}" selected>{{$user->nombre}}</option>
                                                             @endif
                                                           @endif
                                                           @endforeach
@@ -123,7 +123,7 @@
                                         <button type="submit" name="button" class="btn-lg btn-danger mt-1 " style="bottom: 100%" value="Guardar"><i class="far fa-save"></i></button>
                                         <button type="button" name="button" class="btn-lg btn-danger" style="bottom: 100%" value="Volver" onclick="location.href='/entrenamientos'"><i class="fas fa-undo"></i></button>
                                       </div>
-                                    
+
 
 
 
