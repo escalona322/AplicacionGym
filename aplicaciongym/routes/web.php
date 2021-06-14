@@ -40,9 +40,9 @@ Route::get('contacto', function(){
 })->middleware(['auth'])->name('contacto');
 
 //Rutas a editar entrenamientos
-Route::post('listadoEntreLowEditar', [entrenamientoController::class,'listadoEntreLowEditar'])->middleware(['auth']);
-Route::post('listadoEntreUpperEditar', [entrenamientoController::class,'listadoEntreUpperEditar'])->middleware(['auth']);
-Route::post('listadoEntreCardioEditar', [entrenamientoController::class,'listadoEntreCardioEditar'])->middleware(['auth']);
+Route::get('listadoEntreLowEditar', [entrenamientoController::class,'listadoEntreLowEditar'])->middleware(['auth']);
+Route::get('listadoEntreUpperEditar', [entrenamientoController::class,'listadoEntreUpperEditar'])->middleware(['auth']);
+Route::get('listadoEntreCardioEditar', [entrenamientoController::class,'listadoEntreCardioEditar'])->middleware(['auth']);
 //Rutas desde Usuario a ver las listas de entenamientos
 Route::post('listadoEntreLow', [entrenamientoController::class,'listadoEntreLow'])->middleware(['auth']);
 Route::post('listadoEntreUpper', [entrenamientoController::class,'listadoEntreUpper'])->middleware(['auth']);

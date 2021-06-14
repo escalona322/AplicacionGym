@@ -37,8 +37,8 @@
                       <div class="col my-3">
                         <div class="card text-center textogym cardsentreno">
                             <div class="card-body">
-                              <form class="" action="listadoEntreUpperEditar" method="post">
-                                @csrf
+                              <form class="" action="listadoEntreUpperEditar" method="get">
+
                                 <button class="botonentrenos" type="submit" name="button">Entrenamiento Upper</button>
                               </form>
                             </div>
@@ -48,8 +48,8 @@
                         <div class="card text-center textogym cardsentreno">
 
                             <div class="card-body">
-                        <form class="" action="listadoEntreLowEditar" method="post">
-                          @csrf
+                        <form class="" action="listadoEntreLowEditar" method="get">
+
                           <button class="botonentrenos" type="submit" name="button">Entrenamiento low</button>
                         </form>
                             </div>
@@ -60,8 +60,8 @@
 
                             <div class="card-body">
 
-                          <form class="" action="listadoEntreCardioEditar" method="post">
-                            @csrf
+                          <form class="" action="listadoEntreCardioEditar" method="get">
+                    
                             <button class="botonentrenos" type="submit" name="button">Entrenamiento Cardio</button>
                           </form>
                             </div>
