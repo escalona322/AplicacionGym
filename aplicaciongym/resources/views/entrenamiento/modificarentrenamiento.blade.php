@@ -88,18 +88,18 @@
 
                                                       <div class="col-2"><span class="textogym">Monitor:</span> </div>
                                                       <div class="col-2">
-                                                        <select class="" name="">
+                                                        <select class="" name="mon">
                                                           @foreach($users as $user)
                                                           @if($user->rol=="monitor")
                                                             @if($entrenamiento->user_id==$user->id)
                                                               <option value="{{$user->id}}" selected>{{$user->nombre}}</option>
                                                             @else
-                                                            <option value="{{$user->id}}" selected>{{$user->nombre}}</option>
+                                                            <option value="{{$user->id}}" >{{$user->nombre}}</option>
                                                             @endif
                                                           @endif
                                                           @endforeach
 
-                                                              <option value="{{$user->id==null}}" selected>{{$user->nombre}}</option>
+                                                              <option value="{{$user->id==null}}" >{{$user->nombre}}</option>
 
                                                       </div>
                                                       @endif
