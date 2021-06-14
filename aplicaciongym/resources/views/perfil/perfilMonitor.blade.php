@@ -26,6 +26,36 @@
                   <div class="col-sm-12 col-md-12 col-lg-2 col-xl-1 col-xxl-1"></div>
                   <div class="col-sm-12 col-md-12 col-lg-8 col-xl-10 col-xxl-10">
                   <div class="col">
+                    @if (session('createUser'))
+                        <div class="alert alert-success text-center">
+                            {{ session('createUser') }}
+                        </div>
+                    @endif
+                    @if (session('updateUser'))
+                        <div class="alert alert-success text-center">
+                            {{ session('updateUser') }}
+                        </div>
+                    @endif
+                    @if (session('deleteUser'))
+                        <div class="alert alert-danger text-center">
+                            {{ session('deleteUser') }}
+                        </div>
+                    @endif
+                    @if (session('pagado'))
+                        <div class="alert alert-success">
+                            {{ session('pagado') }}
+                        </div>
+                    @endif
+                    @if (session('Nopagado'))
+                        <div class="alert alert-danger">
+                            {{ session('Nopagado') }}
+                        </div>
+                    @endif
+                    @if (session('Yapagado'))
+                        <div class="alert alert-danger">
+                            {{ session('Yapagado') }}
+                        </div>
+                    @endif
                     @if (session('pagado'))
                         <div class="alert alert-success">
                             {{ session('pagado') }}

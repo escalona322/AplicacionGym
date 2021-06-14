@@ -25,6 +25,11 @@
               <div class="row">
                   <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-1"></div>
                   <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-10">
+                    @if (session('createUser'))
+                        <div class="alert alert-success text-center">
+                            {{ session('createUser') }}
+                        </div>
+                    @endif
                     @if (session('updateUser'))
                         <div class="alert alert-success text-center">
                             {{ session('updateUser') }}

@@ -143,16 +143,18 @@ class entrenamientoController extends Controller
 
            public function Crear(Request $datos){
                 $user = new User;
+                $pass=$datos->password;
                 $user->nombre=$datos->nombre;
                 $user->apellidos=$datos->apellidos;
                 $user->pagado="no";
                 $user->rol=$datos->rol;
-                $user->password=Hash::make($datos->password);
+                $user->password=Hash::make($pass);
+                $user->encriptedPass=Crypt::encrypt($pass);
                 $user->DNI=$datos->dni;
                 $user->email=$datos->email;
                 $user->save();
 
-              return redirect('perfil');
+              return redirect('perfil')->with('createUser', 'Nuevo usuario: '. $user->nombre);
            }
 
            public function entrenamientosanadir(Request $datos){
