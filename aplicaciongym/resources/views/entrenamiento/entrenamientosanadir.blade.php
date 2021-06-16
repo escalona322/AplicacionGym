@@ -24,11 +24,11 @@
     <body>
       <div style="margin-top: 6em;">
         <div class="row" >
-            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2 contenedorentrenos">
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-1 col-xxl-1 contenedorentrenos">
 
             </div>
             <!-- PARTE DEL MEDIO -->
-            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-8 col-xxl-8">
+            <div   class="col-sm-12 col-md-12 col-lg-8 col-xl-10 col-xxl-10">
                 <div class="row">
                     <p class="textogymxl text-center"> -Añadir entrenamientos- </p>
                 </div>
@@ -75,21 +75,31 @@
 
 
                                 <div class="row my-3">
-                                    <div class="col "> <span class="textogym">Kcalorias:  </div>
-                                    <div class="col"> <input class="inputnumber"  type="number" name="Kcalorias" placeholder="100">  </div>
-                                    <div class="col "> <span class="textogym">Monitor especialista:  </div>
-                                    <div class="col">
-                                      <select class="" name="user_id">
-                                        @foreach($users as $user)
-                                        @if($user->rol=="monitor")
-                                          <option value="{{$user->id}}">{{$user->nombre}}</option>
+                                    <div class="col-2 "> <span class="textogym">Kcalorias:  </div>
+                                    <div class="col-2"> <input class="inputnumber"  type="number" name="Kcalorias" placeholder="100">  </div>
+
+                                      @php
+                                      $usA= Auth::user();
+                                      @endphp
+                                      @if($usA->rol == "admin")
+                                      <div class="col-2 "> <span class="textogym">Monitor especialista:  </div>
+                                        <div class="col-2"><span class="textogym">Monitor:</span> </div>
+                                        <div class="col-2">
+                                          <select class="" name="mon">
+                                            @foreach($users as $user)
+                                            @if($user->rol=="monitor")
+                                              @if($entrenamiento->user_id==$user->id)
+                                                <option value="{{$user->id}}" selected>{{$user->nombre}}</option>
+                                              @else
+                                              <option value="{{$user->id}}" >{{$user->nombre}}</option>
+                                              @endif
+                                            @endif
+                                            @endforeach
+
+                                                <option value="{{$user->id==null}}" >{{$user->nombre}}</option>
+
+                                        </div>
                                         @endif
-                                        @endforeach
-                                      <option value="{{$user->id==null}}" selected> Sin monitor</option>
-
-
-                                    </select>
-                                    </div>                              
                                   </div>
                               </div>
 

@@ -54,14 +54,14 @@
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped text-center table-active" style="margin-bottom: 10%;">
                         <thead>
-                            <tr class="bg-light-gray textogymmd">
+                            <tr class="bg-light-gray textogym">
                                 <th class="text-uppercase">Hora</th>
-                                <th class="text-uppercase">Lunes</th>
-                                <th class="text-uppercase">Martes</th>
-                                <th class="text-uppercase">Miércoles</th>
-                                <th class="text-uppercase">Jueves</th>
-                                <th class="text-uppercase">Viernes</th>
-                                <th class="text-uppercase">Sábado</th>
+                                <th class="text-uppercase">  Lunes    </th>
+                                <th class="text-uppercase">  Martes   </th>
+                                <th class="text-uppercase">  Miércoles</th>
+                                <th class="text-uppercase">  Jueves   </th>
+                                <th class="text-uppercase">  Viernes  </th>
+                                <th class="text-uppercase">  Sábado   </th>
                             </tr>
                         </thead>
                         <tbody>
@@ -84,7 +84,7 @@
                                     <td>
                                         <form class="" action="modificarHorario" method="post">
                                           @csrf
-                                          <span class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size16 xs-font-size13">{{$clase->nombre}}</span>
+                                          <span class="bg-danger padding-5px-tb padding-15px-lr border-radius-5 margin-10px-bottom text-white font-size14 xs-font-size13">{{$clase->nombre}}</span>
                                           <button type="submit" id="editar" name="button" class="btn-sm btn-outline-dark" alt="Editar clase"><i class="fas fa-edit"></i></button>
                                           <div class="margin-10px-top font-size14"><i class="far fa-clock" style="margin-right: 0.5em;"></i>{{$clase->duracion}} min</div>
                                           <input type="text" name="id" value="{{$clase->id}}" hidden>
